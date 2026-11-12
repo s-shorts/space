@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Shorts Scheduler: privacy policy and terms</title>
-<style>body{font:17px/1.6 system-ui,sans-serif;max-width:680px;margin:40px auto;padding:0 20px;color:#14213D}h1{font-size:28px}h2{font-size:20px;margin-top:32px}</style></head>
+<title>Shorts Scheduler: privacy policy</title><style>body{font:17px/1.6 system-ui,sans-serif;max-width:680px;margin:40px auto;padding:0 20px;color:#14213D}h1{font-size:28px}h2{font-size:20px;margin-top:32px}</style></head>
 <body>
-<h1>Shorts Scheduler: privacy policy and terms of use</h1>
+<h1>Shorts Scheduler: privacy policy</h1>
 <p>Last updated: 12 November 2026</p>
 <p>Shorts Scheduler is a private tool that its owner uses to publish the owner's own videos to the owner's own YouTube channels and Instagram accounts at scheduled times. It is not offered to the public and has no other users.</p>
 
-<h2>Use of YouTube API Services</h2>
-<p>Shorts Scheduler uses YouTube API Services to upload videos. By using it, the owner agrees to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<h2>YouTube API Services</h2>
+<p>Shorts Scheduler uses YouTube API Services to upload videos to YouTube. Use of the tool is also subject to the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. Google's handling of data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> (https://policies.google.com/privacy).</p>
 
 <h2>What information is accessed</h2>
 <p>The tool asks for one permission on the owner's Google account: uploading videos to the owner's YouTube channel (<code>youtube.upload</code>). It does not read, collect or store any YouTube user data, viewer data, comments or analytics. The only thing it receives back from YouTube is the ID of each video it uploaded, which it keeps in a list of posted videos.</p>
 
-<h2>What is stored</h2>
+<h2>How information is used and stored</h2>
 <p>The owner's sign-in tokens are stored as encrypted GitHub Actions secrets and are used only to upload the owner's videos. Video files are deleted after they are posted. The dashboard keeps the owner's GitHub key in the owner's own browser. The tool uses no cookies, advertising or tracking, and collects nothing from visitors to this site.</p>
 
 <h2>Sharing</h2>
 <p>No information is sold or shared with anyone. Videos and their titles are sent only to YouTube and Instagram for publishing, as the owner instructs.</p>
 
 <h2>Removing access and deleting data</h2>
-<p>The owner can remove the tool's access to their Google account at any time on the <a href="https://myaccount.google.com/permissions">Google security settings page</a>, and can delete the stored tokens by removing the secrets from the GitHub repository. Once removed, the tool holds no data from that account.</p>
+<p>The owner can revoke the tool's access to their Google account at any time on the <a href="https://myaccount.google.com/permissions">Google security settings page</a> (https://myaccount.google.com/permissions), and can delete the stored tokens by removing the secrets from the GitHub repository. Once removed, the tool holds no data from that account. The list of posted video IDs can be deleted at any time by deleting the file <code>published.jsonl</code> in the repository.</p>
 
 <h2>Contact</h2>
 <p>Questions can be raised at <a href="https://github.com/s-shorts/space/issues">github.com/s-shorts/space/issues</a>.</p>
+<p><a href="./">Home</a> &nbsp; <a href="terms.html">Terms of service</a></p>
 </body></html>
