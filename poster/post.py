@@ -11,10 +11,13 @@ Environment:
     MEDIA_DIR        checkout of the media branch (default: media)
     GITHUB_REPOSITORY owner/repo, used to build the public video URL for Instagram
     MEDIA_BRANCH     default: media
-    YOUTUBE_MODE     off | private | public   (default off)
-    INSTAGRAM_MODE   off | on                 (default off)
-    YT_CLIENT_ID, YT_CLIENT_SECRET, YT_REFRESH_TOKEN
-    IG_USER_ID, IG_ACCESS_TOKEN, IG_API_VERSION (optional, e.g. v25.0)
+    SECRETS_JSON     all repo secrets as JSON (toJSON(secrets) in the workflow)
+    IG_API_VERSION   optional, e.g. v25.0
+
+Channels are listed in accounts.json. Each has a platform, a mode and a key:
+    youtube    mode off | private | public   secret YT_<KEY>_REFRESH_TOKEN
+               (plus YT_CLIENT_ID and YT_CLIENT_SECRET, shared by all channels)
+    instagram  mode off | on                 secret IG_<KEY>_TOKEN
     DRY_RUN=1        do everything except call YouTube/Instagram
     GIT_SYNC=1       commit and push the queue state after every result
 """
@@ -32,8 +35,8 @@ QUEUE = MEDIA_DIR / "queue"
 LOG = MEDIA_DIR / "published.jsonl"
 REPO = os.environ.get("GITHUB_REPOSITORY", "s-shorts/space")
 BRANCH = os.environ.get("MEDIA_BRANCH", "media")
-YOUTUBE_MODE = os.environ.get("YOUTUBE_MODE", "off").strip().lower() or "off"
-INSTAGRAM_MODE = os.environ.get("INSTAGRAM_MODE", "off").strip().lower() or "off"
+SECRETS = json.loads(os.environ.get("SECRETS_JSON") or "{}")
+ACCOUNTS = json.loads((ROOT / "accounts.json").read_text())["accounts"]
 DRY_RUN = os.environ.get("DRY_RUN") == "1"
 GIT_SYNC = os.environ.get("GIT_SYNC") == "1"
 CONFIG = json.loads((ROOT / "config.json").read_text())
@@ -51,12 +54,26 @@ def log(msg):
     print(f"[{now():%H:%M:%S}] {msg}", flush=True)
 
 
-def enabled_platforms():
-    out = []
-    if YOUTUBE_MODE in ("private", "public"):
-        out.append("youtube")
-    if INSTAGRAM_MODE == "on":
-        out.append("instagram")
+def secret_names(acc):
+    key = acc["key"].upper()
+    if acc["platform"] == "youtube":
+        return ["YT_CLIENT_ID", "YT_CLIENT_SECRET", f"YT_{key}_REFRESH_TOKEN"]
+    return [f"IG_{key}_TOKEN"]
+
+
+def enabled_accounts():
+    """Channels that are switched on and have their keys saved."""
+    out = {}
+    for acc in ACCOUNTS:
+        mode = str(acc.get("mode", "off")).lower()
+        ok = mode in (("private", "public") if acc["platform"] == "youtube" else ("on",))
+        if not ok:
+            continue
+        missing = [n for n in secret_names(acc) if not SECRETS.get(n)]
+        if missing and not DRY_RUN:
+            log(f"{acc['name']}: switched on but keys are missing ({', '.join(missing)}). Skipped.")
+            continue
+        out[acc["id"]] = acc
     return out
 
 
@@ -83,11 +100,11 @@ def sync(message):
 
 
 # ---------------------------------------------------------------- YouTube
-def youtube_token(requests):
+def youtube_token(requests, acc):
     r = requests.post("https://oauth2.googleapis.com/token", timeout=30, data={
-        "client_id": os.environ["YT_CLIENT_ID"],
-        "client_secret": os.environ["YT_CLIENT_SECRET"],
-        "refresh_token": os.environ["YT_REFRESH_TOKEN"],
+        "client_id": SECRETS["YT_CLIENT_ID"],
+        "client_secret": SECRETS["YT_CLIENT_SECRET"],
+        "refresh_token": SECRETS[f"YT_{acc['key'].upper()}_REFRESH_TOKEN"],
         "grant_type": "refresh_token",
     })
     if r.status_code != 200:
@@ -95,9 +112,9 @@ def youtube_token(requests):
     return r.json()["access_token"]
 
 
-def post_youtube(item, video):
+def post_youtube(item, video, acc):
     yt = {**CONFIG.get("youtube", {}), **item.get("youtube", {})}
-    privacy = "public" if YOUTUBE_MODE == "public" else "private"
+    privacy = "public" if acc["mode"] == "public" else "private"
     body = {
         "snippet": {
             "title": item["title"][:100],
@@ -112,11 +129,11 @@ def post_youtube(item, video):
         },
     }
     if DRY_RUN:
-        log(f"  DRY RUN youtube ({privacy}): {body['snippet']['title']}")
+        log(f"  DRY RUN {acc['name']} ({privacy}): {body['snippet']['title']}")
         return {"id": "dry-run", "url": "https://youtube.com/shorts/dry-run", "privacy": privacy}
 
     import requests
-    token = youtube_token(requests)
+    token = youtube_token(requests, acc)
     notify = "true" if yt.get("notify_subscribers", True) else "false"
     start = requests.post(
         "https://www.googleapis.com/upload/youtube/v3/videos",
@@ -148,8 +165,8 @@ def ig_base():
     return "https://graph.instagram.com" + (f"/{version}" if version else "")
 
 
-def ig_call(requests, method, path, **params):
-    params["access_token"] = os.environ["IG_ACCESS_TOKEN"]
+def ig_call(requests, token, method, path, **params):
+    params["access_token"] = token
     r = requests.request(method, f"{ig_base()}/{path}", params=params, timeout=60)
     try:
         data = r.json()
@@ -160,22 +177,24 @@ def ig_call(requests, method, path, **params):
     return data
 
 
-def post_instagram(item, video):
+def post_instagram(item, video, acc):
     ig = {**CONFIG.get("instagram", {}), **item.get("instagram", {})}
     video_url = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/queue/{video.name}"
     caption = item.get("instagram_caption") or item.get("description") or item["title"]
     if DRY_RUN:
-        log(f"  DRY RUN instagram: {video_url}")
+        log(f"  DRY RUN {acc['name']}: {video_url}")
         return {"id": "dry-run", "url": "https://instagram.com/reel/dry-run"}
 
     import requests
-    user = os.environ["IG_USER_ID"]
-    container = ig_call(requests, "POST", f"{user}/media",
+    token = SECRETS[f"IG_{acc['key'].upper()}_TOKEN"]
+    me = ig_call(requests, token, "GET", "me", fields="user_id,username")
+    user = me.get("user_id") or me["id"]
+    container = ig_call(requests, token, "POST", f"{user}/media",
                         media_type="REELS", video_url=video_url, caption=caption[:2200],
                         share_to_feed="true" if ig.get("share_to_feed", True) else "false")["id"]
     deadline = time.time() + 600
     while True:
-        st = ig_call(requests, "GET", container, fields="status_code,status")
+        st = ig_call(requests, token, "GET", container, fields="status_code,status")
         code = st.get("status_code")
         if code == "FINISHED":
             break
@@ -184,10 +203,10 @@ def post_instagram(item, video):
         if time.time() > deadline:
             raise PostError("Instagram took more than 10 minutes to process the video.")
         time.sleep(15)
-    media_id = ig_call(requests, "POST", f"{user}/media_publish", creation_id=container)["id"]
+    media_id = ig_call(requests, token, "POST", f"{user}/media_publish", creation_id=container)["id"]
     url = None
     try:
-        url = ig_call(requests, "GET", media_id, fields="permalink").get("permalink")
+        url = ig_call(requests, token, "GET", media_id, fields="permalink").get("permalink")
     except PostError:
         pass
     return {"id": media_id, "url": url}
@@ -218,7 +237,8 @@ def save(item):
 
 
 def wanted(item, enabled):
-    return [p for p in item.get("platforms", CONFIG["default_platforms"]) if p in enabled]
+    targets = item.get("targets") or [a["id"] for a in ACCOUNTS]
+    return [t for t in targets if t in enabled]
 
 
 def pending(item, enabled):
@@ -251,11 +271,11 @@ def retire(item):
 
 
 def main():
-    enabled = enabled_platforms()
-    log(f"platforms on: {enabled or 'none'}  (youtube={YOUTUBE_MODE}, instagram={INSTAGRAM_MODE})"
-        + ("  DRY RUN" if DRY_RUN else ""))
+    enabled = enabled_accounts()
+    names = ", ".join(f"{a['name']} ({a['mode']})" for a in enabled.values())
+    log(f"channels on: {names or 'none'}" + ("  DRY RUN" if DRY_RUN else ""))
     if not enabled:
-        log("Nothing is switched on yet. Set YOUTUBE_MODE / INSTAGRAM_MODE in repo variables.")
+        log("No channel is switched on yet. Switch one on in the dashboard.")
         return 0
     if not QUEUE.is_dir():
         log("No queue folder yet.")
@@ -283,17 +303,18 @@ def main():
         log(f"POST {item['id']}  (due {item['publish_at']})")
         posted += 1
         for platform in todo:
+            acc = enabled[platform]
             item.setdefault("attempts", {})
             item["attempts"][platform] = item["attempts"].get(platform, 0) + 1
             try:
-                result = POSTERS[platform](item, video)
+                result = POSTERS[acc["platform"]](item, video, acc)
                 result.update(status="done", at=now().isoformat(timespec="seconds"))
-                log(f"  {platform}: {result.get('url')}")
+                log(f"  {acc['name']}: {result.get('url')}")
             except Exception as exc:
                 failures += 1
                 result = {"status": "failed", "error": str(exc)[:500],
                           "at": now().isoformat(timespec="seconds")}
-                log(f"  {platform} FAILED (attempt {item['attempts'][platform]}): {exc}")
+                log(f"  {acc['name']} FAILED (attempt {item['attempts'][platform]}): {exc}")
             item.setdefault("results", {})[platform] = result
             save(item)
             sync(f"{item['id']}: {platform} {result['status']}")

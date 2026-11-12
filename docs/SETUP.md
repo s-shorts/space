@@ -1,8 +1,15 @@
 # One-time setup
 
-You do this once. Everything here is free. Button names on Google's and Meta's sites change now and then, so a label may differ slightly.
+You do this once. Everything here is free. Button names on GitHub's, Google's and Meta's sites change now and then, so a label may differ slightly.
 
-All keys go in this repo under **Settings → Secrets and variables → Actions**. "Secret" and "Variable" are two tabs on that page.
+---
+
+## Part 0: Open your dashboard
+
+1. **Switch the dashboard on.** In this repo: Settings → Pages → under "Build and deployment" choose **Deploy from a branch**, branch **main**, folder **/docs** → Save. After a minute or two the dashboard is at **https://s-shorts.github.io/space/**
+2. **Make your GitHub key.** The dashboard's first screen lists the steps. The key needs Contents, Secrets and Actions set to "Read and write" for this repo only. Paste it into the dashboard. It is kept in your browser on that device and nowhere else; do not share it.
+
+All the keys below are pasted into the dashboard's **Channels** tab. It encrypts them and saves them as GitHub secrets; nobody can read them back, not even you.
 
 ---
 
@@ -15,12 +22,11 @@ Posting to your own account needs no Meta App Review.
 3. In the app, open **Instagram → API setup with Instagram login**.
 4. **Add yourself as a tester.** App roles → Roles → Add People → Instagram Tester → your Instagram username. Then in Instagram: Settings → Apps and websites → Tester invites → Accept.
 5. Back in **API setup with Instagram login**, under "Generate access tokens", add your account and press **Generate token**. Allow the content publishing permission (`instagram_business_content_publish`). Copy the token and the Instagram user ID shown beside the account.
-6. Add in GitHub:
-   - Secret `IG_ACCESS_TOKEN` = the token
-   - Secret `IG_USER_ID` = the number
-   - Variable `INSTAGRAM_MODE` = `on`
+6. In the dashboard → Channels → your Instagram channel → "Add the key": paste the token and save. Then set the channel to **On**.
 
-**Token renewal.** The token lasts 60 days. To have it renewed automatically every week, create a fine-grained GitHub token (GitHub → Settings → Developer settings → Fine-grained tokens) limited to this repo with **Secrets: Read and write**, and save it as secret `GH_PAT`. Without it, repeat step 5 every 60 days.
+**More Instagram accounts.** Add each one as an Instagram Tester on the same Meta app (step 4), generate its token (step 5), then in the dashboard use "Add a channel" and paste that token.
+
+**Token renewal.** Instagram tokens last 60 days. To have them renewed automatically every week, save a GitHub key as a secret named `GH_PAT` (repo Settings → Secrets and variables → Actions → New repository secret). A key like the dashboard one works; it needs **Secrets: Read and write**. Without it, repeat step 5 every 60 days.
 
 ---
 
@@ -42,22 +48,24 @@ Posting to your own account needs no Meta App Review.
 4. Choose your channel. Google shows an "unverified app" warning because it is your own private app: Advanced → Go to (app name) → Allow.
 5. Press **Exchange authorization code for tokens** and copy the **Refresh token**.
 
-### B3. Add in GitHub
-- Secret `YT_CLIENT_ID`
-- Secret `YT_CLIENT_SECRET`
-- Secret `YT_REFRESH_TOKEN`
-- Variable `YOUTUBE_MODE` = `private` for now
+### B3. Add the keys in the dashboard
+In Channels:
+- "Google app keys": paste the Client ID and Client secret (once, shared by all YouTube channels).
+- Your YouTube channel → "Add the key": paste the Refresh token.
+- Set the channel to **Private test** for now.
 
-With `private`, uploads work but nobody can see them. That is enough to prove the app works for the audit.
+With Private test, uploads work but nobody else can see them. That is enough to prove the app works for the audit.
+
+**More YouTube channels.** Repeat B2 for each channel (choose that channel in step 4), then in the dashboard use "Add a channel" and paste its Refresh token. The Google app keys stay the same.
 
 ### B4. The audit
 Until Google audits the project, every upload made through it is locked as private and cannot be switched to public later. So keep uploading to YouTube by hand until approval.
 
 1. Fill in the "YouTube API Services – Audit and Quota Extension Form" (search that name on Google's help site). Draft answers are in [youtube-audit-answers.md](youtube-audit-answers.md).
-2. When Google emails that the project is approved, change variable `YOUTUBE_MODE` to `public`.
+2. When Google emails that the project is approved, set each YouTube channel to **Public** in the dashboard.
 
 ---
 
 ## Check it works
 
-Actions → **Post due videos** → Run workflow → tick **Test only**. Read the log: it lists which platforms are on and what would be posted.
+In the dashboard, add a video and press **Post now**, or wait for its time. The top of the dashboard shows whether the last check went fine. Full logs are in the repo's Actions tab.

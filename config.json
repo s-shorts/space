@@ -1,7 +1,13 @@
 {
   "timezone": "Asia/Kolkata",
-  "daily_slots": ["08:00", "11:00", "14:00", "17:00", "20:00", "22:30"],
-  "default_platforms": ["youtube", "instagram"],
+  "daily_slots": [
+    "08:00",
+    "11:00",
+    "14:00",
+    "17:00",
+    "20:00",
+    "22:30"
+  ],
   "youtube": {
     "category_id": "28",
     "made_for_kids": false,

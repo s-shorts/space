@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Shorts Scheduler</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sky:#E8EDF4; --paper:#FFFFFF; --ink:#14213D; --dim:#5B6782; --line:#CBD4E1;
+  --amber:#F0A800; --teal:#177E66; --red:#C0362C; --navy2:#1E2F55;
+  --display:"Bricolage Grotesque","Figtree",system-ui,sans-serif;
+  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--sky);color:var(--ink);font:400 16px/1.5 var(--body)}
+h1,h2,h3{font-family:var(--display);margin:0;line-height:1.15}
+button,input,select,textarea{font:inherit;color:inherit}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px}
+[hidden]{display:none!important}
+
+/* top band: the next launch */
+.band{background:var(--ink);color:#fff;padding:18px 0 0}
+.band .row{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.brand{font:700 17px var(--display);letter-spacing:-.01em}
+.linkbtn{background:none;border:0;color:#B9C4DA;padding:6px 0;cursor:pointer;text-decoration:underline;font-size:14px}
+.next{padding:26px 0 22px}
+.next small{color:#B9C4DA;font-size:14px;display:block}
+.count{font:700 clamp(44px,13vw,76px)/1 var(--display);letter-spacing:-.03em;margin:4px 0 8px;color:var(--amber);font-variant-numeric:tabular-nums}
+.next p{margin:0;max-width:52ch;color:#E3E9F4}
+.check{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;font-size:14px;color:#B9C4DA;padding-bottom:16px}
+.check button{background:var(--navy2);border:1px solid #3A4C78;color:#fff;border-radius:999px;padding:7px 14px;cursor:pointer}
+.tabs{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none}
+.tabs button{background:none;border:0;color:#B9C4DA;padding:12px 14px;cursor:pointer;white-space:nowrap;border-radius:10px 10px 0 0;font-weight:500}
+.tabs button[aria-selected=true]{background:var(--sky);color:var(--ink);font-weight:600}
+
+main.wrap{padding:26px 18px 80px}
+main h2{font-size:24px;margin-bottom:6px}
+.lede{color:var(--dim);margin:0 0 20px;max-width:60ch}
+
+/* timeline */
+.day{font:700 15px var(--display);margin:26px 0 8px;color:var(--dim)}
+.day:first-of-type{margin-top:4px}
+.slot{display:grid;grid-template-columns:64px 1fr;gap:0 14px;position:relative}
+.slot .t{font:700 19px var(--display);font-variant-numeric:tabular-nums;padding-top:13px;text-align:right}
+.slot .body{border-left:2px solid var(--line);padding:0 0 14px 18px;position:relative}
+.slot .body::before{content:"";position:absolute;left:-7px;top:19px;width:12px;height:12px;border-radius:50%;background:var(--sky);border:2px solid var(--ink)}
+.slot.due .body::before{background:var(--amber);border-color:var(--amber)}
+.slot.bad .body::before{background:var(--red);border-color:var(--red)}
+.item{background:var(--paper);border-radius:12px;padding:13px 15px}
+.item h3{font:600 16.5px/1.3 var(--body)}
+.note{font-size:14px;color:var(--dim);margin:4px 0 0}
+.note.err{color:var(--red)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:9px}
+.chip{font-size:13px;padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--dim);text-decoration:none;white-space:nowrap}
+.chip.done{background:#E2F3EE;border-color:#BFE3D8;color:var(--teal)}
+.chip.fail{background:#FBE9E7;border-color:#F1C4BF;color:var(--red)}
+.chip.off{border-style:dashed}
+.acts{display:flex;flex-wrap:wrap;gap:4px 16px;margin-top:10px}
+.acts button{background:none;border:0;padding:4px 0;cursor:pointer;text-decoration:underline;font-size:14.5px}
+.acts .danger{color:var(--red)}
+.empty{background:var(--paper);border-radius:12px;padding:26px 20px}
+.empty p{margin:6px 0 14px;color:var(--dim)}
+
+/* forms */
+.panel{background:var(--paper);border-radius:12px;padding:18px;margin-bottom:14px}
+label{display:block;font-weight:600;font-size:15px;margin:14px 0 5px}
+label:first-child{margin-top:0}
+.hint{font-weight:400;color:var(--dim);font-size:14px}
+input[type=text],input[type=password],input[type=datetime-local],input[type=time],select,textarea{
+  width:100%;border:1px solid var(--line);border-radius:9px;padding:10px 12px;background:#fff}
+textarea{min-height:84px;resize:vertical}
+input[type=file]{width:100%;padding:16px;border:2px dashed var(--line);border-radius:12px;background:#F6F8FB}
+.opt{display:flex;align-items:center;gap:9px;font-weight:400;margin:6px 0}
+.opt input{width:19px;height:19px;accent-color:var(--ink)}
+.btn{background:var(--ink);color:#fff;border:0;border-radius:10px;padding:12px 20px;font-weight:600;cursor:pointer}
+.btn.alt{background:#fff;color:var(--ink);border:1px solid var(--ink)}
+.btn:disabled{opacity:.55;cursor:default}
+.btnrow{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+progress{width:100%;height:10px;margin-top:14px;accent-color:var(--teal)}
+.chan{display:grid;grid-template-columns:1fr auto;gap:8px 14px;align-items:center}
+.chan h3{font:600 17px var(--body)}
+.chan select{width:auto}
+.keys{grid-column:1/-1;font-size:14.5px}
+.ok{color:var(--teal);font-weight:600}.missing{color:var(--red);font-weight:600}
+details{grid-column:1/-1;border-top:1px solid var(--line);padding-top:10px;margin-top:4px}
+summary{cursor:pointer;font-weight:600;font-size:15px}
+.slotrow{display:flex;gap:10px;align-items:center;margin-bottom:8px}
+.slotrow input{max-width:150px}
+ol.steps{padding-left:22px;margin:10px 0 0}ol.steps li{margin-bottom:8px}
+code{background:#EEF2F7;padding:1px 5px;border-radius:5px;font-size:.92em}
+dialog{border:0;border-radius:14px;padding:22px;width:min(560px,94vw);color:var(--ink)}
+dialog::backdrop{background:rgba(20,33,61,.55)}
+#toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:11px 18px;border-radius:10px;max-width:92vw;z-index:9;box-shadow:0 6px 24px rgba(20,33,61,.35)}
+#toast.err{background:var(--red)}
+@media (max-width:480px){.slot{grid-template-columns:52px 1fr;gap:0 10px}.slot .t{font-size:17px}}
+</style>
+</head>
+<body>
+
+<!-- sign in -->
+<section id="login" class="wrap" hidden style="padding-top:8vh;padding-bottom:60px">
+  <h1 style="font-size:34px">Shorts Scheduler</h1>
+  <p class="lede" style="margin-top:8px">Schedule videos for your YouTube and Instagram channels. To open your dashboard, paste a GitHub key. It stays on this device only.</p>
+  <div class="panel">
+    <label for="tok">GitHub key</label>
+    <input id="tok" type="password" autocomplete="off" placeholder="github_pat_...">
+    <div class="btnrow"><button class="btn" id="signin">Open dashboard</button></div>
+  </div>
+  <div class="panel">
+    <h3 style="font:600 17px var(--body)">How to get the key (one time)</h3>
+    <ol class="steps">
+      <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub → new fine-grained token</a>.</li>
+      <li>Name it "Scheduler dashboard" and pick the longest expiry you are comfortable with.</li>
+      <li>Set "Resource owner" to <b>s-shorts</b>.</li>
+      <li>Under "Repository access" choose "Only select repositories" and pick <code id="reponame"></code>.</li>
+      <li>Under "Permissions → Repository" set these three to "Read and write": <b>Contents</b>, <b>Secrets</b>, <b>Actions</b>.</li>
+      <li>Press "Generate token", copy it and paste it above.</li>
+    </ol>
+  </div>
+</section>
+
+<div id="app" hidden>
+  <header class="band">
+    <div class="wrap">
+      <div class="row"><span class="brand">Shorts Scheduler</span><button class="linkbtn" id="signout">Sign out</button></div>
+      <div class="next" id="next"></div>
+      <div class="check"><span id="lastrun">Loading…</span><button id="runnow">Check for due posts now</button><button id="refresh">Refresh</button></div>
+      <nav class="tabs" role="tablist" id="tabs">
+        <button role="tab" data-tab="queue">Scheduled</button>
+        <button role="tab" data-tab="add">Add video</button>
+        <button role="tab" data-tab="channels">Channels</button>
+        <button role="tab" data-tab="times">Posting times</button>
+        <button role="tab" data-tab="posted">Posted</button>
+      </nav>
+    </div>
+  </header>
+  <main class="wrap" id="view"></main>
+</div>
+
+<dialog id="dlg"></dialog>
+<div id="toast" hidden role="status"></div>
+
+<script src="vendor/nacl.min.js"></script>
+<script src="vendor/sealedbox.js"></script>
+<script>
+"use strict";
+const REPO = "s-shorts/space", API = "https://api.github.com", MAIN = "main", MEDIA = "media";
+const MAX_BYTES = 95 * 1024 * 1024;
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+let token = null;
+try { token = localStorage.getItem("gh_token"); } catch (e) {}
+const S = { tab: "queue", config: null, cfgSha: null, accounts: [], accSha: null, queue: [], orphans: [], posted: [], secrets: new Set(), run: null, busy: false };
+
+/* ---------- GitHub ---------- */
+async function gh(path, { method = "GET", body, raw = false } = {}) {
+  const r = await fetch(API + path, {
+    method, cache: "no-store",
+    headers: { Authorization: "Bearer " + token, Accept: raw ? "application/vnd.github.raw+json" : "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" },
+    body: body ? JSON.stringify(body) : undefined });
+  if (r.status === 401) { signOut("That key was not accepted. It may have expired; make a new one."); throw new Error("signed out"); }
+  if (r.status === 404 && method === "GET") return null;
+  if (!r.ok) {
+    let m = ""; try { m = (await r.json()).message; } catch (e) {}
+    if (r.status === 403 || r.status === 404) m = "GitHub refused this. Check the key has Contents, Secrets and Actions set to Read and write. (" + m + ")";
+    if (r.status === 409 || r.status === 422) m = "Someone else changed this at the same moment. Press Refresh and try again. (" + m + ")";
+    throw new Error(m || "GitHub error " + r.status);
+  }
+  return raw ? r.text() : (r.status === 204 ? {} : r.json());
+}
+const b64ToBytes = b => Uint8Array.from(atob(b.replace(/\s/g, "")), c => c.charCodeAt(0));
+function bytesToB64(u8) { let s = ""; for (let i = 0; i < u8.length; i += 0x8000) s += String.fromCharCode.apply(null, u8.subarray(i, i + 0x8000)); return btoa(s); }
+const textToB64 = t => bytesToB64(new TextEncoder().encode(t));
+async function readJson(path, ref) {
+  const d = await gh(`/repos/${REPO}/contents/${path}?ref=${ref}`);
+  if (!d) return null;
+  return { data: JSON.parse(new TextDecoder().decode(b64ToBytes(d.content))), sha: d.sha };
+}
+const writeJson = (path, branch, data, sha, message) =>
+  gh(`/repos/${REPO}/contents/${path}`, { method: "PUT", body: { message, branch, sha: sha || undefined, content: textToB64(JSON.stringify(data, null, 2) + "\n") } });
+const removeFile = (path, sha, message) =>
+  gh(`/repos/${REPO}/contents/${path}`, { method: "DELETE", body: { message, branch: MEDIA, sha } });
+
+/* ---------- time, in the schedule's time zone ---------- */
+const tz = () => S.config?.timezone || "Asia/Kolkata";
+function offsetMin(date) {
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: tz(), hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit" }).formatToParts(date).map(x => [x.type, x.value]));
+  return Math.round((Date.UTC(+p.year, p.month - 1, +p.day, +p.hour, +p.minute, +p.second) - Math.floor(date.getTime() / 1000) * 1000) / 60000);
+}
+function zoned(y, m, d, h, mi) { const g = Date.UTC(y, m - 1, d, h, mi); return new Date(g - offsetMin(new Date(g)) * 60000); }
+const wall = date => new Date(date.getTime() + offsetMin(date) * 60000).toISOString();   // wall clock in tz
+const toInput = date => wall(date).slice(0, 16);
+function fromInput(v) { const [y, m, d, h, mi] = v.split(/[-T:]/).map(Number); return zoned(y, m, d, h, mi); }
+function toIso(date) { const o = offsetMin(date), a = Math.abs(o), p = n => String(n).padStart(2, "0"); return wall(date).slice(0, 19) + (o < 0 ? "-" : "+") + p(Math.floor(a / 60)) + ":" + p(a % 60); }
+const fmtTime = d => wall(d).slice(11, 16);
+function fmtDay(d) {
+  const k = x => wall(x).slice(0, 10), now = new Date();
+  if (k(d) === k(now)) return "Today";
+  if (k(d) === k(new Date(now.getTime() + 864e5))) return "Tomorrow";
+  if (k(d) === k(new Date(now.getTime() - 864e5))) return "Yesterday";
+  return new Intl.DateTimeFormat("en-GB", { timeZone: tz(), weekday: "long", day: "numeric", month: "short" }).format(d);
+}
+function ago(d) { const m = Math.round((Date.now() - d) / 60000); return m < 1 ? "just now" : m < 60 ? m + " min ago" : m < 1440 ? Math.round(m / 60) + " h ago" : Math.round(m / 1440) + " days ago"; }
+function until(d) { let m = Math.max(0, Math.round((d - Date.now()) / 60000)); const dd = Math.floor(m / 1440), h = Math.floor((m % 1440) / 60); m %= 60; return dd ? `${dd}d ${h}h` : h ? `${h}h ${String(m).padStart(2, "0")}m` : `${m} min`; }
+function nextSlot(extraTaken = []) {
+  const taken = new Set([...S.queue.map(q => q.due.getTime()), ...S.posted.map(p => new Date(p.publish_at).getTime()), ...extraTaken]);
+  const after = Date.now() + 20 * 60000, slots = [...(S.config.daily_slots || [])].sort();
+  for (let i = 0; i < 60; i++) {
+    const [y, m, d] = wall(new Date(Date.now() + i * 864e5)).slice(0, 10).split("-").map(Number);
+    for (const s of slots) { const [h, mi] = s.split(":").map(Number), t = zoned(y, m, d, h, mi); if (t.getTime() > after && !taken.has(t.getTime())) return t; }
+  }
+  return new Date(after);
+}
+
+/* ---------- channels ---------- */
+const acc = id => S.accounts.find(a => a.id === id);
+const secretNames = a => a.platform === "youtube" ? ["YT_CLIENT_ID", "YT_CLIENT_SECRET", `YT_${a.key}_REFRESH_TOKEN`] : [`IG_${a.key}_TOKEN`];
+const isOn = a => a.platform === "youtube" ? ["private", "public"].includes(a.mode) : a.mode === "on";
+const hasKeys = a => secretNames(a).every(n => S.secrets.has(n));
+const kind = a => a.platform === "youtube" ? "YouTube" : "Instagram";
+const targetsOf = item => (item.targets && item.targets.length ? item.targets : S.accounts.map(a => a.id));
+
+/* ---------- load ---------- */
+async function load() {
+  const [cfg, accs, list, posted, secrets, runs] = await Promise.all([
+    readJson("config.json", MAIN), readJson("accounts.json", MAIN),
+    gh(`/repos/${REPO}/contents/queue?ref=${MEDIA}`),
+    gh(`/repos/${REPO}/contents/published.jsonl?ref=${MEDIA}`, { raw: true }),
+    gh(`/repos/${REPO}/actions/secrets?per_page=100`).catch(() => null),
+    gh(`/repos/${REPO}/actions/workflows/post.yml/runs?per_page=1`).catch(() => null)]);
+  if (!cfg || !accs) throw new Error("The scheduler files were not found in " + REPO + ".");
+  S.config = cfg.data; S.cfgSha = cfg.sha; S.accounts = accs.data.accounts; S.accSha = accs.sha;
+  S.secrets = new Set((secrets?.secrets || []).map(s => s.name));
+  S.secretsKnown = !!secrets;
+  S.run = runs?.workflow_runs?.[0] || null;
+  S.posted = (posted || "").split("\n").filter(Boolean).map(l => { try { return JSON.parse(l); } catch (e) { return null; } }).filter(Boolean);
+  const files = Array.isArray(list) ? list : [];
+  const jsons = files.filter(f => f.name.endsWith(".json"));
+  const items = await Promise.all(jsons.map(f => readJson("queue/" + f.name, MEDIA)));
+  S.queue = items.map((r, i) => r && { item: r.data, sha: r.sha, path: "queue/" + jsons[i].name, due: new Date(r.data.publish_at),
+      videoSha: files.find(f => f.name === r.data.file)?.sha }).filter(Boolean).sort((a, b) => a.due - b.due);
+  const used = new Set(S.queue.map(q => q.item.file));
+  S.orphans = files.filter(f => f.name.endsWith(".mp4") && !used.has(f.name));
+}
+async function reload(msg) { try { await load(); render(); if (msg) toast(msg); } catch (e) { if (e.message !== "signed out") toast(e.message, true); } }
+
+/* ---------- render ---------- */
+function toast(msg, err) { const t = $("#toast"); t.textContent = msg; t.className = err ? "err" : ""; t.hidden = false; clearTimeout(toast.t); toast.t = setTimeout(() => t.hidden = true, err ? 9000 : 3500); }
+function statusOf(q) {
+  const on = targetsOf(q.item).map(acc).filter(a => a && isOn(a));
+  const failed = targetsOf(q.item).some(id => q.item.results?.[id]?.status === "failed");
+  return failed ? "bad" : (q.due <= new Date() && on.length ? "due" : "");
+}
+function renderBand() {
+  const anyOn = S.accounts.some(a => isOn(a) && hasKeys(a));
+  const up = S.queue.find(q => q.due > new Date()), due = S.queue.filter(q => statusOf(q) === "due").length;
+  let h;
+  if (!anyOn) h = `<small>Posting is paused</small><div class="count">Off</div><p>No channel is switched on with its keys saved. Open Channels to connect one.</p>`;
+  else if (due) h = `<small>Going out at the next check</small><div class="count">${due} due</div><p>${esc(S.queue.find(q => statusOf(q) === "due").item.title)}</p>`;
+  else if (up) h = `<small>Next post in</small><div class="count">${until(up.due)}</div><p>${esc(up.item.title)}, ${fmtDay(up.due).toLowerCase()} at ${fmtTime(up.due)}</p>`;
+  else h = `<small>Next post</small><div class="count">None</div><p>Nothing is scheduled. Add a video to fill the next slot.</p>`;
+  $("#next").innerHTML = h;
+  const r = S.run;
+  $("#lastrun").innerHTML = !r ? "No checks have run yet." :
+    r.status !== "completed" ? "Checking now…" :
+    `Last check ${ago(new Date(r.updated_at))}: ${r.conclusion === "success" ? "all fine" : `<a href="${esc(r.html_url)}" target="_blank" rel="noopener">had a problem, see the log</a>`}`;
+  document.querySelectorAll("#tabs button").forEach(b => { b.setAttribute("aria-selected", b.dataset.tab === S.tab);
+    if (b.dataset.tab === "queue") b.textContent = "Scheduled" + (S.queue.length ? ` (${S.queue.length})` : ""); });
+}
+function chips(item) {
+  return targetsOf(item).map(id => {
+    const a = acc(id), r = item.results?.[id];
+    if (!a) return `<span class="chip off">Removed channel</span>`;
+    if (r?.status === "done") return `<a class="chip done" href="${esc(r.url || "#")}" target="_blank" rel="noopener">${esc(a.name)}: posted</a>`;
+    if (r?.status === "failed") return `<span class="chip fail">${esc(a.name)}: failed</span>`;
+    if (!isOn(a)) return `<span class="chip off">${esc(a.name)}: switched off</span>`;
+    if (!hasKeys(a)) return `<span class="chip fail">${esc(a.name)}: keys missing</span>`;
+    return `<span class="chip">${esc(a.name)}${a.mode === "private" ? " (private test)" : ""}</span>`;
+  }).join("");
+}
+function viewQueue() {
+  if (!S.queue.length && !S.orphans.length) return `<div class="empty"><h2>Nothing scheduled</h2><p>Add a video and it takes the next free posting time.</p><button class="btn" data-go="add">Add a video</button></div>`;
+  let h = `<h2>Scheduled videos</h2><p class="lede">Times are ${esc(tz())} time. Posts go out within about 15 minutes after their time.</p>`, last = "";
+  S.queue.forEach((q, i) => {
+    const day = fmtDay(q.due); if (day !== last) { h += `<div class="day">${day}</div>`; last = day; }
+    const st = statusOf(q);
+    const errs = Object.entries(q.item.results || {}).filter(([, r]) => r.status === "failed").map(([id, r]) => `<p class="note err">${esc(acc(id)?.name || id)}: ${esc(r.error)}</p>`).join("");
+    const warn = Object.entries(q.item.results || {}).filter(([, r]) => r.warning).map(([, r]) => `<p class="note err">${esc(r.warning)}</p>`).join("");
+    h += `<div class="slot ${st}"><div class="t">${fmtTime(q.due)}</div><div class="body"><div class="item">
+      <h3>${esc(q.item.title)}</h3>${st === "due" ? `<p class="note">Due. Goes out at the next check.</p>` : ""}${errs}${warn}
+      <div class="chips">${chips(q.item)}</div>
+      <div class="acts"><button data-edit="${i}">Edit</button><button data-now="${i}">Post now</button>${st === "bad" ? `<button data-retry="${i}">Try again</button>` : ""}<button class="danger" data-del="${i}">Delete</button></div>
+    </div></div></div>`;
+  });
+  if (S.orphans.length) h += `<div class="day">Unfinished uploads</div>` + S.orphans.map((f, i) => `<div class="panel"><b>${esc(f.name)}</b><p class="note">This file has no details, so it will never be posted.</p><div class="acts"><button class="danger" data-orphan="${i}">Remove file</button></div></div>`).join("");
+  return h;
+}
+const targetBoxes = (sel) => S.accounts.map(a => `<label class="opt"><input type="checkbox" name="target" value="${esc(a.id)}" ${sel.includes(a.id) ? "checked" : ""}> ${esc(a.name)} <span class="hint">${kind(a)}${isOn(a) ? "" : ", switched off"}</span></label>`).join("");
+function detailFields(it = {}) {
+  return `<label for="f-title">Title <span class="hint" id="tcount"></span></label><input id="f-title" type="text" maxlength="100" required value="${esc(it.title)}">
+    <label for="f-desc">Description <span class="hint">shown on YouTube</span></label><textarea id="f-desc">${esc(it.description)}</textarea>
+    <label for="f-tags">Tags <span class="hint">YouTube, separated by commas</span></label><input id="f-tags" type="text" value="${esc((it.tags || []).join(", "))}">
+    <label for="f-cap">Instagram caption <span class="hint">leave empty to use the description</span></label><textarea id="f-cap">${esc(it.instagram_caption && it.instagram_caption !== it.description ? it.instagram_caption : "")}</textarea>`;
+}
+function viewAdd() {
+  const slot = nextSlot();
+  return `<h2>Add a video</h2><p class="lede">Choose the file, write its details and pick where and when it goes out.</p>
+  <form id="addform"><div class="panel">
+    <label for="f-file">Video file <span class="hint">MP4, vertical, under 95 MB</span></label><input id="f-file" type="file" accept="video/mp4,.mp4" required>
+    ${detailFields()}</div>
+  <div class="panel"><label>Post to</label>${targetBoxes(S.accounts.map(a => a.id))}</div>
+  <div class="panel"><label>When</label>
+    <label class="opt"><input type="radio" name="when" value="next" checked> Next free time: ${fmtDay(slot)} at ${fmtTime(slot)}</label>
+    <label class="opt"><input type="radio" name="when" value="pick"> Choose a date and time</label>
+    <input id="f-at" type="datetime-local" value="${toInput(slot)}" hidden aria-label="Date and time">
+  </div>
+  <progress id="prog" max="100" value="0" hidden></progress>
+  <div class="btnrow"><button class="btn" id="addbtn">Schedule video</button></div></form>`;
+}
+function viewChannels() {
+  const sec = (p, title, blurb) => {
+    const list = S.accounts.filter(a => a.platform === p);
+    return `<h2 style="margin-top:${p === "youtube" ? 0 : 28}px">${title}</h2><p class="lede">${blurb}</p>` +
+      (list.length ? list.map(a => {
+        const modes = p === "youtube" ? [["off", "Off"], ["private", "Private test"], ["public", "Public"]] : [["off", "Off"], ["on", "On"]];
+        const tokName = secretNames(a).at(-1);
+        return `<div class="panel chan"><h3>${esc(a.name)}</h3>
+          <select data-mode="${esc(a.id)}" aria-label="Posting for ${esc(a.name)}">${modes.map(([v, l]) => `<option value="${v}" ${a.mode === v ? "selected" : ""}>${l}</option>`).join("")}</select>
+          <div class="keys">${!S.secretsKnown ? "Key status unknown (the GitHub key cannot read secrets)." : S.secrets.has(tokName) ? `<span class="ok">Key saved</span>` : `<span class="missing">Key missing</span>. Paste it below.`}
+            ${p === "youtube" && a.mode === "public" ? `<p class="note">Public works only after Google approves your project. Before that, YouTube locks every upload as private.</p>` : ""}</div>
+          <details><summary>${S.secrets.has(tokName) ? "Replace the key" : "Add the key"}</summary>
+            <label for="k-${esc(a.id)}">${p === "youtube" ? "Refresh token for this channel" : "Instagram access token for this account"}</label>
+            <input id="k-${esc(a.id)}" type="password" autocomplete="off">
+            <div class="btnrow"><button class="btn" data-savekey="${esc(a.id)}">Save key</button><button class="btn alt" data-rm="${esc(a.id)}">Remove channel</button></div>
+          </details></div>`;
+      }).join("") : `<div class="empty"><p>No ${title} channel yet.</p></div>`);
+  };
+  const g = S.secrets.has("YT_CLIENT_ID") && S.secrets.has("YT_CLIENT_SECRET");
+  return sec("youtube", "YouTube", "Private test uploads videos that only you can see. Switch to Public once Google has approved your project.") +
+    `<div class="panel"><h3 style="font:600 17px var(--body)">Google app keys</h3><p class="note">Shared by all your YouTube channels. ${g ? `<span class="ok">Saved</span>` : `<span class="missing">Missing</span>`}</p>
+      <details style="border:0;padding:0"><summary>${g ? "Replace" : "Add"} the Google app keys</summary>
+      <label for="g-id">Client ID</label><input id="g-id" type="text" autocomplete="off">
+      <label for="g-sec">Client secret</label><input id="g-sec" type="password" autocomplete="off">
+      <div class="btnrow"><button class="btn" id="saveg">Save Google app keys</button></div></details></div>` +
+    sec("instagram", "Instagram", "Each account must be a Creator or Business account and a tester on your Meta app.") +
+    `<h2 style="margin-top:28px">Add a channel</h2><form class="panel" id="newchan">
+      <label for="n-plat">Type</label><select id="n-plat"><option value="youtube">YouTube</option><option value="instagram">Instagram</option></select>
+      <label for="n-name">Name <span class="hint">how it appears here</span></label><input id="n-name" type="text" required maxlength="40">
+      <div class="btnrow"><button class="btn">Add channel</button></div></form>
+    <p class="note">Where do the keys come from? <a href="https://github.com/${REPO}/blob/main/docs/SETUP.md" target="_blank" rel="noopener">Open the setup guide</a>.</p>`;
+}
+function viewTimes() {
+  const zones = [...new Set([tz(), "Asia/Kolkata", Intl.DateTimeFormat().resolvedOptions().timeZone, "UTC", "America/New_York", "Europe/London"])];
+  return `<h2>Posting times</h2><p class="lede">New videos take the next free time from this list, one video per time.</p>
+  <form class="panel" id="timesform"><label>Daily times</label><div id="slots">${[...S.config.daily_slots].sort().map(s => slotRow(s)).join("")}</div>
+    <button type="button" class="btn alt" id="addslot">Add a time</button>
+    <label for="f-tz">Time zone</label><select id="f-tz">${zones.map(z => `<option ${z === tz() ? "selected" : ""}>${esc(z)}</option>`).join("")}</select>
+    <div class="btnrow"><button class="btn">Save times</button></div></form>`;
+}
+const slotRow = v => `<div class="slotrow"><input type="time" value="${esc(v)}" required aria-label="Posting time"><button type="button" class="linkbtn" style="color:var(--red)" data-rmslot>Remove</button></div>`;
+function viewPosted() {
+  if (!S.posted.length) return `<div class="empty"><h2>Nothing posted yet</h2><p>Videos appear here with their links once they have gone out.</p></div>`;
+  return `<h2>Posted</h2><p class="lede">The video files are deleted after posting; the links stay here.</p>` + [...S.posted].reverse().slice(0, 100).map(p => {
+    const d = new Date(p.publish_at);
+    return `<div class="panel"><b>${esc(p.title)}</b><p class="note">${fmtDay(d)} at ${fmtTime(d)}</p><div class="chips">${Object.entries(p.results || {}).map(([id, r]) =>
+      `<a class="chip done" href="${esc(r.url || "#")}" target="_blank" rel="noopener">${esc(acc(id)?.name || id)}</a>`).join("")}</div></div>`;
+  }).join("");
+}
+function render() {
+  renderBand();
+  $("#view").innerHTML = { queue: viewQueue, add: viewAdd, channels: viewChannels, times: viewTimes, posted: viewPosted }[S.tab]();
+  const t = $("#f-title"); if (t) { const c = () => $("#tcount").textContent = `${t.value.length}/100`; t.oninput = c; c(); }
+}
+function go(tab) { S.tab = tab; render(); window.scrollTo(0, 0); }
+
+/* ---------- actions ---------- */
+async function guard(fn, btn) {
+  if (S.busy) return; S.busy = true; if (btn) btn.disabled = true;
+  try { await fn(); } catch (e) { if (e.message !== "signed out") toast(e.message, true); }
+  finally { S.busy = false; if (btn) btn.disabled = false; }
+}
+function readDetails(root) {
+  const desc = $("#f-desc", root).value.trim();
+  return { title: $("#f-title", root).value.trim(), description: desc,
+    tags: $("#f-tags", root).value.split(",").map(s => s.trim()).filter(Boolean),
+    instagram_caption: $("#f-cap", root).value.trim() || desc,
+    targets: [...root.querySelectorAll("input[name=target]:checked")].map(i => i.value) };
+}
+const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "").slice(0, 40) || "video";
+function uploadVideo(path, file, onProgress) {
+  return new Promise((res, rej) => {
+    const fr = new FileReader();
+    fr.onerror = () => rej(new Error("Could not read the file."));
+    fr.onload = () => {
+      const x = new XMLHttpRequest();
+      x.open("PUT", `${API}/repos/${REPO}/contents/${path}`);
+      x.setRequestHeader("Authorization", "Bearer " + token); x.setRequestHeader("Accept", "application/vnd.github+json");
+      x.upload.onprogress = e => e.lengthComputable && onProgress(Math.round(e.loaded / e.total * 100));
+      x.onload = () => x.status < 300 ? res() : rej(new Error("Upload failed (" + x.status + "). Check the key's permissions and try again."));
+      x.onerror = () => rej(new Error("Upload failed. Check your connection and try again."));
+      x.send(JSON.stringify({ message: "queue " + path, branch: MEDIA, content: fr.result.slice(fr.result.indexOf(",") + 1) }));
+    };
+    fr.readAsDataURL(file);
+  });
+}
+async function addVideo(form) {
+  const file = $("#f-file").files[0], d = readDetails(form);
+  if (!file) throw new Error("Choose a video file.");
+  if (file.size > MAX_BYTES) throw new Error("That file is over 95 MB. Export it smaller.");
+  if (!d.targets.length) throw new Error("Tick at least one channel.");
+  const when = form.when.value === "pick" ? fromInput($("#f-at").value) : nextSlot();
+  if (isNaN(when)) throw new Error("Choose a date and time.");
+  const id = wall(when).slice(0, 16).replace(/[-:]/g, "").replace("T", "-") + "-" + slug(d.title);
+  if (S.queue.some(q => q.item.id === id)) throw new Error("A video with this title is already scheduled for that time.");
+  const prog = $("#prog"); prog.hidden = false; prog.value = 0;
+  await uploadVideo(`queue/${id}.mp4`, file, v => prog.value = v);
+  await writeJson(`queue/${id}.json`, MEDIA, { id, file: id + ".mp4", publish_at: toIso(when), ...d, results: {}, attempts: {} }, null, "queue " + id);
+  S.tab = "queue"; await reload(`Scheduled for ${fmtDay(when).toLowerCase()} at ${fmtTime(when)}`);
+}
+async function saveItem(q, msg) { await writeJson(q.path, MEDIA, q.item, q.sha, "edit " + q.item.id); await reload(msg); }
+const dispatch = () => gh(`/repos/${REPO}/actions/workflows/post.yml/dispatches`, { method: "POST", body: { ref: MAIN, inputs: { dry_run: "false" } } });
+function openEdit(q) {
+  const dlg = $("#dlg");
+  dlg.innerHTML = `<form method="dialog" id="editform"><h2 style="font-size:21px;margin-bottom:12px">Edit video</h2>${detailFields(q.item)}
+    <label for="e-at">Date and time <span class="hint">${esc(tz())}</span></label><input id="e-at" type="datetime-local" value="${toInput(q.due)}" required>
+    <label>Post to</label>${targetBoxes(targetsOf(q.item))}
+    <div class="btnrow"><button class="btn" value="save">Save changes</button><button class="btn alt" value="cancel" formnovalidate>Cancel</button></div></form>`;
+  const t = $("#f-title", dlg), c = () => $("#tcount", dlg).textContent = `${t.value.length}/100`; t.oninput = c; c();
+  dlg.onclose = () => { if (dlg.returnValue !== "save") return;
+    guard(async () => { const d = readDetails(dlg); if (!d.targets.length) throw new Error("Tick at least one channel.");
+      Object.assign(q.item, d, { publish_at: toIso(fromInput($("#e-at", dlg).value)) }); await saveItem(q, "Changes saved"); }); };
+  dlg.showModal();
+}
+async function sealSecret(name, value) {
+  if (!sealSecret.key) sealSecret.key = await gh(`/repos/${REPO}/actions/secrets/public-key`);
+  const sealed = sealedBox.seal(new TextEncoder().encode(value), b64ToBytes(sealSecret.key.key));
+  await gh(`/repos/${REPO}/actions/secrets/${name}`, { method: "PUT", body: { encrypted_value: bytesToB64(sealed), key_id: sealSecret.key.key_id } });
+  S.secrets.add(name);
+}
+async function saveAccounts(msg) { const r = await writeJson("accounts.json", MAIN, { accounts: S.accounts }, S.accSha, "update channels"); S.accSha = r.content.sha; render(); toast(msg); }
+
+document.addEventListener("click", e => {
+  const b = e.target.closest("button"); if (!b) return;
+  const d = b.dataset;
+  if (d.tab) return go(d.tab);
+  if (d.go) return go(d.go);
+  if (b.id === "signout") return signOut();
+  if (b.id === "refresh") return guard(() => reload("Up to date"), b);
+  if (b.id === "runnow") return guard(async () => { await dispatch(); toast("Checking now. Refresh in a minute to see the result."); }, b);
+  if (d.edit) return openEdit(S.queue[d.edit]);
+  if (d.now) return guard(async () => { const q = S.queue[d.now]; if (!confirm(`Post "${q.item.title}" now?`)) return;
+    q.item.publish_at = toIso(new Date()); await writeJson(q.path, MEDIA, q.item, q.sha, "post now " + q.item.id); await dispatch(); await reload("Posting now. It takes a few minutes."); }, b);
+  if (d.retry) return guard(async () => { const q = S.queue[d.retry];
+    for (const [id, r] of Object.entries(q.item.results || {})) if (r.status === "failed") { delete q.item.results[id]; if (q.item.attempts) q.item.attempts[id] = 0; }
+    await saveItem(q, "Will try again at the next check"); }, b);
+  if (d.del) return guard(async () => { const q = S.queue[d.del]; if (!confirm(`Delete "${q.item.title}"? The video file is removed too.`)) return;
+    await removeFile(q.path, q.sha, "delete " + q.item.id); if (q.videoSha) await removeFile("queue/" + q.item.file, q.videoSha, "delete " + q.item.id); await reload("Deleted"); }, b);
+  if (d.orphan) return guard(async () => { const f = S.orphans[d.orphan]; await removeFile("queue/" + f.name, f.sha, "remove " + f.name); await reload("Removed"); }, b);
+  if (d.savekey) return guard(async () => { const a = acc(d.savekey), v = $("#k-" + CSS.escape(a.id)).value.trim(); if (!v) throw new Error("Paste the key first.");
+    await sealSecret(secretNames(a).at(-1), v); render(); toast("Key saved for " + a.name); }, b);
+  if (d.rm) return guard(async () => { const a = acc(d.rm); if (!confirm(`Remove ${a.name}? Videos already scheduled will skip it.`)) return;
+    S.accounts = S.accounts.filter(x => x.id !== a.id); await saveAccounts("Channel removed"); }, b);
+  if (b.id === "saveg") return guard(async () => { const i = $("#g-id").value.trim(), s = $("#g-sec").value.trim(); if (!i || !s) throw new Error("Paste both the Client ID and the Client secret.");
+    await sealSecret("YT_CLIENT_ID", i); await sealSecret("YT_CLIENT_SECRET", s); render(); toast("Google app keys saved"); }, b);
+  if (b.id === "addslot") return $("#slots").insertAdjacentHTML("beforeend", slotRow("12:00"));
+  if ("rmslot" in d) return b.parentElement.remove();
+});
+document.addEventListener("change", e => {
+  const t = e.target;
+  if (t.name === "when") $("#f-at").hidden = t.value !== "pick";
+  if (t.dataset.mode) guard(async () => { const a = acc(t.dataset.mode); a.mode = t.value; await saveAccounts(`${a.name}: ${t.selectedOptions[0].text}`); });
+});
+document.addEventListener("submit", e => {
+  const f = e.target; if (f.method === "dialog") return; e.preventDefault();
+  if (f.id === "addform") guard(() => addVideo(f), $("#addbtn"));
+  if (f.id === "newchan") guard(async () => {
+    const platform = $("#n-plat").value, name = $("#n-name").value.trim(), pre = platform === "youtube" ? "yt-" : "ig-";
+    let base = slug(name), key = base.replace(/-/g, "_").toUpperCase(), n = 2;
+    while (S.accounts.some(a => a.id === pre + base)) { base = slug(name) + "-" + n; key = base.replace(/-/g, "_").toUpperCase(); n++; }
+    S.accounts.push({ id: pre + base, platform, name, key, mode: "off" }); await saveAccounts("Channel added. Now add its key."); });
+  if (f.id === "timesform") guard(async () => {
+    const slots = [...new Set([...f.querySelectorAll("#slots input")].map(i => i.value).filter(Boolean))].sort();
+    if (!slots.length) throw new Error("Keep at least one posting time.");
+    S.config.daily_slots = slots; S.config.timezone = $("#f-tz").value;
+    const r = await writeJson("config.json", MAIN, S.config, S.cfgSha, "update posting times"); S.cfgSha = r.content.sha; render(); toast("Times saved"); });
+});
+
+/* ---------- sign in ---------- */
+function signOut(msg) { token = null; try { localStorage.removeItem("gh_token"); } catch (e) {} $("#app").hidden = true; $("#login").hidden = false; if (msg) toast(msg, true); }
+async function start() {
+  $("#reponame").textContent = REPO;
+  if (!token) { $("#login").hidden = false; return; }
+  try { await load(); $("#login").hidden = true; $("#app").hidden = false; render(); }
+  catch (e) { if (e.message !== "signed out") { signOut(e.message); } }
+}
+$("#signin").onclick = () => { const v = $("#tok").value.trim(); if (!v) return toast("Paste your GitHub key first.", true);
+  token = v; try { localStorage.setItem("gh_token", v); } catch (e) {} $("#tok").value = ""; start(); };
+setInterval(() => { if (!$("#app").hidden) renderBand(); }, 30000);
+start();
+</script>
+</body>
+</html>

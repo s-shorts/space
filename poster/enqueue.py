@@ -21,6 +21,7 @@ from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = json.loads((ROOT / "config.json").read_text())
+ACCOUNTS = json.loads((ROOT / "accounts.json").read_text())["accounts"]
 MAX_BYTES = 95 * 1024 * 1024   # GitHub refuses files over 100 MB
 
 
@@ -69,7 +70,8 @@ def main():
     ap.add_argument("--tags", default="", help="comma separated")
     ap.add_argument("--caption", default="", help="Instagram caption; defaults to the description")
     ap.add_argument("--at", help="ISO time with offset, e.g. 2026-11-13T08:00:00+05:30")
-    ap.add_argument("--platforms", default=",".join(CONFIG["default_platforms"]))
+    ap.add_argument("--targets", default="",
+                    help="comma separated channel ids from accounts.json; default: all channels")
     ap.add_argument("--ai-disclosure", action="store_true",
                     help="tell YouTube the video has realistic AI-made content")
     args = ap.parse_args()
@@ -82,9 +84,10 @@ def main():
         sys.exit(f"{video.name} is over 95 MB; re-encode it smaller.")
     if len(args.title) > 100:
         sys.exit("YouTube titles are limited to 100 characters.")
-    platforms = [p.strip() for p in args.platforms.split(",") if p.strip()]
-    if not set(platforms) <= {"youtube", "instagram"}:
-        sys.exit("Platforms can only be youtube and instagram.")
+    known = [a["id"] for a in ACCOUNTS]
+    platforms = [p.strip() for p in args.targets.split(",") if p.strip()] or known
+    if not set(platforms) <= set(known):
+        sys.exit(f"Unknown channel. Choose from: {', '.join(known)}")
 
     if args.at:
         when = datetime.fromisoformat(args.at)
@@ -107,7 +110,7 @@ def main():
         "description": args.description,
         "tags": [t.strip() for t in args.tags.split(",") if t.strip()],
         "instagram_caption": args.caption or args.description,
-        "platforms": platforms,
+        "targets": platforms,
         "youtube": {"ai_disclosure": bool(args.ai_disclosure)},
         "results": {},
         "attempts": {},
