@@ -1,6 +1,18 @@
 {
   "accounts": [
-    {"id": "yt-main", "platform": "youtube", "name": "My YouTube channel", "key": "MAIN", "mode": "off"},
-    {"id": "ig-main", "platform": "instagram", "name": "My Instagram", "key": "MAIN", "mode": "off"}
+    {
+      "id": "yt-main",
+      "platform": "youtube",
+      "name": "My YouTube channel",
+      "key": "MAIN",
+      "mode": "private"
+    },
+    {
+      "id": "ig-main",
+      "platform": "instagram",
+      "name": "My Instagram",
+      "key": "MAIN",
+      "mode": "off"
+    }
   ]
 }
