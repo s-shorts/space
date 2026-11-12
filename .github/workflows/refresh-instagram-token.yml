@@ -1,0 +1,32 @@
+name: Refresh Instagram token
+
+# Instagram tokens last 60 days. This renews the token every week and saves it
+# back to the repo secrets. It needs a secret named GH_PAT (a fine-grained
+# GitHub token for this repo with "Secrets: read and write").
+
+on:
+  schedule:
+    - cron: "17 3 * * 1"
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -z "$IG_ACCESS_TOKEN" ]; then echo "Instagram is not set up yet."; exit 0; fi
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning::GH_PAT is not set, so the Instagram token was not renewed. It expires 60 days after it was made."
+            exit 0
+          fi
+          new=$(curl -sS --get "https://graph.instagram.com/refresh_access_token" \
+                  --data-urlencode "grant_type=ig_refresh_token" \
+                  --data-urlencode "access_token=$IG_ACCESS_TOKEN" | jq -r '.access_token // empty')
+          if [ -z "$new" ]; then echo "::error::Instagram did not return a new token."; exit 1; fi
+          echo "::add-mask::$new"
+          gh secret set IG_ACCESS_TOKEN --repo "$GITHUB_REPOSITORY" --body "$new"
+          echo "Instagram token renewed."

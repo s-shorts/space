@@ -1,0 +1,80 @@
+name: Post due videos
+
+on:
+  schedule:
+    - cron: "7,22,37,52 * * * *"   # every 15 minutes
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Test only: do not really post"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: poster
+  cancel-in-progress: false
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for a queue
+        id: media
+        run: |
+          if git ls-remote --exit-code --heads origin media >/dev/null; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No media branch yet, nothing to post."
+          fi
+
+      - uses: actions/checkout@v4
+        if: steps.media.outputs.exists == 'true'
+        with:
+          ref: media
+          path: media
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        if: steps.media.outputs.exists == 'true'
+        with:
+          python-version: "3.12"
+
+      - name: Post
+        if: steps.media.outputs.exists == 'true'
+        env:
+          MEDIA_DIR: media
+          GIT_SYNC: "1"
+          DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+          YOUTUBE_MODE: ${{ vars.YOUTUBE_MODE }}
+          INSTAGRAM_MODE: ${{ vars.INSTAGRAM_MODE }}
+          IG_API_VERSION: ${{ vars.IG_API_VERSION }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          pip install --quiet requests
+          git -C media config user.name "shorts-poster"
+          git -C media config user.email "shorts-poster@users.noreply.github.com"
+          python3 poster/post.py
+
+      # Deleting a file still leaves it in git history. Squash the media branch
+      # to a single commit so published videos are really gone from storage.
+      - name: Free storage
+        if: always() && steps.media.outputs.exists == 'true' && !inputs.dry_run
+        run: |
+          cd media
+          git fetch origin media
+          tip=$(git rev-parse origin/media)
+          if [ "$(git rev-list --count origin/media)" -gt 1 ]; then
+            new=$(git commit-tree "origin/media^{tree}" -m "queue")
+            git push --force-with-lease=media:"$tip" origin "$new":refs/heads/media \
+              || echo "Queue changed meanwhile; will tidy on the next run."
+          fi

@@ -1,0 +1,16 @@
+{
+  "timezone": "Asia/Kolkata",
+  "daily_slots": ["08:00", "11:00", "14:00", "17:00", "20:00", "22:30"],
+  "default_platforms": ["youtube", "instagram"],
+  "youtube": {
+    "category_id": "28",
+    "made_for_kids": false,
+    "ai_disclosure": false,
+    "notify_subscribers": true
+  },
+  "instagram": {
+    "share_to_feed": true
+  },
+  "max_attempts": 5,
+  "max_posts_per_run": 1
+}
