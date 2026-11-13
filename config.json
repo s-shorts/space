@@ -11,7 +11,7 @@
   "youtube": {
     "category_id": "28",
     "made_for_kids": false,
-    "ai_disclosure": false,
+    "ai_disclosure": true,
     "notify_subscribers": true
   },
   "instagram": {

@@ -5,7 +5,7 @@
       "platform": "youtube",
       "name": "My YouTube channel",
       "key": "MAIN",
-      "mode": "private"
+      "mode": "public"
     },
     {
       "id": "ig-main",
