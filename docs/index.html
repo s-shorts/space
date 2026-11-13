@@ -341,7 +341,7 @@ function viewChannels() {
         return `<div class="panel chan"><h3>${esc(a.name)}</h3>
           <select data-mode="${esc(a.id)}" aria-label="Posting for ${esc(a.name)}">${modes.map(([v, l]) => `<option value="${v}" ${a.mode === v ? "selected" : ""}>${l}</option>`).join("")}</select>
           <div class="keys">${!S.secretsKnown ? "Key status unknown (the GitHub key cannot read secrets)." : S.secrets.has(tokName) ? `<span class="ok">Key saved</span>` : `<span class="missing">Key missing</span>. Paste it below.`}
-            ${p === "youtube" && a.mode === "public" ? `<p class="note">Public works only after Google approves your project. Before that, YouTube locks every upload as private.</p>` : ""}</div>
+            </div>
           <details><summary>${S.secrets.has(tokName) ? "Replace the key" : "Add the key"}</summary>
             <label for="k-${esc(a.id)}">${p === "youtube" ? "Refresh token for this channel" : "Instagram access token for this account"}</label>
             <input id="k-${esc(a.id)}" type="password" autocomplete="off">
@@ -350,7 +350,7 @@ function viewChannels() {
       }).join("") : `<div class="empty"><p>No ${title} channel yet.</p></div>`);
   };
   const g = S.secrets.has("YT_CLIENT_ID") && S.secrets.has("YT_CLIENT_SECRET");
-  return sec("youtube", "YouTube", "Private test uploads videos that only you can see. Switch to Public once Google has approved your project.") +
+  return sec("youtube", "YouTube", "Private test uploads videos that only you can see. Public posts them for everyone.") +
     `<div class="panel"><h3 style="font:600 17px var(--body)">Google app keys</h3><p class="note">Shared by all your YouTube channels. ${g ? `<span class="ok">Saved</span>` : `<span class="missing">Missing</span>`}</p>
       <details style="border:0;padding:0"><summary>${g ? "Replace" : "Add"} the Google app keys</summary>
       <label for="g-id">Client ID</label><input id="g-id" type="text" autocomplete="off">

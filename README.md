@@ -16,7 +16,7 @@ GitHub's timer is not exact: a post can go out 5 to 20 minutes after its slot.
 
 ## Channels
 
-`accounts.json` lists any number of YouTube and Instagram channels. Each has a mode (YouTube: `off` / `private` / `public`; Instagram: `off` / `on`) and its own key saved as a repo secret (`YT_<KEY>_REFRESH_TOKEN` or `IG_<KEY>_TOKEN`). Use `public` on YouTube only after the Google audit passes. Manage all of this from the dashboard's Channels tab.
+`accounts.json` lists any number of YouTube and Instagram channels. Each has a mode (YouTube: `off` / `private` / `public`; Instagram: `off` / `on`) and its own key saved as a repo secret (`YT_<KEY>_REFRESH_TOKEN` or `IG_<KEY>_TOKEN`). Manage all of this from the dashboard's Channels tab.
 
 ## Posting times
 
@@ -25,7 +25,6 @@ Dashboard → Posting times (stored in `config.json`). Default: 08:00, 11:00, 14
 ## Setup
 
 - [docs/SETUP.md](docs/SETUP.md): connect YouTube and Instagram (one time).
-- [docs/youtube-audit-answers.md](docs/youtube-audit-answers.md): draft answers for Google's YouTube API audit form.
 
 ## Queue item format
 

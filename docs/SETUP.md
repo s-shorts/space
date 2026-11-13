@@ -54,15 +54,12 @@ In Channels:
 - Your YouTube channel → "Add the key": paste the Refresh token.
 - Set the channel to **Private test** for now.
 
-With Private test, uploads work but nobody else can see them. That is enough to prove the app works for the audit.
+With Private test, uploads work but nobody else can see them. Use it to check everything is connected.
 
 **More YouTube channels.** Repeat B2 for each channel (choose that channel in step 4), then in the dashboard use "Add a channel" and paste its Refresh token. The Google app keys stay the same.
 
-### B4. The audit
-Until Google audits the project, every upload made through it is locked as private and cannot be switched to public later. So keep uploading to YouTube by hand until approval.
-
-1. Fill in the "YouTube API Services – Audit and Quota Extension Form" (search that name on Google's help site). Draft answers are in [youtube-audit-answers.md](youtube-audit-answers.md).
-2. When Google emails that the project is approved, set each YouTube channel to **Public** in the dashboard.
+### B4. Go public
+Since 2 November 2026 Google no longer locks uploads from unaudited projects as private, so no audit is needed. After one Private test upload has worked, set the channel to **Public** in the dashboard. Check the first public video in YouTube Studio a few minutes after it posts to confirm it shows as Public.
 
 ---
 
