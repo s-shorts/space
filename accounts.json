@@ -13,6 +13,13 @@
       "name": "My Instagram",
       "key": "MAIN",
       "mode": "off"
+    },
+    {
+      "id": "yt-owlfiles",
+      "platform": "youtube",
+      "name": "The Owl Files",
+      "key": "OWLFILES",
+      "mode": "public"
     }
   ]
 }
