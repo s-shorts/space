@@ -1,0 +1,15 @@
+name: TTS fix lines
+on:
+  push:
+    branches: [tts-fix]
+permissions:
+  contents: write
+jobs:
+  tts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install "edge-tts>=7.0" && python3 fix.py
+      - run: |
+          cd out && git init -q -b tts-fix-out && git config user.name bot && git config user.email actions@users.noreply.github.com
+          git add -A && git commit -q -m fix && git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" tts-fix-out
