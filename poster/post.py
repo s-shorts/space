@@ -118,7 +118,7 @@ def post_youtube(item, video, acc):
     body = {
         "snippet": {
             "title": item["title"][:100],
-            "description": item.get("description", ""),
+            "description": fill_link(item.get("description", ""), linked_url(item, acc["id"])[0]),
             "tags": item.get("tags", []),
             "categoryId": str(yt.get("category_id", "28")),
         },
@@ -212,6 +212,44 @@ def post_instagram(item, video, acc):
     return {"id": media_id, "url": url}
 
 
+
+# ---------------------------------------------------------------- links between videos
+LINK_TOKEN = "{FULL_VIDEO_URL}"
+
+
+def linked_url(item, platform):
+    """For an item with "link_to": the URL of that video on the same channel.
+    Returns (url, wait): wait=True means the linked video is still queued, so hold this one back."""
+    target = item.get("link_to")
+    if not target:
+        return None, False
+    if LOG.is_file():
+        for line in LOG.read_text().splitlines():
+            try:
+                entry = json.loads(line)
+            except ValueError:
+                continue
+            res = entry.get("results", {}).get(platform, {})
+            if entry.get("id") == target and res.get("status") == "done" and res.get("id"):
+                return f"https://youtu.be/{res['id']}", False
+    path = QUEUE / f"{target}.json"
+    if path.is_file():
+        other = json.loads(path.read_text())
+        res = other.get("results", {}).get(platform, {})
+        if res.get("status") == "done" and res.get("id"):
+            return f"https://youtu.be/{res['id']}", False
+        if other.get("attempts", {}).get(platform, 0) < CONFIG.get("max_attempts", 5):
+            return None, True
+    return None, False  # linked video failed for good or is unknown: post without the link
+
+
+def fill_link(text, url):
+    if LINK_TOKEN not in text:
+        return text
+    if url:
+        return text.replace(LINK_TOKEN, url)
+    return "\n".join(l for l in text.split("\n") if LINK_TOKEN not in l)
+
 POSTERS = {"youtube": post_youtube, "instagram": post_instagram}
 
 
@@ -294,6 +332,10 @@ def main():
             continue
         if posted >= limit:
             log(f"{item['id']} is due too; it goes out on the next run.")
+            continue
+        waiting = [p for p in todo if enabled[p]["platform"] == "youtube" and linked_url(item, p)[1]]
+        if waiting:
+            log(f"{item['id']} waits for {item['link_to']} to be published first.")
             continue
         video = QUEUE / item["file"]
         if not video.is_file():

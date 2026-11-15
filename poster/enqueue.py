@@ -72,6 +72,9 @@ def main():
     ap.add_argument("--at", help="ISO time with offset, e.g. 2026-11-13T08:00:00+05:30")
     ap.add_argument("--targets", default="",
                     help="comma separated channel ids from accounts.json; default: all channels")
+    ap.add_argument("--link-to", default="",
+                    help="queue id of another video; {FULL_VIDEO_URL} in the description becomes its YouTube link, "
+                         "and this video waits until that one is published")
     ap.add_argument("--ai-disclosure", action="store_true",
                     help="tell YouTube the video has realistic AI-made content")
     args = ap.parse_args()
@@ -112,6 +115,7 @@ def main():
         "instagram_caption": args.caption or args.description,
         "targets": platforms,
         "youtube": {"ai_disclosure": bool(args.ai_disclosure)},
+        **({"link_to": args.link_to} if args.link_to else {}),
         "results": {},
         "attempts": {},
     }
