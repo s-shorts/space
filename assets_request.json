@@ -1,0 +1,42 @@
+{
+ "photos": [
+  {"id": "launch", "q": "Voyager 1 launch Titan IIIE Centaur 1977", "n": 3},
+  {"id": "probe", "q": "Voyager spacecraft artist concept NASA", "n": 3},
+  {"id": "assembly", "q": "Voyager spacecraft assembly JPL 1977", "n": 2},
+  {"id": "jupiter", "q": "Jupiter Voyager 1 1979 full disc", "n": 3},
+  {"id": "redspot", "q": "Great Red Spot Voyager 1", "n": 2},
+  {"id": "io", "q": "Io volcanic plume Voyager 1 Loki", "n": 3},
+  {"id": "saturn", "q": "Saturn Voyager 1 1980", "n": 3},
+  {"id": "rings", "q": "Saturn rings Voyager ringlets", "n": 2},
+  {"id": "titan", "q": "Titan haze Voyager 1", "n": 2},
+  {"id": "pbd", "q": "Pale Blue Dot Voyager 1 1990", "n": 3},
+  {"id": "portrait", "q": "Voyager family portrait solar system mosaic", "n": 2},
+  {"id": "record", "q": "Voyager Golden Record", "n": 3},
+  {"id": "dsn", "q": "Canberra Deep Space Communication Complex 70m antenna", "n": 3},
+  {"id": "helio", "q": "heliosphere Voyager interstellar space illustration NASA", "n": 3},
+  {"id": "milkyway", "q": "Milky Way night sky Ladakh", "n": 2},
+  {"id": "earthmoon", "q": "Earth and Moon Voyager 1 1977 crescent", "n": 2}
+ ],
+ "ai": [
+  {"name": "a01_voyager_dark.jpg", "seed": 11, "prompt": "NASA Voyager space probe with large white parabolic dish antenna and long thin boom, drifting alone in deep interstellar space, faint stars and Milky Way glow behind, cinematic, photorealistic, dark moody, rim lighting, highly detailed"},
+  {"name": "a02_voyager_milky.jpg", "seed": 4, "prompt": "tiny distant space probe silhouette against a vast glowing Milky Way galaxy band, deep space, cinematic wide shot, photorealistic, serene, dark blue and gold"},
+  {"name": "a03_cleanroom_1977.jpg", "seed": 7, "prompt": "1970s spacecraft clean room, engineers in white coveralls from behind assembling a space probe with a big white dish antenna, warm vintage film photograph, 35mm grain, soft light"},
+  {"name": "a04_tape_computer.jpg", "seed": 5, "prompt": "vintage 1970s computer with reel to reel magnetic tape and blinking lights in a dark laboratory, cinematic close up, warm glow, film grain"},
+  {"name": "a05_rtg_glow.jpg", "seed": 9, "prompt": "cylindrical radioisotope thermoelectric generator with metal cooling fins glowing softly warm orange in total darkness, macro, cinematic, realistic sci-fi"},
+  {"name": "a06_swing.jpg", "seed": 2, "prompt": "silhouette of a child on a swing in an Indian village at dusk, first stars appearing in a deep blue sky, painterly, gentle, warm"},
+  {"name": "a07_io_volcano.jpg", "seed": 8, "prompt": "huge umbrella shaped volcanic plume rising from the edge of Jupiter's yellow moon Io, giant striped Jupiter in background, photorealistic space art, cinematic"},
+  {"name": "a08_titan_flyby.jpg", "seed": 6, "prompt": "small space probe flying past hazy orange moon Titan, Saturn with rings large in the background, cinematic space art, photorealistic"},
+  {"name": "a09_tanpura_night.jpg", "seed": 3, "prompt": "Indian classical tanpura instrument resting on a carpet beside an open window, starry night sky outside, a small brass oil lamp glowing, serene, painterly, warm and dark"},
+  {"name": "a10_record_space.jpg", "seed": 12, "prompt": "golden phonograph record disc floating in deep space among stars, soft reflections, cinematic, photorealistic, dark"},
+  {"name": "a11_heliopause.jpg", "seed": 1, "prompt": "enormous faint translucent glowing bubble boundary in space, blue on the outside and orange on the inside, a tiny spacecraft crossing it, cosmic space art, cinematic"},
+  {"name": "a12_control_night.jpg", "seed": 10, "prompt": "empty spacecraft mission control room at night, glowing monitors with green telemetry text, a cup of tea, cinematic, moody blue light, realistic"},
+  {"name": "a13_binary.jpg", "seed": 13, "prompt": "abstract stream of glowing green ones and zeros dissolving into static in the dark, digital glitch, cinematic"},
+  {"name": "a14_dish_night.jpg", "seed": 14, "prompt": "giant radio telescope dish antenna pointing at a starry night sky with the Milky Way, long exposure, photorealistic, quiet"},
+  {"name": "a15_rooftop_child.jpg", "seed": 15, "prompt": "child lying on a rooftop of an Indian town at night looking up at a starry sky, string lights, peaceful, painterly illustration, soft blue"},
+  {"name": "a16_red_star.jpg", "seed": 16, "prompt": "a small dim orange red dwarf star in deep black space, a tiny distant spacecraft far away, cinematic, photorealistic, lonely"},
+  {"name": "a17_bedroom_window.jpg", "seed": 17, "prompt": "quiet bedroom window at night with sheer curtains moving, starlit sky and crescent moon outside, cozy, peaceful, soft blue light, cinematic"},
+  {"name": "a18_probe_record.jpg", "seed": 18, "prompt": "close up of a golden record disc mounted on the side of a 1970s space probe, gold foil, deep space background, photorealistic, cinematic lighting"},
+  {"name": "a19_thrusters.jpg", "seed": 19, "prompt": "tiny thruster puff of gas from an old space probe in darkness, faint stars, cinematic, photorealistic"},
+  {"name": "a20_kashmir_road.jpg", "seed": 20, "prompt": "long highway stretching across India from snowy Himalayan mountains to the ocean, aerial dusk view, painterly, wide"}
+ ]
+}

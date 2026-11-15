@@ -1,0 +1,65 @@
+{
+ "title": "Voyager 1: One Light-Day From Home",
+ "voice": "en-IN-PrabhatNeural",
+ "scenes": [
+  {"id": "s01", "name": "cold_open", "paras": [
+   "Close your eyes for a moment. Or keep them open, if you like the stars.",
+   "Somewhere out there, far beyond the last planet, a small machine is falling quietly through the dark. It is about the size of a small car. It has no windows, no passengers, and no way to turn around. It has been travelling for forty-nine years.",
+   "Its name is Voyager 1. And this week, it is crossing a line that nothing made by human hands has ever crossed before."]},
+  {"id": "s02", "name": "light_day", "paras": [
+   "Light is the fastest thing in the universe. It can circle the Earth seven times in a single second. From the Moon, light reaches us in just over one second. From the Sun, in about eight minutes.",
+   "But on the eighteenth of November, 2026, a whisper of radio sent by Voyager 1 will need a full twenty-four hours to reach home. One whole day.",
+   "If an engineer says hello on Monday morning, Voyager hears it on Tuesday morning. And its reply arrives on Wednesday. Even our phone networks are not that slow. Well. Mostly."]},
+  {"id": "s03", "name": "launch_1977", "paras": [
+   "So let us go back to where this journey began. The year is 1977. Engineers in California are building something for a part of our solar system that no one has ever seen up close.",
+   "There is a rare gift in the sky that decade. Jupiter, Saturn, Uranus and Neptune are lining up in a way that happens only once in about a hundred and seventy-five years. A spacecraft could swing from one giant planet to the next, stealing a little speed from each, like a child jumping from one moving swing to another.",
+   "So they built twins. Voyager 2 left first, on the twentieth of August. Voyager 1 followed on the fifth of September, on a faster path. Yes. Voyager 1 launched second. Even space agencies, it seems, have naming problems."]},
+  {"id": "s04", "name": "inside", "paras": [
+   "And what did they pack inside? Computers with less memory than a single photo on your phone. A tape recorder, with real tape. A radio transmitter about as powerful as the little bulb inside your refrigerator.",
+   "And a heart that needs no sunlight. A small core of plutonium, slowly giving off heat, turned quietly into electricity.",
+   "Nobody expected any of this to last fifty years. The mission was planned for five."]},
+  {"id": "s05", "name": "jupiter", "paras": [
+   "In March 1979, Voyager 1 swept past Jupiter. The pictures came back like postcards from a dream. Storms bigger than the whole Earth. Clouds swirling in creamy bands of orange and white.",
+   "And then, a surprise that no one was ready for. A navigation engineer named Linda Morabito, studying a picture of the moon Io, noticed a strange shape rising from its edge. A giant umbrella of gas, hundreds of kilometres high.",
+   "It was a volcano. An active volcano, erupting, on another world. For the first time, we had caught another world in the act."]},
+  {"id": "s06", "name": "saturn_titan", "paras": [
+   "Then came Saturn, in November 1980. Its rings were not a few simple bands, as we had imagined. They were thousands of thin ringlets, braided and guarded by tiny moons.",
+   "And here, the team faced a hard choice. Saturn's giant moon Titan was wrapped in a thick, mysterious haze. To take a closer look, Voyager 1 would have to bend its path sharply, up and out of the flat plane where all the planets live. It would never visit another planet again.",
+   "They took the chance. Voyager 1 dived past Titan, and was flung upward, away from the planets, towards the stars. Titan's haze kept its secrets that day. But Voyager now had a new destination. Everything else."]},
+  {"id": "s07", "name": "pale_blue_dot", "paras": [
+   "For nearly ten years it travelled on, in silence. Then, on Valentine's Day, 1990, the team gave its cameras one last instruction. Turn around. And look back.",
+   "From about six billion kilometres away, Voyager 1 took a picture of home. And the Earth was a dot. Smaller than a single pixel, floating in a pale beam of scattered sunlight.",
+   "Every king and every exam. Every cricket match. Every cup of chai ever made. All of it, on that one tiny speck.",
+   "Minutes later, the cameras were switched off, forever. There was nothing left to photograph. Only darkness, in every direction."]},
+  {"id": "s08", "name": "golden_record", "paras": [
+   "But Voyager is not travelling empty-handed. Bolted to its side is a golden record. A gold-plated copper disc, carrying the sounds and pictures of Earth.",
+   "Rain and thunder. Laughter. A kiss. A baby's cry. A human heartbeat. And greetings in fifty-five languages, including Hindi, Bengali, Marathi, Telugu and Urdu. The Hindi one is simple. Greetings, from the people of this world.",
+   "And among the music, there is a raga. Jaat Kahan Ho, in raga Bhairavi, sung by Surshri Kesarbai Kerkar, a great singer from a small village in Goa. A morning raga, now drifting through an endless night.",
+   "Its words ask a question that fits strangely well. Where are you going, all alone?"]},
+  {"id": "s09", "name": "heliopause", "paras": [
+   "For thirty-five years, Voyager 1 flew inside a giant, invisible bubble. A bubble blown by the Sun itself, out of the solar wind.",
+   "Then, in August 2012, the readings changed. The wind from the Sun faded away. The particles of the galaxy grew stronger. Voyager 1 had slipped out of the bubble, into interstellar space. The space between the stars.",
+   "And it did this without any announcement. Scientists became sure only months later, by listening to the faint hum of the thin gas around it. Even its biggest moment happened quietly. Very Voyager."]},
+  {"id": "s10", "name": "glitch_2023", "paras": [
+   "But quiet does not mean easy. In November 2023, Voyager 1 suddenly began talking nonsense. Its messages turned into a meaningless pattern of ones and zeros. Was this the end?",
+   "For months, a small team worked like detectives, over a line where every question took almost two days to answer. Slowly, they found the culprit. A single memory chip had failed.",
+   "So they did something beautiful. They cut the old code into pieces, and moved it, bit by bit, into other corners of the memory. Like rearranging your whole house, from twenty-four billion kilometres away, in the dark, waiting nearly two days for every reply.",
+   "In April 2024, Voyager 1 began to make sense again. And somewhere in California, some very tired engineers were very, very happy."]},
+  {"id": "s11", "name": "power_fading", "paras": [
+   "Today, that little plutonium heart is growing weaker. It loses about four watts of power every year. So, one by one, the team has been switching things off. Heaters. Cameras. Instruments.",
+   "In April this year, they turned off another one. An instrument that had listened to charged particles, almost without a break, since 1977.",
+   "Then came a plan with a rather dramatic name. The Big Bang. Don't worry, nothing exploded. It meant switching several devices at once, swapping them for ones that need less power, while keeping the spacecraft warm enough that its fuel lines don't freeze. It worked on Voyager 2 in July. And in September, on Voyager 1."]},
+  {"id": "s12", "name": "october_silence", "paras": [
+   "And then, just last month, a fright. On the eighteenth and nineteenth of October, the giant dishes of the Deep Space Network listened for Voyager 1, and heard nothing. Only silence.",
+   "On the twentieth, the signal came back. One set of its thrusters had stopped working, and the spacecraft had calmly switched to its backup set, exactly as it was designed to do, almost fifty years ago.",
+   "The cause is still being studied. But the old traveller was still talking."]},
+  {"id": "s13", "name": "the_future", "paras": [
+   "So where is it now? It is moving at about sixty-one thousand kilometres an hour. Every single hour, it travels the distance from Kashmir to Kanyakumari, more than sixteen times over.",
+   "Its last instruments may fall silent in the next few years. One day, its radio will go quiet too. But Voyager itself will keep going.",
+   "In about forty thousand years, it will pass within roughly one point seven light-years of a small star called Gliese 445. It will not stop there. It will not stop anywhere."]},
+  {"id": "s14", "name": "goodnight", "paras": [
+   "And long after our world has changed beyond recognition, a golden record will still be out there. Carrying a raga from Goa. A hello in Hindi. And the sound of a human heartbeat.",
+   "One light-day from home. And still going.",
+   "So tonight, as you drift off to sleep, remember. Somewhere in the dark, a small machine from 1977 is still awake. So that you don't have to be. Sleep well. Good night."]}
+ ]
+}
