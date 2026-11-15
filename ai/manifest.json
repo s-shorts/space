@@ -1,0 +1,105 @@
+{
+ "generated": [
+  {
+   "name": "a01_voyager_dark.jpg",
+   "ok": true,
+   "prompt": "NASA Voyager space probe with large white parabolic dish antenna and long thin boom, drifting alone in deep interstellar space, faint stars and Milky Way glow behind, cinematic, photorealistic, dark moody, rim lighting, highly detailed"
+  },
+  {
+   "name": "a02_voyager_milky.jpg",
+   "ok": true,
+   "prompt": "tiny distant space probe silhouette against a vast glowing Milky Way galaxy band, deep space, cinematic wide shot, photorealistic, serene, dark blue and gold"
+  },
+  {
+   "name": "a03_cleanroom_1977.jpg",
+   "ok": false,
+   "prompt": "1970s spacecraft clean room, engineers in white coveralls from behind assembling a space probe with a big white dish antenna, warm vintage film photograph, 35mm grain, soft light"
+  },
+  {
+   "name": "a04_tape_computer.jpg",
+   "ok": true,
+   "prompt": "vintage 1970s computer with reel to reel magnetic tape and blinking lights in a dark laboratory, cinematic close up, warm glow, film grain"
+  },
+  {
+   "name": "a05_rtg_glow.jpg",
+   "ok": false,
+   "prompt": "cylindrical radioisotope thermoelectric generator with metal cooling fins glowing softly warm orange in total darkness, macro, cinematic, realistic sci-fi"
+  },
+  {
+   "name": "a06_swing.jpg",
+   "ok": true,
+   "prompt": "silhouette of a child on a swing in an Indian village at dusk, first stars appearing in a deep blue sky, painterly, gentle, warm"
+  },
+  {
+   "name": "a07_io_volcano.jpg",
+   "ok": true,
+   "prompt": "huge umbrella shaped volcanic plume rising from the edge of Jupiter's yellow moon Io, giant striped Jupiter in background, photorealistic space art, cinematic"
+  },
+  {
+   "name": "a08_titan_flyby.jpg",
+   "ok": true,
+   "prompt": "small space probe flying past hazy orange moon Titan, Saturn with rings large in the background, cinematic space art, photorealistic"
+  },
+  {
+   "name": "a09_tanpura_night.jpg",
+   "ok": false,
+   "prompt": "Indian classical tanpura instrument resting on a carpet beside an open window, starry night sky outside, a small brass oil lamp glowing, serene, painterly, warm and dark"
+  },
+  {
+   "name": "a10_record_space.jpg",
+   "ok": true,
+   "prompt": "golden phonograph record disc floating in deep space among stars, soft reflections, cinematic, photorealistic, dark"
+  },
+  {
+   "name": "a11_heliopause.jpg",
+   "ok": true,
+   "prompt": "enormous faint translucent glowing bubble boundary in space, blue on the outside and orange on the inside, a tiny spacecraft crossing it, cosmic space art, cinematic"
+  },
+  {
+   "name": "a12_control_night.jpg",
+   "ok": true,
+   "prompt": "empty spacecraft mission control room at night, glowing monitors with green telemetry text, a cup of tea, cinematic, moody blue light, realistic"
+  },
+  {
+   "name": "a13_binary.jpg",
+   "ok": true,
+   "prompt": "abstract stream of glowing green ones and zeros dissolving into static in the dark, digital glitch, cinematic"
+  },
+  {
+   "name": "a14_dish_night.jpg",
+   "ok": true,
+   "prompt": "giant radio telescope dish antenna pointing at a starry night sky with the Milky Way, long exposure, photorealistic, quiet"
+  },
+  {
+   "name": "a15_rooftop_child.jpg",
+   "ok": true,
+   "prompt": "child lying on a rooftop of an Indian town at night looking up at a starry sky, string lights, peaceful, painterly illustration, soft blue"
+  },
+  {
+   "name": "a16_red_star.jpg",
+   "ok": true,
+   "prompt": "a small dim orange red dwarf star in deep black space, a tiny distant spacecraft far away, cinematic, photorealistic, lonely"
+  },
+  {
+   "name": "a17_bedroom_window.jpg",
+   "ok": false,
+   "prompt": "quiet bedroom window at night with sheer curtains moving, starlit sky and crescent moon outside, cozy, peaceful, soft blue light, cinematic"
+  },
+  {
+   "name": "a18_probe_record.jpg",
+   "ok": false,
+   "prompt": "close up of a golden record disc mounted on the side of a 1970s space probe, gold foil, deep space background, photorealistic, cinematic lighting"
+  },
+  {
+   "name": "a19_thrusters.jpg",
+   "ok": false,
+   "prompt": "tiny thruster puff of gas from an old space probe in darkness, faint stars, cinematic, photorealistic"
+  },
+  {
+   "name": "a20_kashmir_road.jpg",
+   "ok": true,
+   "prompt": "long highway stretching across India from snowy Himalayan mountains to the ocean, aerial dusk view, painterly, wide"
+  }
+ ],
+ "has_key": false
+}
