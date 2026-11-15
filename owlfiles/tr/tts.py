@@ -7,7 +7,8 @@ L=[("1942. A tiny frozen lake in the Himalayas.","Nineteen forty-two. A tiny fro
    ("A deadly hailstorm? Case closed.",None),
    ("Then the DNA came back.","Then the D N A came back."),
    ("They died 1,000 years apart. And some had Greek-like ancestry!","They died a thousand years apart. And some had Greek-like ancestry!"),
-   ("Who were they? Full case on The Owl Files.",None)]
+   ("Who were they?",None),
+   ("The full video is available on our channel. Kindly visit to watch.",None)]
 out=[]
 for i,(d,s) in enumerate(L):
     a,sr=k.create(s or d,voice=v,speed=1.06,lang="en-gb")

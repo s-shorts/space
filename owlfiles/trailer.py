@@ -54,7 +54,7 @@ def endcard(c, tt, t0, f):
     rrect(c, -440, -300, 880, 600, 16, P("#d9ab5c")); rrect(c, -410, -270, 820, 540, 8, P(PAPER))
     text(c, "CASE #001", 0, -200, 34, "t", "#6b5a3c", anchor="c")
     text(c, "WHO WERE", 0, -90, 92, "b", INK, anchor="c"); text(c, "THEY?", 0, 20, 110, "b", RED, anchor="c")
-    text(c, "Full case now on", 0, 130, 44, "s", "#6b5a3c", anchor="c"); text(c, "THE OWL FILES", 0, 210, 66, "b", INK, anchor="c")
+    text(c, "Full video on our channel", 0, 130, 46, "b", INK, anchor="c"); text(c, "Kindly visit to watch", 0, 205, 48, "s", "#6b5a3c", anchor="c")
     c.restore(); stamp(c, "WATCH NOW", 700, 1110, 64, u, 0.9, rot=-10)
     text(c, "@TheOwlFiles", 540, 300, 48, "b", MUST, eout(prog(u, 0.4, 0.3)), "c")
 def frame(f):
