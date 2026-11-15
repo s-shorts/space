@@ -8,6 +8,50 @@ ALLOWED = ("upload.wikimedia.org", "commons.wikimedia.org", "images-assets.nasa.
 MAX_FILES, MAX_BYTES = 30, 15 * 1024 * 1024
 UA = "OwlFilesAssetFetcher/1.0 (https://github.com/s-shorts/space; educational video project)"
 req = json.load(open("request.json")); os.makedirs("out", exist_ok=True); res = []
+KEY = os.environ.get("POLLINATIONS_API_KEY", "").strip()
+import time
+def get(url, want, timeout=180):
+    with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=timeout) as f:
+        ct = f.headers.get("Content-Type", "")
+        if not ct.startswith(want): raise ValueError("unexpected content type: " + ct)
+        return f.read(60 * 1024 * 1024)
+# ---- AI-generated images and (with a key) video clips, through Pollinations
+gen = []; last = 0.0
+for item in req.get("generate", [])[:24]:
+    kind = item.get("kind", "image"); name = re.sub(r"[^A-Za-z0-9._-]", "_", item.get("name", ""))[:80]
+    r = dict(name=name, kind=kind, prompt=item.get("prompt", ""), ok=False)
+    try:
+        prompt = urllib.parse.quote(item["prompt"][:900], safe="")
+        q = dict(width=int(item.get("width", 1920)), height=int(item.get("height", 1080)), seed=int(item.get("seed", 1)), nologo="true")
+        if item.get("model"): q["model"] = item["model"]
+        if kind == "video":
+            if not KEY: raise ValueError("video needs the POLLINATIONS_API_KEY repository secret")
+            if not re.search(r"\.mp4$", name): raise ValueError("video name must end in .mp4")
+            q.setdefault("model", "seedance"); q["duration"] = int(item.get("duration", 5)); q["key"] = KEY
+            if item.get("image"): q["image"] = item["image"]
+            url = "https://gen.pollinations.ai/image/" + prompt + "?" + urllib.parse.urlencode(q); want = "video/"
+        else:
+            if not re.search(r"\.(jpe?g|png)$", name): raise ValueError("image name must end in .jpg or .png")
+            if KEY: q["key"] = KEY; url = "https://gen.pollinations.ai/image/" + prompt + "?" + urllib.parse.urlencode(q)
+            else: url = "https://image.pollinations.ai/prompt/" + prompt + "?" + urllib.parse.urlencode(q)
+            want = "image/"
+        err = None
+        for attempt in range(3):
+            wait = (3 if KEY else 16) - (time.time() - last)
+            if wait > 0: time.sleep(wait)
+            try:
+                data = get(url, want, 300 if kind == "video" else 120); last = time.time(); err = None; break
+            except Exception as e:
+                last = time.time(); err = e; time.sleep(10)
+        if err: raise err
+        open(os.path.join("out", name), "wb").write(data); r.update(ok=True, bytes=len(data))
+    except Exception as e:
+        r["error"] = re.sub(r"key=[^&\s]+", "key=***", str(e))[:200]
+    gen.append(r); print({k: v for k, v in r.items() if k != "prompt"})
+models = None
+if KEY:
+    try: models = json.loads(get("https://gen.pollinations.ai/image/models?key=" + KEY, "application/json", 30))
+    except Exception as e: models = "could not list: " + re.sub(r"key=[^&\s]+", "key=***", str(e))[:120]
 for item in req.get("files", [])[:MAX_FILES]:
     url = item.get("url", ""); name = re.sub(r"[^A-Za-z0-9._-]", "_", item.get("name", ""))[:80]
     r = dict(name=name, url=url, credit=item.get("credit", ""), licence=item.get("licence", ""), ok=False)
@@ -24,4 +68,4 @@ for item in req.get("files", [])[:MAX_FILES]:
     except Exception as e:
         r["error"] = str(e)[:200]
     res.append(r); print(r)
-json.dump(dict(id=req.get("id", ""), files=res), open("out/manifest.json", "w"), indent=1)
+json.dump(dict(id=req.get("id", ""), files=res, generated=gen, has_key=bool(KEY), models=models), open("out/manifest.json", "w"), indent=1)

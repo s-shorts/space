@@ -1,4 +1,4 @@
-name: Fetch photo assets
+name: Fetch photo and AI assets
 
 # Downloads the public-domain / openly licensed images listed in request.json
 # and publishes them on the "assets" branch (replaced on every request).
@@ -17,10 +17,12 @@ concurrency:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-      - name: Download
+      - name: Download and generate
+        env:
+          POLLINATIONS_API_KEY: ${{ secrets.POLLINATIONS_API_KEY }}
         run: python3 fetch.py
       - name: Publish to assets branch
         run: |

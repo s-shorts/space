@@ -1,4 +1,20 @@
-{"id": "test-20261115", "files": [
- {"name": "earth_apollo17.jpg", "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/The_Earth_seen_from_Apollo_17.jpg/1280px-The_Earth_seen_from_Apollo_17.jpg", "credit": "NASA / Apollo 17 crew", "licence": "Public domain"},
- {"name": "bad.jpg", "url": "https://example.com/x.jpg", "credit": "", "licence": ""}
-]}
+{
+ "id": "aitest-20261115",
+ "files": [],
+ "generate": [
+  {
+   "name": "lake.jpg",
+   "prompt": "cinematic photograph of a small frozen glacial lake high in the Himalayas at dawn, snow covered rocky ridge, mist, dramatic light, documentary style, highly detailed, 35mm",
+   "width": 1920,
+   "height": 1080,
+   "seed": 7
+  },
+  {
+   "name": "manuscript.jpg",
+   "prompt": "close-up photograph of an old undeciphered manuscript page with strange botanical drawings on a wooden desk, candle light, shallow depth of field, museum archive, no modern objects",
+   "width": 1920,
+   "height": 1080,
+   "seed": 11
+  }
+ ]
+}
