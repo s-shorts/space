@@ -1,20 +1,186 @@
 {
- "id": "aitest-20261115",
- "files": [],
- "generate": [
+ "id": "20261115-voynich",
+ "files": [
   {
-   "name": "lake.jpg",
-   "prompt": "cinematic photograph of a small frozen glacial lake high in the Himalayas at dawn, snow covered rocky ridge, mist, dramatic light, documentary style, highly detailed, 35mm",
-   "width": 1920,
-   "height": 1080,
-   "seed": 7
+   "name": "v003.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%283%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
   },
   {
-   "name": "manuscript.jpg",
-   "prompt": "close-up photograph of an old undeciphered manuscript page with strange botanical drawings on a wooden desk, candle light, shallow depth of field, museum archive, no modern objects",
-   "width": 1920,
-   "height": 1080,
-   "seed": 11
+   "name": "v004.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%284%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v006.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%286%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v009.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%289%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v017.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%2817%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v033.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%2833%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v050.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%2850%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v066.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%2866%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v090.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%2890%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v112.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28112%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v119.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28119%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v121.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28121%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v123.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28123%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v125.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28125%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v127.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28127%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v128.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28128%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v131.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28131%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v135.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28135%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v141.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28141%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v145.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28145%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v158.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28158%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v166.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28166%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v175.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28175%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v186.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28186%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v195.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28195%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "v206.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28206%29.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
+  },
+  {
+   "name": "voynich_portrait.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Wilfrid%20Voynich%20c1920.jpg?width=1600",
+   "credit": "Unknown photographer, c. 1920, via Wikimedia Commons",
+   "licence": "Public domain"
+  },
+  {
+   "name": "rudolf.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AACHEN%2C%20Hans%20von%20-%20Portrait%20of%20Emperor%20Rudolf%20II%20-%20WGA.jpg?width=1600",
+   "credit": "Hans von Aachen, c. 1590s (Kunsthistorisches Museum), via Wikimedia Commons",
+   "licence": "Public domain"
+  },
+  {
+   "name": "marci.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Marcus%20Marci%2000.jpg?width=1600",
+   "credit": "17th-century portrait of Johannes Marcus Marci, via Wikimedia Commons",
+   "licence": "Public domain"
+  },
+  {
+   "name": "bath78.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20manuscript%20bathtub2%20example%2078r%20cropped.jpg?width=1600",
+   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
+   "licence": "Public domain"
   }
- ]
+ ],
+ "generate": []
 }
