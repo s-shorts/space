@@ -1,66 +1,76 @@
 {
- "id": "20261115-voynich-b",
- "files": [
+ "id": "20261116-wow-a",
+ "files": [],
+ "generate": [
   {
-   "name": "v158.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28158%29.jpg?width=1600",
-   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
-   "licence": "Public domain"
+   "name": "ai_field.jpg",
+   "prompt": "Flat rural Ohio farmland at night in August 1977, cornfields and a distant farmhouse light, enormous clear starry sky with the Milky Way, warm haze on the horizon, 35mm documentary photograph, 1970s Kodachrome film look, muted teal and amber colour grade, soft grain, cinematic wide shot, no text, no letters, no people",
+   "width": 1920,
+   "height": 1080,
+   "seed": 11
   },
   {
-   "name": "rudolf.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/AACHEN%2C%20Hans%20von%20-%20Portrait%20of%20Emperor%20Rudolf%20II%20-%20WGA.jpg?width=1600",
-   "credit": "Hans von Aachen, c. 1590s (Kunsthistorisches Museum), via Wikimedia Commons",
-   "licence": "Public domain"
+   "name": "ai_bigear.jpg",
+   "prompt": "A giant unusual radio telescope built flat on the ground in rural Ohio in 1977: a huge aluminium-covered flat field the size of three football fields, with a tall tilted flat mesh reflector wall at one end and a tall curved parabolic mesh reflector wall at the other end, starry night sky above, seen from a low hill, 35mm documentary photograph, 1970s Kodachrome film look, muted teal and amber colour grade, soft grain, cinematic wide shot, no text, no letters, no people",
+   "width": 1920,
+   "height": 1080,
+   "seed": 22
   },
   {
-   "name": "v127.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28127%29.jpg?width=1600",
-   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
-   "licence": "Public domain"
+   "name": "ai_printer.jpg",
+   "prompt": "Empty 1970s university computer room at night, a beige mainframe line printer slowly feeding out a long ribbon of green-striped fan-fold paper that piles on the floor, dim fluorescent light, reels of tape in the background, 35mm documentary photograph, 1970s Kodachrome film look, muted teal and amber colour grade, soft grain, cinematic wide shot, no text, no letters, no people",
+   "width": 1920,
+   "height": 1080,
+   "seed": 33
   },
   {
-   "name": "v186.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28186%29.jpg?width=1600",
-   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
-   "licence": "Public domain"
+   "name": "ai_kitchen.jpg",
+   "prompt": "A 1977 American kitchen table in morning window light, a thick stack of fan-fold computer printout paper, a red ballpoint pen resting on the paper, a coffee mug, wood panelling, close view from above at an angle, the paper covered in tiny blurred unreadable marks, 35mm documentary photograph, 1970s Kodachrome film look, muted teal and amber colour grade, soft grain, cinematic wide shot, no text, no letters, no people",
+   "width": 1920,
+   "height": 1080,
+   "seed": 44
   },
   {
-   "name": "v206.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28206%29.jpg?width=1600",
-   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
-   "licence": "Public domain"
+   "name": "ai_cloud.jpg",
+   "prompt": "A small cold dark interstellar hydrogen gas cloud in deep space suddenly glowing brightly from within, lit by a flash from a distant star behind it, dense star field, detailed astronomical illustration, deep teal and amber palette, cinematic, no text, no letters",
+   "width": 1920,
+   "height": 1080,
+   "seed": 55
   },
   {
-   "name": "v141.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28141%29.jpg?width=1600",
-   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
-   "licence": "Public domain"
+   "name": "ai_comet.jpg",
+   "prompt": "A faint comet with a wide diffuse pale halo of gas drifting in front of a dense star field of the Milky Way, detailed astronomical illustration, deep teal and amber palette, cinematic, no text, no letters",
+   "width": 1920,
+   "height": 1080,
+   "seed": 66
   },
   {
-   "name": "marci.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Jan%20Marcus%20Marci%2000.jpg?width=1600",
-   "credit": "17th-century portrait of Johannes Marcus Marci, via Wikimedia Commons",
-   "licence": "Public domain"
+   "name": "ai_debris.jpg",
+   "prompt": "A piece of tumbling metallic space debris in orbit high above the night side of the Earth, city lights far below, stars, sunlight glinting on the metal, detailed astronomical illustration, deep teal and amber palette, cinematic, no text, no letters",
+   "width": 1920,
+   "height": 1080,
+   "seed": 77
   },
   {
-   "name": "v166.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28166%29.jpg?width=1600",
-   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
-   "licence": "Public domain"
+   "name": "ai_golf.jpg",
+   "prompt": "A quiet golf course fairway in Ohio at misty dawn, dew on the grass, a single flag in the distance, tall trees, soft golden light, wide documentary photograph, muted teal and amber colour grade, no text, no people",
+   "width": 1920,
+   "height": 1080,
+   "seed": 88
   },
   {
-   "name": "v131.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28131%29.jpg?width=1600",
-   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
-   "licence": "Public domain"
+   "name": "ai_dish.jpg",
+   "prompt": "A lone large white radio telescope dish pointing at a brilliant starry sky with the Milky Way core, desert at blue hour, patient and silent mood, 35mm documentary photograph, 1970s Kodachrome film look, muted teal and amber colour grade, soft grain, cinematic wide shot, no text, no letters, no people",
+   "width": 1920,
+   "height": 1080,
+   "seed": 99
   },
   {
-   "name": "v195.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Voynich%20Manuscript%20%28195%29.jpg?width=1600",
-   "credit": "Beinecke Rare Book & Manuscript Library, Yale University (MS 408)",
-   "licence": "Public domain"
+   "name": "ai_stars.jpg",
+   "prompt": "Extremely dense star field of the Milky Way in the constellation Sagittarius, dark dust lanes, thousands of tiny stars, long exposure astrophotograph look, deep teal and amber tones, no text",
+   "width": 1920,
+   "height": 1080,
+   "seed": 110
   }
- ],
- "generate": []
+ ]
 }
