@@ -1,0 +1,50 @@
+{
+ "id": "20261117-styletest-film-2",
+ "files": [],
+ "generated": [
+  {
+   "name": "bat_idle.jpg",
+   "kind": "image",
+   "prompt": "3D animated feature film character render, cute stylized, big expressive eyes, soft subsurface fur and feathers, cinematic rim light, volumetric fog, detailed, no humans, animal character only, full body, centered, plain dark background. an anthropomorphic fruit bat with leathery wings and big pointed ears, wearing round cracked spectacles and a dark navy hooded cloak, holding a glowing brass lantern, standing calmly, slight smile",
+   "ok": true,
+   "bytes": 42359
+  },
+  {
+   "name": "bat_scared.jpg",
+   "kind": "image",
+   "prompt": "3D animated feature film character render, cute stylized, big expressive eyes, soft subsurface fur and feathers, cinematic rim light, volumetric fog, detailed, no humans, animal character only, full body, centered, plain dark background. an anthropomorphic fruit bat with leathery wings and big pointed ears, wearing round cracked spectacles and a dark navy hooded cloak, holding a glowing brass lantern, frightened, wings clutched, ears flat, trembling",
+   "ok": true,
+   "bytes": 42319
+  },
+  {
+   "name": "owl_idle.jpg",
+   "kind": "image",
+   "prompt": "3D animated feature film character render, cute stylized, big expressive eyes, soft subsurface fur and feathers, cinematic rim light, volumetric fog, detailed, no humans, animal character only, full body, centered, plain dark background. an anthropomorphic brown owl bird with feathers and a small orange beak, wearing round glasses, a brown tweed flat cap and a red scarf, holding a magnifying glass, standing confidently",
+   "ok": true,
+   "bytes": 50841
+  },
+  {
+   "name": "owl_point.jpg",
+   "kind": "image",
+   "prompt": "3D animated feature film character render, cute stylized, big expressive eyes, soft subsurface fur and feathers, cinematic rim light, volumetric fog, detailed, no humans, animal character only, full body, centered, plain dark background. an anthropomorphic brown owl bird with feathers and a small orange beak, wearing round glasses, a brown tweed flat cap and a red scarf, holding a magnifying glass, raising one wing to make a point, curious expression",
+   "ok": false,
+   "error": "HTTP Error 503: Service Unavailable"
+  },
+  {
+   "name": "env_room.jpg",
+   "kind": "image",
+   "prompt": "stylized 3D animated feature film background, no characters, cinematic composition, volumetric fog and moonlight, soft global illumination, teal and amber color grade, highly detailed. a 1970s children's bedroom at night, a wooden chair alone in the middle of the floor, toys, eerie blue moonlight through curtains",
+   "ok": true,
+   "bytes": 52871
+  },
+  {
+   "name": "env_corridor.jpg",
+   "kind": "image",
+   "prompt": "stylized 3D animated feature film background, no characters, cinematic composition, volumetric fog and moonlight, soft global illumination, teal and amber color grade, highly detailed. a narrow old house hallway at night, stairs, a single flickering lamp, long shadows",
+   "ok": false,
+   "error": "HTTP Error 503: Service Unavailable"
+  }
+ ],
+ "has_key": false,
+ "models": null
+}
