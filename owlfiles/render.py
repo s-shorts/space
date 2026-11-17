@@ -1,5 +1,7 @@
 import skia, numpy as np, json, subprocess, math, sys, os, random
-W, H, FPS = 1920, 1080, 30
+# Portrait Short canvas (changed 17 Nov 2026: episodes are now a single vertical
+# Short, max 3:00 -- there is no separate 16:9 long video or trailer anymore).
+W, H, FPS = 1080, 1920, 30
 TL = json.load(open("timeline.json")); LN = TL["lines"]; SC = {int(k): v for k, v in TL["sc"].items()}
 TOTAL = TL["total"]; TITLE_AT = TL["title"]; ENV = np.load("env.npy")
 GF = "/usr/share/fonts/truetype/google-fonts/"
@@ -70,7 +72,7 @@ def caption(c, t):
             words = l["t"].split(); chunks = []; cur = []
             for w in words:
                 cur.append(w)
-                if len(" ".join(cur)) > 34 or (w[-1] in ".?!:" and len(cur) > 2): chunks.append(" ".join(cur)); cur = []
+                if len(" ".join(cur)) > 22 or (w[-1] in ".?!:" and len(cur) > 2): chunks.append(" ".join(cur)); cur = []  # narrower portrait canvas
             if cur:
                 if chunks and len(" ".join(cur)) < 10: chunks[-1] += " " + " ".join(cur)
                 else: chunks.append(" ".join(cur))
@@ -78,7 +80,7 @@ def caption(c, t):
             for q in chunks:
                 if x < acc + len(q) + 4: ch = q; st = acc; break
                 acc += len(q) + 4
-            font = skia.Font(TF["b"], 46); w = font.measureText(ch); cx = 830; y = 1004
+            font = skia.Font(TF["b"], 46); w = font.measureText(ch); cx = 540; y = 1525  # portrait: centered, above the bottom-safe zone
             k = eout(clamp((x - st) / 2.5)) if st > 0 else eout(prog(t, l["s"] - 0.05, 0.15))
             c.save(); c.translate(cx, y - 16); c.scale(0.94 + 0.06 * k, 0.94 + 0.06 * k); c.translate(-cx, -(y - 16))
             rrect(c, cx - w / 2 - 30, y - 56, w + 60, 78, 18, P("#0a1220", 0.86 * k))
@@ -218,12 +220,18 @@ def string(c, x1, y1, x2, y2, t, t0):
     k = ease(prog(t, t0, 0.5))
     if k > 0: c.drawLine(x1, y1, x1 + (x2 - x1) * k, y1 + (y2 - y1) * k, P(RED, 0.9, stroke=5))
 def host_corner(c, t, f, look=(-0.6, -0.3), brow=0.0, wing=0.0, prop="glass"):
-    owl(c, 1745, 1040, 0.62, t, f, look=look, brow=brow, wing=wing, prop=prop)
+    owl(c, 970, 1840, 0.5, t, f, look=look, brow=brow, wing=wing, prop=prop)  # bottom-right corner, portrait canvas
 def fade_in(c, t, t0, d=0.3, color="#000000"):
     k = 1 - prog(t, t0, d)
     if k > 0: c.drawRect(skia.Rect.MakeWH(W, H), P(color, k))
 
 # ================= SCENES =================
+# NOTE (17 Nov 2026): s0-s7 below are Episode 1's ORIGINAL scenes, authored for the
+# old 1920x1080 landscape canvas before the switch to a single 1080x1920 portrait
+# Short. Episode 1 itself is already published and untouched. For every new episode
+# these are a reference for pacing/joke placement only -- the actual pixel
+# coordinates inside them are landscape and must be redrawn for the 1080-wide
+# portrait canvas, same as every other case-specific scene (see README step 4).
 def s0(c, t, f):
     if t >= TITLE_AT: return title(c, t, f)
     z = 1 + 0.05 * (t / 16) + 0.28 * ease(prog(t, cue(2) - 0.4, 3.5)); c.save(); c.translate(W / 2, 800); c.scale(z, z); c.translate(-W / 2, -800)
