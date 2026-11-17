@@ -20,6 +20,13 @@
       "name": "The Owl Files",
       "key": "OWLFILES",
       "mode": "public"
+    },
+    {
+      "id": "ig-mysterious-world",
+      "platform": "instagram",
+      "name": "mysterious._._.world",
+      "key": "MYSTERIOUS_WORLD",
+      "mode": "off"
     }
   ]
 }
