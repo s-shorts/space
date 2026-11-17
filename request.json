@@ -1,34 +1,48 @@
 {
- "id": "20261117-styletest-film",
+ "id": "20261117-styletest-film-2",
  "files": [],
  "generate": [
   {
-   "name": "t_bat_host.jpg",
-   "prompt": "stylized 3D animated feature film still, cinematic composition, volumetric god rays and fog, soft global illumination, rich teal and amber color grade, highly detailed textures, expressive, vertical frame. a small cute fruit bat detective character with big expressive eyes, round cracked spectacles, dark navy cloak, holding a glowing brass lantern, standing nervously in a moonlit Victorian attic, dust in the lantern light",
-   "seed": 11,
+   "name": "bat_idle.jpg",
+   "prompt": "3D animated feature film character render, cute stylized, big expressive eyes, soft subsurface fur and feathers, cinematic rim light, volumetric fog, detailed, no humans, animal character only, full body, centered, plain dark background. an anthropomorphic fruit bat with leathery wings and big pointed ears, wearing round cracked spectacles and a dark navy hooded cloak, holding a glowing brass lantern, standing calmly, slight smile",
+   "seed": 21,
    "width": 1088,
-   "height": 1920
+   "height": 2048
   },
   {
-   "name": "t_house.jpg",
-   "prompt": "stylized 3D animated feature film still, cinematic composition, volumetric god rays and fog, soft global illumination, rich teal and amber color grade, highly detailed textures, expressive, vertical frame. a small 1970s London council terraced house at night, one upstairs window glowing, mist on the street, full moon",
-   "seed": 12,
+   "name": "bat_scared.jpg",
+   "prompt": "3D animated feature film character render, cute stylized, big expressive eyes, soft subsurface fur and feathers, cinematic rim light, volumetric fog, detailed, no humans, animal character only, full body, centered, plain dark background. an anthropomorphic fruit bat with leathery wings and big pointed ears, wearing round cracked spectacles and a dark navy hooded cloak, holding a glowing brass lantern, frightened, wings clutched, ears flat, trembling",
+   "seed": 21,
    "width": 1088,
-   "height": 1920
+   "height": 2048
   },
   {
-   "name": "t_room.jpg",
-   "prompt": "stylized 3D animated feature film still, cinematic composition, volumetric god rays and fog, soft global illumination, rich teal and amber color grade, highly detailed textures, expressive, vertical frame. a 1970s children's bedroom at night, a wooden chair tilted mid-slide across the floor, marbles frozen mid-air, eerie blue moonlight",
+   "name": "owl_idle.jpg",
+   "prompt": "3D animated feature film character render, cute stylized, big expressive eyes, soft subsurface fur and feathers, cinematic rim light, volumetric fog, detailed, no humans, animal character only, full body, centered, plain dark background. an anthropomorphic brown owl bird with feathers and a small orange beak, wearing round glasses, a brown tweed flat cap and a red scarf, holding a magnifying glass, standing confidently",
+   "seed": 31,
+   "width": 1088,
+   "height": 2048
+  },
+  {
+   "name": "owl_point.jpg",
+   "prompt": "3D animated feature film character render, cute stylized, big expressive eyes, soft subsurface fur and feathers, cinematic rim light, volumetric fog, detailed, no humans, animal character only, full body, centered, plain dark background. an anthropomorphic brown owl bird with feathers and a small orange beak, wearing round glasses, a brown tweed flat cap and a red scarf, holding a magnifying glass, raising one wing to make a point, curious expression",
+   "seed": 31,
+   "width": 1088,
+   "height": 2048
+  },
+  {
+   "name": "env_room.jpg",
+   "prompt": "stylized 3D animated feature film background, no characters, cinematic composition, volumetric fog and moonlight, soft global illumination, teal and amber color grade, highly detailed. a 1970s children's bedroom at night, a wooden chair alone in the middle of the floor, toys, eerie blue moonlight through curtains",
    "seed": 13,
    "width": 1088,
-   "height": 1920
+   "height": 2048
   },
   {
-   "name": "t_owl_host.jpg",
-   "prompt": "stylized 3D animated feature film still, cinematic composition, volumetric god rays and fog, soft global illumination, rich teal and amber color grade, highly detailed textures, expressive, vertical frame. a cute owl detective character with round glasses, brown tweed cap and red scarf, holding a magnifying glass, in a cozy cluttered detective study with pinned maps and a cup of chai, warm lamp light",
-   "seed": 14,
+   "name": "env_corridor.jpg",
+   "prompt": "stylized 3D animated feature film background, no characters, cinematic composition, volumetric fog and moonlight, soft global illumination, teal and amber color grade, highly detailed. a narrow old house hallway at night, stairs, a single flickering lamp, long shadows",
+   "seed": 15,
    "width": 1088,
-   "height": 1920
+   "height": 2048
   }
  ]
 }
