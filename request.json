@@ -1,25 +1,34 @@
 {
- "id": "20261117-mallory-irvine",
- "files": [
-  {"name": "p_sts80.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2025/02/sts080-733-001orig.jpg", "credit": "NASA, Space Shuttle Columbia STS-80, 30 November 1996", "licence": "Public domain (NASA)"},
-  {"name": "p_iss066.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2023/03/iss066e141209.jpg", "credit": "NASA, ISS Expedition 66 (iss066e141209), 12 February 2022", "licence": "Public domain (NASA)"},
-  {"name": "p_iss054.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2023/03/iss054e006869.jpg", "credit": "NASA, ISS Expedition 54 (iss054e006869), 27 December 2017", "licence": "Public domain (NASA)"},
-  {"name": "p_iss008.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2023/03/iss008-e-13304_lrg.jpg", "credit": "NASA, ISS Expedition 8 (iss008-e-13304), 26 November 2003", "licence": "Public domain (NASA)"},
-  {"name": "p_landsat7.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2023/03/335340main_landsat_everest_05jan2002_lrg_full.jpg", "credit": "NASA, Landsat 7 image of Mount Everest", "licence": "Public domain (NASA)"},
-  {"name": "p_iss069.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2023/04/iss069e003192.jpg", "credit": "NASA, ISS Expedition 69 (iss069e003192), 13 April 2023", "licence": "Public domain (NASA)"},
-  {"name": "p_iss068.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2023/03/iss068e044967.jpg", "credit": "NASA, ISS Expedition 68 (iss068e044967), 1 February 2023", "licence": "Public domain (NASA)"},
-  {"name": "p_landsat9.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2023/03/l9_himalaya_hyperwall_rgb_nolabels.jpg", "credit": "NASA/USGS, Landsat 9, 31 October 2021", "licence": "Public domain (NASA/USGS)"}
- ],
+ "id": "20261117-styletest-film",
+ "files": [],
  "generate": [
-  {"name": "ai_ridge.jpg", "prompt": "A long bare snow and rock ridge very high on a Himalayan mountain, a sea of cloud far below, thin cold air, pale blue light, 1920s black and white expedition photograph look lightly toned in blue grey and warm sepia, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 101},
-  {"name": "ai_tent.jpg", "prompt": "A tiny canvas ridge tent pitched on a steep snow slope at great altitude at dawn, guy ropes, snow drifted against the canvas, enormous empty sky, 1920s expedition photograph look toned in blue grey and warm sepia, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 202},
-  {"name": "ai_camp.jpg", "prompt": "A 1920s Himalayan expedition base camp of canvas tents and wooden crates on grey glacial moraine, prayer flags, an enormous snow mountain wall behind, overcast light, antique expedition photograph look toned in blue grey and warm sepia, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 303},
-  {"name": "ai_mist.jpg", "prompt": "Thick mist and cloud suddenly parting to reveal a dark rock step on a high snow ridge, shafts of pale light, cold and vast, 1920s expedition photograph look toned in blue grey and warm sepia, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 404},
-  {"name": "ai_glacier.jpg", "prompt": "A wide glacier of broken grey ice and rubble flowing below a gigantic dark mountain face, melt pools, late afternoon light, antique expedition photograph look toned in blue grey and warm sepia, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 505},
-  {"name": "ai_boot.jpg", "prompt": "Close view of a very old brown leather climbing boot with iron hobnails in the sole, half frozen into dirty grey glacier ice, wool sock, cold flat daylight, documentary photograph, muted blue grey and warm sepia tones, soft grain, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 606},
-  {"name": "ai_axe.jpg", "prompt": "An old wooden shafted ice axe lying alone on a smooth sloping slab of dark rock dusted with snow, high on a mountain, cold grey light, documentary photograph, muted blue grey and warm sepia tones, soft grain, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 707},
-  {"name": "ai_night.jpg", "prompt": "The black silhouette of an enormous mountain pyramid against a deep blue night sky full of stars, snow faintly glowing, bitter cold, 1920s expedition photograph look toned in blue grey, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 808},
-  {"name": "ai_summit.jpg", "prompt": "The final summit pyramid of a huge snow mountain in low golden late afternoon light, long shadows across the snow, wind plume off the top, 1920s expedition photograph look toned in blue grey and warm sepia, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 909},
-  {"name": "ai_monastery.jpg", "prompt": "An old Tibetan monastery of whitewashed stone buildings on a barren brown valley floor, an immense snow mountain filling the sky behind it, cold clear light, antique expedition photograph look toned in blue grey and warm sepia, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 1010}
+  {
+   "name": "t_bat_host.jpg",
+   "prompt": "stylized 3D animated feature film still, cinematic composition, volumetric god rays and fog, soft global illumination, rich teal and amber color grade, highly detailed textures, expressive, vertical frame. a small cute fruit bat detective character with big expressive eyes, round cracked spectacles, dark navy cloak, holding a glowing brass lantern, standing nervously in a moonlit Victorian attic, dust in the lantern light",
+   "seed": 11,
+   "width": 1088,
+   "height": 1920
+  },
+  {
+   "name": "t_house.jpg",
+   "prompt": "stylized 3D animated feature film still, cinematic composition, volumetric god rays and fog, soft global illumination, rich teal and amber color grade, highly detailed textures, expressive, vertical frame. a small 1970s London council terraced house at night, one upstairs window glowing, mist on the street, full moon",
+   "seed": 12,
+   "width": 1088,
+   "height": 1920
+  },
+  {
+   "name": "t_room.jpg",
+   "prompt": "stylized 3D animated feature film still, cinematic composition, volumetric god rays and fog, soft global illumination, rich teal and amber color grade, highly detailed textures, expressive, vertical frame. a 1970s children's bedroom at night, a wooden chair tilted mid-slide across the floor, marbles frozen mid-air, eerie blue moonlight",
+   "seed": 13,
+   "width": 1088,
+   "height": 1920
+  },
+  {
+   "name": "t_owl_host.jpg",
+   "prompt": "stylized 3D animated feature film still, cinematic composition, volumetric god rays and fog, soft global illumination, rich teal and amber color grade, highly detailed textures, expressive, vertical frame. a cute owl detective character with round glasses, brown tweed cap and red scarf, holding a magnifying glass, in a cozy cluttered detective study with pinned maps and a cup of chai, warm lamp light",
+   "seed": 14,
+   "width": 1088,
+   "height": 1920
+  }
  ]
 }
