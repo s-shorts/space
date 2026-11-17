@@ -23,6 +23,9 @@ for acc in ACCOUNTS:
     if not token:
         print(f"{acc['name']}: no token saved yet, skipped")
         continue
+    if not token.startswith("IG"):
+        print(f"{acc['name']}: Facebook-login token, nothing to renew (Page tokens don't expire)")
+        continue
     r = requests.get("https://graph.instagram.com/refresh_access_token", timeout=30,
                      params={"grant_type": "ig_refresh_token", "access_token": token})
     new = r.json().get("access_token") if r.status_code == 200 else None

@@ -160,14 +160,17 @@ def post_youtube(item, video, acc):
 
 
 # ---------------------------------------------------------------- Instagram
-def ig_base():
+def ig_base(token=""):
+    """Tokens from "API setup with Instagram login" start with IG and use graph.instagram.com.
+    Facebook-login tokens (user or Page tokens, they start with EAA) use graph.facebook.com."""
     version = os.environ.get("IG_API_VERSION", "").strip()
-    return "https://graph.instagram.com" + (f"/{version}" if version else "")
+    host = "https://graph.instagram.com" if token.startswith("IG") else "https://graph.facebook.com"
+    return host + (f"/{version}" if version else "")
 
 
 def ig_call(requests, token, method, path, **params):
     params["access_token"] = token
-    r = requests.request(method, f"{ig_base()}/{path}", params=params, timeout=60)
+    r = requests.request(method, f"{ig_base(token)}/{path}", params=params, timeout=60)
     try:
         data = r.json()
     except ValueError:
@@ -175,6 +178,27 @@ def ig_call(requests, token, method, path, **params):
     if r.status_code != 200 or "error" in data:
         raise PostError(f"Instagram error ({r.status_code}): {json.dumps(data)[:400]}")
     return data
+
+
+def ig_user_id(requests, token, acc):
+    """The Instagram professional account ID to publish to."""
+    fixed = SECRETS.get(f"IG_{acc['key'].upper()}_USER_ID")
+    if fixed:
+        return fixed
+    if token.startswith("IG"):
+        me = ig_call(requests, token, "GET", "me", fields="user_id,username")
+        return me.get("user_id") or me["id"]
+    # Facebook login: a Page token, or a user token that manages the Page linked to Instagram.
+    me = ig_call(requests, token, "GET", "me", fields="id,name,instagram_business_account")
+    if me.get("instagram_business_account"):
+        return me["instagram_business_account"]["id"]
+    pages = ig_call(requests, token, "GET", "me/accounts", fields="name,instagram_business_account")
+    for page in pages.get("data", []):
+        if page.get("instagram_business_account"):
+            return page["instagram_business_account"]["id"]
+    raise PostError("This token can't see an Instagram account. Link the Instagram professional "
+                    "account to a Facebook Page and include instagram_basic, instagram_content_publish, "
+                    "pages_show_list and pages_read_engagement when making the token.")
 
 
 def post_instagram(item, video, acc):
@@ -187,8 +211,7 @@ def post_instagram(item, video, acc):
 
     import requests
     token = SECRETS[f"IG_{acc['key'].upper()}_TOKEN"]
-    me = ig_call(requests, token, "GET", "me", fields="user_id,username")
-    user = me.get("user_id") or me["id"]
+    user = ig_user_id(requests, token, acc)
     container = ig_call(requests, token, "POST", f"{user}/media",
                         media_type="REELS", video_url=video_url, caption=caption[:2200],
                         share_to_feed="true" if ig.get("share_to_feed", True) else "false")["id"]

@@ -24,6 +24,17 @@ Posting to your own account needs no Meta App Review.
 5. Back in **API setup with Instagram login**, under "Generate access tokens", add your account and press **Generate token**. Allow the content publishing permission (`instagram_business_content_publish`). Copy the token and the Instagram user ID shown beside the account.
 6. In the dashboard → Channels → your Instagram channel → "Add the key": paste the token and save. Then set the channel to **On**.
 
+### If your app has no "API setup with Instagram login" (new Meta apps, 2026)
+
+New Meta apps only offer "API setup with Facebook login" and "API setup with unified login". Use Facebook login; the scheduler accepts its tokens too.
+
+1. Make a free Facebook Page (any name), and link your Instagram professional account to it: Page → Settings → Linked accounts → Instagram → Connect.
+2. In the app: Use cases → Manage messaging & content on Instagram → Customize → **API setup with Facebook login** → add the required permissions.
+3. Open the Graph API Explorer (developers.facebook.com/tools/explorer). Pick your app, then "Get User Access Token" with `instagram_basic`, `instagram_content_publish`, `pages_show_list`, `pages_read_engagement`, `business_management`. Allow your Page and Instagram account.
+4. Click the blue (i) next to the token → Open in Access Token Tool → **Extend Access Token**, and copy the new long-lived token.
+5. Back in the Explorer, paste that token, run `me/accounts`, and copy the `access_token` of your Page. This Page token does not expire.
+6. Dashboard → Channels → your Instagram channel → Add the key: paste the Page token, save, switch On.
+
 **More Instagram accounts.** Add each one as an Instagram Tester on the same Meta app (step 4), generate its token (step 5), then in the dashboard use "Add a channel" and paste that token.
 
 **Token renewal.** Instagram tokens last 60 days. To have them renewed automatically every week, save a GitHub key as a secret named `GH_PAT` (repo Settings → Secrets and variables → Actions → New repository secret). A key like the dashboard one works; it needs **Secrets: Read and write**. Without it, repeat step 5 every 60 days.
