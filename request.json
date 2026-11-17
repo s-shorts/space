@@ -1,76 +1,25 @@
 {
- "id": "20261116-wow-a",
- "files": [],
+ "id": "20261117-mallory-irvine",
+ "files": [
+  {"name": "p_sts80.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2025/02/sts080-733-001orig.jpg", "credit": "NASA, Space Shuttle Columbia STS-80, 30 November 1996", "licence": "Public domain (NASA)"},
+  {"name": "p_iss066.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2023/03/iss066e141209.jpg", "credit": "NASA, ISS Expedition 66 (iss066e141209), 12 February 2022", "licence": "Public domain (NASA)"},
+  {"name": "p_iss054.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2023/03/iss054e006869.jpg", "credit": "NASA, ISS Expedition 54 (iss054e006869), 27 December 2017", "licence": "Public domain (NASA)"},
+  {"name": "p_iss008.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2023/03/iss008-e-13304_lrg.jpg", "credit": "NASA, ISS Expedition 8 (iss008-e-13304), 26 November 2003", "licence": "Public domain (NASA)"},
+  {"name": "p_landsat7.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2023/03/335340main_landsat_everest_05jan2002_lrg_full.jpg", "credit": "NASA, Landsat 7 image of Mount Everest", "licence": "Public domain (NASA)"},
+  {"name": "p_iss069.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2023/04/iss069e003192.jpg", "credit": "NASA, ISS Expedition 69 (iss069e003192), 13 April 2023", "licence": "Public domain (NASA)"},
+  {"name": "p_iss068.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2023/03/iss068e044967.jpg", "credit": "NASA, ISS Expedition 68 (iss068e044967), 1 February 2023", "licence": "Public domain (NASA)"},
+  {"name": "p_landsat9.jpg", "url": "https://www.nasa.gov/wp-content/uploads/2023/03/l9_himalaya_hyperwall_rgb_nolabels.jpg", "credit": "NASA/USGS, Landsat 9, 31 October 2021", "licence": "Public domain (NASA/USGS)"}
+ ],
  "generate": [
-  {
-   "name": "ai_field.jpg",
-   "prompt": "Flat rural Ohio farmland at night in August 1977, cornfields and a distant farmhouse light, enormous clear starry sky with the Milky Way, warm haze on the horizon, 35mm documentary photograph, 1970s Kodachrome film look, muted teal and amber colour grade, soft grain, cinematic wide shot, no text, no letters, no people",
-   "width": 1920,
-   "height": 1080,
-   "seed": 11
-  },
-  {
-   "name": "ai_bigear.jpg",
-   "prompt": "A giant unusual radio telescope built flat on the ground in rural Ohio in 1977: a huge aluminium-covered flat field the size of three football fields, with a tall tilted flat mesh reflector wall at one end and a tall curved parabolic mesh reflector wall at the other end, starry night sky above, seen from a low hill, 35mm documentary photograph, 1970s Kodachrome film look, muted teal and amber colour grade, soft grain, cinematic wide shot, no text, no letters, no people",
-   "width": 1920,
-   "height": 1080,
-   "seed": 22
-  },
-  {
-   "name": "ai_printer.jpg",
-   "prompt": "Empty 1970s university computer room at night, a beige mainframe line printer slowly feeding out a long ribbon of green-striped fan-fold paper that piles on the floor, dim fluorescent light, reels of tape in the background, 35mm documentary photograph, 1970s Kodachrome film look, muted teal and amber colour grade, soft grain, cinematic wide shot, no text, no letters, no people",
-   "width": 1920,
-   "height": 1080,
-   "seed": 33
-  },
-  {
-   "name": "ai_kitchen.jpg",
-   "prompt": "A 1977 American kitchen table in morning window light, a thick stack of fan-fold computer printout paper, a red ballpoint pen resting on the paper, a coffee mug, wood panelling, close view from above at an angle, the paper covered in tiny blurred unreadable marks, 35mm documentary photograph, 1970s Kodachrome film look, muted teal and amber colour grade, soft grain, cinematic wide shot, no text, no letters, no people",
-   "width": 1920,
-   "height": 1080,
-   "seed": 44
-  },
-  {
-   "name": "ai_cloud.jpg",
-   "prompt": "A small cold dark interstellar hydrogen gas cloud in deep space suddenly glowing brightly from within, lit by a flash from a distant star behind it, dense star field, detailed astronomical illustration, deep teal and amber palette, cinematic, no text, no letters",
-   "width": 1920,
-   "height": 1080,
-   "seed": 55
-  },
-  {
-   "name": "ai_comet.jpg",
-   "prompt": "A faint comet with a wide diffuse pale halo of gas drifting in front of a dense star field of the Milky Way, detailed astronomical illustration, deep teal and amber palette, cinematic, no text, no letters",
-   "width": 1920,
-   "height": 1080,
-   "seed": 66
-  },
-  {
-   "name": "ai_debris.jpg",
-   "prompt": "A piece of tumbling metallic space debris in orbit high above the night side of the Earth, city lights far below, stars, sunlight glinting on the metal, detailed astronomical illustration, deep teal and amber palette, cinematic, no text, no letters",
-   "width": 1920,
-   "height": 1080,
-   "seed": 77
-  },
-  {
-   "name": "ai_golf.jpg",
-   "prompt": "A quiet golf course fairway in Ohio at misty dawn, dew on the grass, a single flag in the distance, tall trees, soft golden light, wide documentary photograph, muted teal and amber colour grade, no text, no people",
-   "width": 1920,
-   "height": 1080,
-   "seed": 88
-  },
-  {
-   "name": "ai_dish.jpg",
-   "prompt": "A lone large white radio telescope dish pointing at a brilliant starry sky with the Milky Way core, desert at blue hour, patient and silent mood, 35mm documentary photograph, 1970s Kodachrome film look, muted teal and amber colour grade, soft grain, cinematic wide shot, no text, no letters, no people",
-   "width": 1920,
-   "height": 1080,
-   "seed": 99
-  },
-  {
-   "name": "ai_stars.jpg",
-   "prompt": "Extremely dense star field of the Milky Way in the constellation Sagittarius, dark dust lanes, thousands of tiny stars, long exposure astrophotograph look, deep teal and amber tones, no text",
-   "width": 1920,
-   "height": 1080,
-   "seed": 110
-  }
+  {"name": "ai_ridge.jpg", "prompt": "A long bare snow and rock ridge very high on a Himalayan mountain, a sea of cloud far below, thin cold air, pale blue light, 1920s black and white expedition photograph look lightly toned in blue grey and warm sepia, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 101},
+  {"name": "ai_tent.jpg", "prompt": "A tiny canvas ridge tent pitched on a steep snow slope at great altitude at dawn, guy ropes, snow drifted against the canvas, enormous empty sky, 1920s expedition photograph look toned in blue grey and warm sepia, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 202},
+  {"name": "ai_camp.jpg", "prompt": "A 1920s Himalayan expedition base camp of canvas tents and wooden crates on grey glacial moraine, prayer flags, an enormous snow mountain wall behind, overcast light, antique expedition photograph look toned in blue grey and warm sepia, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 303},
+  {"name": "ai_mist.jpg", "prompt": "Thick mist and cloud suddenly parting to reveal a dark rock step on a high snow ridge, shafts of pale light, cold and vast, 1920s expedition photograph look toned in blue grey and warm sepia, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 404},
+  {"name": "ai_glacier.jpg", "prompt": "A wide glacier of broken grey ice and rubble flowing below a gigantic dark mountain face, melt pools, late afternoon light, antique expedition photograph look toned in blue grey and warm sepia, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 505},
+  {"name": "ai_boot.jpg", "prompt": "Close view of a very old brown leather climbing boot with iron hobnails in the sole, half frozen into dirty grey glacier ice, wool sock, cold flat daylight, documentary photograph, muted blue grey and warm sepia tones, soft grain, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 606},
+  {"name": "ai_axe.jpg", "prompt": "An old wooden shafted ice axe lying alone on a smooth sloping slab of dark rock dusted with snow, high on a mountain, cold grey light, documentary photograph, muted blue grey and warm sepia tones, soft grain, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 707},
+  {"name": "ai_night.jpg", "prompt": "The black silhouette of an enormous mountain pyramid against a deep blue night sky full of stars, snow faintly glowing, bitter cold, 1920s expedition photograph look toned in blue grey, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 808},
+  {"name": "ai_summit.jpg", "prompt": "The final summit pyramid of a huge snow mountain in low golden late afternoon light, long shadows across the snow, wind plume off the top, 1920s expedition photograph look toned in blue grey and warm sepia, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 909},
+  {"name": "ai_monastery.jpg", "prompt": "An old Tibetan monastery of whitewashed stone buildings on a barren brown valley floor, an immense snow mountain filling the sky behind it, cold clear light, antique expedition photograph look toned in blue grey and warm sepia, heavy film grain, wide shot, no text, no letters, no people", "width": 1920, "height": 1080, "seed": 1010}
  ]
 }
