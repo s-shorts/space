@@ -354,6 +354,11 @@ def main():
             sync(f"clear {item['id']}")
             continue
         todo = pending(item, enabled)
+        if not todo and wanted(item, enabled):   # every channel either done or out of attempts
+            log(f"{item['id']}: giving up on the failed channel(s) after {CONFIG.get('max_attempts', 5)} attempts")
+            retire(item)
+            sync(f"clear {item['id']} (gave up on failed channels)")
+            continue
         if not todo or item["_due"] > now():
             continue
         if posted >= limit:
