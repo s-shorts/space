@@ -189,9 +189,12 @@ def ig_user_id(requests, token, acc):
         me = ig_call(requests, token, "GET", "me", fields="user_id,username")
         return me.get("user_id") or me["id"]
     # Facebook login: a Page token, or a user token that manages the Page linked to Instagram.
-    me = ig_call(requests, token, "GET", "me", fields="id,name,instagram_business_account")
-    if me.get("instagram_business_account"):
-        return me["instagram_business_account"]["id"]
+    try:  # a Page token: "me" is the Page itself
+        me = ig_call(requests, token, "GET", "me", fields="id,name,instagram_business_account")
+        if me.get("instagram_business_account"):
+            return me["instagram_business_account"]["id"]
+    except PostError:
+        pass  # a user token: "me" is a person, who has no such field
     pages = ig_call(requests, token, "GET", "me/accounts", fields="name,instagram_business_account")
     for page in pages.get("data", []):
         if page.get("instagram_business_account"):
