@@ -75,6 +75,9 @@ def main():
     ap.add_argument("--link-to", default="",
                     help="queue id of another video; {FULL_VIDEO_URL} in the description becomes its YouTube link, "
                          "and this video waits until that one is published")
+    ap.add_argument("--cover", default="",
+                    help="cover image for the Instagram Reel; default: made automatically from the video and title")
+    ap.add_argument("--no-cover", action="store_true", help="don't make a cover image")
     ap.add_argument("--ai-disclosure", action="store_true",
                     help="tell YouTube the video has realistic AI-made content")
     args = ap.parse_args()
@@ -105,6 +108,20 @@ def main():
     if (queue / f"{item_id}.json").exists():
         sys.exit(f"{item_id} is already queued.")
     shutil.copyfile(video, queue / f"{item_id}.mp4")
+    cover = None
+    if not args.no_cover:
+        cover = f"{item_id}-cover.jpg"
+        try:
+            if args.cover:
+                from PIL import Image
+                Image.open(args.cover).convert("RGB").save(queue / cover, quality=90)
+            else:
+                sys.path.insert(0, str(Path(__file__).resolve().parent))
+                from cover import make_cover
+                make_cover(video, args.title, queue / cover)
+        except Exception as exc:
+            print(f"warning: no cover image ({exc}); Instagram will use a frame from the video")
+            cover = None
     item = {
         "id": item_id,
         "file": f"{item_id}.mp4",
@@ -114,6 +131,7 @@ def main():
         "tags": [t.strip() for t in args.tags.split(",") if t.strip()],
         "instagram_caption": args.caption or args.description,
         "targets": platforms,
+        **({"cover": cover} if cover else {}),
         "youtube": {"ai_disclosure": bool(args.ai_disclosure)},
         **({"link_to": args.link_to} if args.link_to else {}),
         "results": {},

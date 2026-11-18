@@ -215,9 +215,15 @@ def post_instagram(item, video, acc):
     import requests
     token = SECRETS[f"IG_{acc['key'].upper()}_TOKEN"]
     user = ig_user_id(requests, token, acc)
+    extra = {}
+    if item.get("cover") and (QUEUE / item["cover"]).is_file():
+        extra["cover_url"] = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/queue/{item['cover']}"
+    else:   # skip the dark first frames
+        extra["thumb_offset"] = str(ig.get("thumb_offset_ms", 3000))
     container = ig_call(requests, token, "POST", f"{user}/media",
                         media_type="REELS", video_url=video_url, caption=caption[:2200],
-                        share_to_feed="true" if ig.get("share_to_feed", True) else "false")["id"]
+                        share_to_feed="true" if ig.get("share_to_feed", True) else "false",
+                        **extra)["id"]
     deadline = time.time() + 600
     while True:
         st = ig_call(requests, token, "GET", container, fields="status_code,status")
@@ -337,6 +343,8 @@ def retire(item):
     with open(LOG, "a") as fh:
         fh.write(json.dumps(entry, ensure_ascii=False) + "\n")
     (QUEUE / item["file"]).unlink(missing_ok=True)
+    if item.get("cover"):
+        (QUEUE / item["cover"]).unlink(missing_ok=True)
     item["_path"].unlink(missing_ok=True)
     log(f"  cleared {item['file']} from storage")
 
