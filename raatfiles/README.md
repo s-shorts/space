@@ -6,48 +6,6 @@ real, documented reports of paranormal and horror incidents, told with the same
 evidence-honest spirit as Owl Files -- never asserting a haunting is proven real.
 Added 17 Nov 2026.
 
-
-## VISUAL STANDARD (from 18 Nov 2026): animated-film look, always
-Viewer feedback on Raat Files #001 (flat code-drawn "case dossier" icons): visuals were not
-good enough. Every episode of BOTH series must now look like a stylized 3D animated feature
-film, moving the whole time. Flat vector icons/cards/stamps are no longer a style of their
-own -- at most small overlays (a date, a "CAUGHT" stamp, a label) on top of cinematic shots.
-
-How (see `cine.py` and the 10 s reference test it was built with):
-1. PLATES: 12-18 AI-generated stills per episode through the assets-request fetcher, every
-   prompt starting with the same episode style string, e.g. "stylized 3D animated feature
-   film background, no characters, cinematic composition, volumetric fog and moonlight,
-   soft global illumination, <grade> color grade, highly detailed" + the scene. Request
-   width 1088, height 2048 (portrait). One shot per beat: establishing exterior, rooms,
-   objects, close-ups of the key evidence, a period/place detail. Use seeds per episode.
-   Free mode returns ~560x1050 with a "pollinations.ai" strip at the bottom and often a few
-   503 errors: request ~20% extra, re-request failures once, `cine.Plate` crops the strip and
-   upscales. No characters/people inside plates (the free model can't keep them consistent);
-   never depict real victims' faces.
-2. HOSTS: use the fixed host art -- `owlfiles/host_art/owl_idle.jpg` (Professor Ullu) and
-   `raatfiles/host_art/bat_idle.jpg`, `bat_scared.jpg` (Inspector Raat) -- as cinematic host
-   shots (push-in, lamp/moon grade, dust, flicker) for the intro, verdict and end card. They
-   are the canonical look now, so the hosts are identical in every episode. The old
-   code-drawn `owl()`/`bat()` may still appear only as a tiny corner cameo, or not at all.
-3. MOTION: every shot is a `cine.Shot` with a camera move (push / pull / pans / tilts /
-   drift), parallax fog, particles (dust, embers, rain via dust_col), light flicker or
-   shafts, lightning where it fits, and a grade. Shots 2.5-5 s, cut on the voice; mix cuts:
-   whip-pan (`whip`), crossfade, hard cut on a sound hit. Nothing static longer than ~1.5 s.
-   Overlays (dates, names, "AI reconstruction" label, stamps) animate in with ease/scale.
-   Finish every frame with `film_finish` (grain + vignette) after captions.
-4. CAPTIONS: big, bold, cinematic subtitles (1-2 lines, wrap at ~W-160 px, stroke outline),
-   bottom third around y=1480, never over the subject's face.
-5. SOUND: under the music add room tone, wind/rain, creaks, a whoosh on every whip-pan,
-   a low boom on reveals and a riser before the verdict.
-6. LABEL: small "AI reconstruction" tag on AI shots; set "ai_disclosure": true in the
-   queue JSON whenever AI plates are used (they always are now).
-7. If the repo secret POLLINATIONS_API_KEY is set (assets manifest "has_key": true), also
-   request 3-6 AI video clips (`kind: video`, image-to-video from your best plates, 5 s)
-   for the key moments, and ask for higher-resolution plates with the best image model the
-   manifest lists. Without a key, plates + cine.py motion are the standard.
-8. QA: contact sheet of 8-12 frames before the full render; reject any plate with
-   distorted anatomy, text gibberish, a human face, or a clashing style, and regenerate.
-
 ## Host: Inspector Raat
 A fruit-bat detective, nocturnal counterpart to Professor Ullu. Round spectacles
 (one lens comically cracked), a dark hooded cloak, a lantern (or an old case
@@ -85,7 +43,7 @@ Never: real recent deaths/tragedies for shock value, implying a real living pers
 is cursed or haunted, graphic descriptions, or presenting any paranormal claim as
 confirmed fact.
 
-## Visual style (palette/mood; the animated-film standard above always applies)
+## Visual style
 Night palette (deep indigo, moonlight silver, lantern-orange, used sparingly blood-red),
 candlelight/flashlight-cone lighting, fog, grain -- same rotation idea as Owl Files
 (case-board, photo-documentary with real archive photos, realistic render, map room,
