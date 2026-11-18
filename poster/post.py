@@ -313,6 +313,13 @@ def pending(item, enabled):
             continue
         if item.get("attempts", {}).get(p, 0) >= max_attempts:
             continue
+        last = item.get("results", {}).get(p, {})
+        if last.get("status") == "failed" and last.get("at"):
+            try:  # retry a failed channel at most once an hour
+                if (now() - datetime.fromisoformat(last["at"])).total_seconds() < 3300:
+                    continue
+            except ValueError:
+                pass
         out.append(p)
     return out
 
@@ -361,7 +368,7 @@ def main():
             continue
         if not todo or item["_due"] > now():
             continue
-        if posted >= limit:
+        if posted >= limit and any(item.get("attempts", {}).get(p, 0) == 0 for p in todo):
             log(f"{item['id']} is due too; it goes out on the next run.")
             continue
         waiting = [p for p in todo if enabled[p]["platform"] == "youtube" and linked_url(item, p)[1]]
@@ -374,7 +381,8 @@ def main():
             failures += 1
             continue
         log(f"POST {item['id']}  (due {item['publish_at']})")
-        posted += 1
+        if any(item.get("attempts", {}).get(p, 0) == 0 for p in todo):
+            posted += 1   # retries of a failed channel don't use up the run's posting slot
         for platform in todo:
             acc = enabled[platform]
             item.setdefault("attempts", {})
