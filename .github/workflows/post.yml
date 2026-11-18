@@ -54,7 +54,8 @@ jobs:
           IG_API_VERSION: ${{ vars.IG_API_VERSION }}
           SECRETS_JSON: ${{ toJSON(secrets) }}
         run: |
-          pip install --quiet requests
+          pip install --quiet requests pillow
+          command -v ffmpeg >/dev/null || (sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null)
           git -C media config user.name "shorts-poster"
           git -C media config user.email "shorts-poster@users.noreply.github.com"
           python3 poster/post.py

@@ -14,7 +14,8 @@ import sys
 import tempfile
 from pathlib import Path
 
-FONT_DIRS = ["/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf",
+FONT_DIRS = [str(Path(__file__).resolve().parent / "fonts" / "Poppins-Bold.ttf"),  # SIL Open Font License
+             "/usr/share/fonts/truetype/google-fonts/Poppins-Bold.ttf",
              "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
              "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf"]
 

@@ -204,6 +204,26 @@ def ig_user_id(requests, token, acc):
                     "pages_show_list and pages_read_engagement when making the token.")
 
 
+def ensure_cover(item, video):
+    """Videos added from the dashboard have no cover yet: make one from the video
+    and title, and push it so Instagram can fetch it."""
+    if item.get("cover") and (QUEUE / item["cover"]).is_file():
+        return
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent))
+        from cover import make_cover
+        name = f"{item['id']}-cover.jpg"
+        make_cover(video, item["title"], QUEUE / name)
+        item["cover"] = name
+        save(item)
+        sync(f"{item['id']}: cover")
+        if GIT_SYNC:
+            time.sleep(8)   # let raw.githubusercontent.com see the new file
+        log(f"  made cover {name}")
+    except Exception as exc:
+        log(f"  no cover ({exc}); Instagram will use a frame 3 s in")
+
+
 def post_instagram(item, video, acc):
     ig = {**CONFIG.get("instagram", {}), **item.get("instagram", {})}
     video_url = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/queue/{video.name}"
@@ -216,6 +236,7 @@ def post_instagram(item, video, acc):
     token = SECRETS[f"IG_{acc['key'].upper()}_TOKEN"]
     user = ig_user_id(requests, token, acc)
     extra = {}
+    ensure_cover(item, video)
     if item.get("cover") and (QUEUE / item["cover"]).is_file():
         extra["cover_url"] = f"https://raw.githubusercontent.com/{REPO}/{BRANCH}/queue/{item['cover']}"
     else:   # skip the dark first frames
