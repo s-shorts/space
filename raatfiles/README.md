@@ -7,6 +7,14 @@ evidence-honest spirit as Owl Files -- never asserting a haunting is proven real
 Added 17 Nov 2026.
 
 
+
+## NO HOST INTRO (from 21 Nov 2026)
+Do not introduce Ullu or Raat at all -- no "मैं हूँ प्रोफ़ेसर उल्लू" / "मैं इंस्पेक्टर रात हूँ" line,
+no greeting. The Short starts straight on the case: first spoken line is the hook, then a
+1-2 second title card, then the case. The host still narrates and appears on screen
+(corner host / reactions), a running joke may slip in mid-story where it fits, and the
+end card keeps the comment question and the sign-off.
+
 ## LANGUAGE: HINDI (from 21 Nov 2026) -- applies to Owl Files AND Raat Files
 Both series are now made in Hindi (everyday spoken Hindi, Hindustani register -- simple,
 conversational, the way a YouTuber talks; common English words like "case", "evidence",

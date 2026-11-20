@@ -15,6 +15,14 @@ Inspector Raat the bat), see `../raatfiles/README.md` — it reuses this same to
 engine, swapping in its own host and palette.
 
 
+
+## NO HOST INTRO (from 21 Nov 2026)
+Do not introduce Ullu or Raat at all -- no "मैं हूँ प्रोफ़ेसर उल्लू" / "मैं इंस्पेक्टर रात हूँ" line,
+no greeting. The Short starts straight on the case: first spoken line is the hook, then a
+1-2 second title card, then the case. The host still narrates and appears on screen
+(corner host / reactions), a running joke may slip in mid-story where it fits, and the
+end card keeps the comment question and the sign-off.
+
 ## LANGUAGE: HINDI (from 21 Nov 2026) -- applies to Owl Files AND Raat Files
 Both series are now made in Hindi (everyday spoken Hindi, Hindustani register -- simple,
 conversational, the way a YouTuber talks; common English words like "case", "evidence",
@@ -59,10 +67,10 @@ independently.) The category rotation still applies within that constraint.
     curl -sSL -o tts/voices.bin  https://github.com/thewh1teagle/kokoro-onnx/releases/download/model-files-v1.0/voices-v1.0.bin
 
 ## Order of work (run everything from the work directory)
-1. `lines.py`: the script as `(scene number, on-screen caption text, spoken text or None)`. Spoken text spells numbers as words, all in Devanagari (see LANGUAGE: HINDI). Scene 0 is the cold open, 1 the host intro, last scene the verdict, comment question and sign-off. About 28-34 lines, 300-360 words total — roughly half of episode 1's script, since the whole episode is now the Short. Keep the cold open getting straight to the hook, and the host intro to just 1-2 short lines (one joke, name the case) — most of the runtime should go to the case itself, not the greeting.
+1. `lines.py`: the script as `(scene number, on-screen caption text, spoken text or None)`. Spoken text spells numbers as words, all in Devanagari (see LANGUAGE: HINDI). Scene 0 is the cold open (the hook), 1 the title card (NO host intro -- see NO HOST INTRO), last scene the verdict, comment question and sign-off. About 28-34 lines, roughly 280-330 Hindi words. Start straight on the hook; no host introduction or greeting.
 2. `python3 tts.py`: narration (HINDI since 21 Nov 2026: hm_omega, lang hi, speed 0.95 -- see LANGUAGE: HINDI above; episode 1 used 80% hm_omega + 20% bm_george, en-gb) -> `tts/l*.wav`, `tts/lines.json`. Aim for 2:30-2:55 of narration, leaving room for the cold open and end card beats so the final render lands under 3:00.
 3. `python3 timeline.py`: line start times, scene starts, title-card time, `voice.wav`, `env.npy` (beak movement). The list of line indices that get an extra pause is episode-specific: update it.
-4. `render.py`: everything above `# ================= SCENES` is the reusable engine (text, cards, stamps, crosses, skull, person, mountains, snowfall, board, owl host, captions, grain) — already set up for the 1080x1920 canvas. Keep the cold-open structure, title card, host intro and an end card in the last scene; rewrite the case-specific scenes with NEW visuals for the new case, laid out for portrait. Visual cues are keyed to line numbers with `cue(i)` / `cend(i)`, so every index must match the new script. Change "CASE #001" and the title text. The end card now IS the only call-to-action (there's no separate trailer to point to): have it say plainly that this is the episode, invite a comment, and sign off — no "watch the full video" line, since this already is the full thing.
+4. `render.py`: everything above `# ================= SCENES` is the reusable engine (text, cards, stamps, crosses, skull, person, mountains, snowfall, board, owl host, captions, grain) — already set up for the 1080x1920 canvas. Keep the cold-open structure, title card and an end card (no host-intro scene) in the last scene; rewrite the case-specific scenes with NEW visuals for the new case, laid out for portrait. Visual cues are keyed to line numbers with `cue(i)` / `cend(i)`, so every index must match the new script. Change "CASE #001" and the title text. The end card now IS the only call-to-action (there's no separate trailer to point to): have it say plainly that this is the episode, invite a comment, and sign off — no "watch the full video" line, since this already is the full thing.
    - `python3 render.py still 5 13 40 ...` writes test frames; `python3 sheet.py sheet.jpg` joins them. Look at frames from every scene before the full render. Captions sit centered around y 1500-1560 and the corner host near the bottom-right (x~970, y~1840): keep cards clear of both, and keep key content out of the top ~180px and bottom ~280px (Shorts UI safe zone).
    - `python3 render.py N` renders scene N to `scN.mp4`. Run two processes in parallel (even and odd scenes).
 5. `python3 audio.py`: music bed + effects -> `mix.wav`. The effect cue lists are episode-specific: update the line indices.
