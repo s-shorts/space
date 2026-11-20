@@ -128,6 +128,9 @@ def post_youtube(item, video, acc):
             "containsSyntheticMedia": bool(yt.get("ai_disclosure", False)),
         },
     }
+    if yt.get("default_language"):  # e.g. "hi" for the Hindi Owl Files / Raat Files Shorts
+        body["snippet"]["defaultLanguage"] = yt["default_language"]
+        body["snippet"]["defaultAudioLanguage"] = yt["default_language"]
     if DRY_RUN:
         log(f"  DRY RUN {acc['name']} ({privacy}): {body['snippet']['title']}")
         return {"id": "dry-run", "url": "https://youtube.com/shorts/dry-run", "privacy": privacy}
