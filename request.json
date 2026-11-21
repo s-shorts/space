@@ -1,150 +1,37 @@
 {
- "id": "2026-11-22-0241-bh-sun-b",
+ "id": "2026-11-22-0241-bh-sun-c",
  "files": [],
  "generate": [
   {
-   "name": "scene01.jpg",
-   "prompt": "the Sun in space halfway collapsing into a perfectly black sphere surrounded by a thin glowing orange ring of light, small blue planet Earth in the lower foreground, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "name": "scene08b.jpg",
+   "prompt": "a grey cratered Moon sphere in space, mostly in deep shadow with only a thin faint crescent edge lit, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5200,
+   "seed": 5300,
    "provider": "pollinations"
   },
   {
-   "name": "scene02.jpg",
-   "prompt": "bright yellow Sun on the far left sending golden beams of light across dark space toward a small blue planet Earth, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "name": "scene09b.jpg",
+   "prompt": "a smooth white wooden artist's posing mannequin, fully clothed in a dark winter coat, standing on a city rooftop looking up at a black sky full of bright stars and the Milky Way, seen from behind, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5201,
+   "seed": 5301,
    "provider": "pollinations"
   },
   {
-   "name": "scene03.jpg",
-   "prompt": "a simple faceless white mannequin figure standing in an empty city park at noon looking up at a suddenly pitch black starry sky, long dark shadows, eerie, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "name": "scene16b.jpg",
+   "prompt": "size comparison in space: a small yellow star on the left next to a gigantic bright blue supergiant star on the right, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5202,
+   "seed": 5302,
    "provider": "pollinations"
   },
   {
-   "name": "scene04.jpg",
-   "prompt": "planet Earth floating alone in dark space lit only by faint starlight, night side, tiny black dot far away in the background, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "name": "scene13b.jpg",
+   "prompt": "planet Earth completely frozen, covered in thick white snow and ice with blue cracks, dark night side, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5203,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene05.jpg",
-   "prompt": "top-down view of a tiny black hole in the center of space with planet Earth far away on a circular path, deep navy starfield, wide shot, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 5204,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene06.jpg",
-   "prompt": "a small perfectly black sphere hovering just above a tiny model town with houses and roads, the sphere as wide as the whole town, miniature diorama, dusk, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 5205,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene07.jpg",
-   "prompt": "a simple faceless white mannequin figure walking along a long straight road toward a huge perfectly black sphere sitting on the horizon, flat plains, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 5206,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene08.jpg",
-   "prompt": "the full Moon almost completely dark, a faint dim grey silhouette against a starfield, eerie, space, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 5207,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene09.jpg",
-   "prompt": "a simple faceless white mannequin figure on a city street looking up at a sky full of bright stars and the Milky Way, streetlights on, buildings, cold blue tones, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 5208,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene10.jpg",
-   "prompt": "a frozen city street covered in thick frost and snow under a black starry sky, icicles on lamp posts, cold blue light, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 5209,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene11.jpg",
-   "prompt": "planet Earth covered in white frost and ice, glowing faintly in dark space, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 5210,
-   "provider": "auto",
-   "steps": 4
-  },
-  {
-   "name": "scene12.jpg",
-   "prompt": "a field of dead wilted crops and plants covered in frost under a dark starry sky, farmhouse in the distance, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 5211,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene13.jpg",
-   "prompt": "planet Earth completely frozen into a white and pale blue ice ball in dark space, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 5212,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene14.jpg",
-   "prompt": "cut-away cross-section diagram of an ocean: thick white ice sheet on the surface, deep dark blue liquid water below, seabed at the bottom, glowing edges, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 5213,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene15.jpg",
-   "prompt": "deep-sea hydrothermal vent chimney on the dark ocean floor releasing black smoke, glowing tube worms and tiny bright microbes around it, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 5214,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene16.jpg",
-   "prompt": "a small yellow star beside a gigantic bright blue supergiant star, size comparison, deep space starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 5215,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene17.jpg",
-   "prompt": "a tiny glowing white dwarf star in the center of a colourful ring-shaped planetary nebula, deep space, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 5216,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene18.jpg",
-   "prompt": "golden sunrise over the curved horizon of planet Earth seen from space, warm sunlight spreading across the clouds, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 5217,
+   "seed": 5303,
    "provider": "pollinations"
   }
  ]
