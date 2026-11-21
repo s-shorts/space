@@ -9,7 +9,21 @@ MAX_FILES, MAX_BYTES = 30, 15 * 1024 * 1024
 UA = "OwlFilesAssetFetcher/1.0 (https://github.com/s-shorts/space; educational video project)"
 req = json.load(open("request.json")); os.makedirs("out", exist_ok=True); res = []
 KEY = os.environ.get("POLLINATIONS_API_KEY", "").strip()
-import time
+CF_ACC = os.environ.get("CF_ACCOUNT_ID", "").strip(); CF_TOK = os.environ.get("CF_API_TOKEN", "").strip()
+import time, base64
+def cloudflare_image(item):
+    """Free tier: 10,000 neurons a day; flux-1-schnell at 4 steps (1024x1024) costs about 58,
+    so roughly 170 images a day. No watermark."""
+    model = item.get("cf_model", "@cf/black-forest-labs/flux-1-schnell")
+    body = dict(prompt=item["prompt"][:2048], steps=int(item.get("steps", 6)), seed=int(item.get("seed", 1)))
+    rq = urllib.request.Request(f"https://api.cloudflare.com/client/v4/accounts/{CF_ACC}/ai/run/{model}",
+                                data=json.dumps(body).encode(), method="POST",
+                                headers={"Authorization": "Bearer " + CF_TOK, "Content-Type": "application/json"})
+    with urllib.request.urlopen(rq, timeout=120) as f:
+        out = json.loads(f.read())
+    img = (out.get("result") or {}).get("image")
+    if not img: raise ValueError("cloudflare: " + json.dumps(out.get("errors") or out)[:180])
+    return base64.b64decode(img)
 def get(url, want, timeout=180):
     with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=timeout) as f:
         ct = f.headers.get("Content-Type", "")
@@ -17,7 +31,7 @@ def get(url, want, timeout=180):
         return f.read(60 * 1024 * 1024)
 # ---- AI-generated images and (with a key) video clips, through Pollinations
 gen = []; last = 0.0
-for item in req.get("generate", [])[:24]:
+for item in req.get("generate", [])[:40]:
     kind = item.get("kind", "image"); name = re.sub(r"[^A-Za-z0-9._-]", "_", item.get("name", ""))[:80]
     r = dict(name=name, kind=kind, prompt=item.get("prompt", ""), ok=False)
     try:
@@ -35,6 +49,18 @@ for item in req.get("generate", [])[:24]:
             if KEY: q["key"] = KEY; url = "https://gen.pollinations.ai/image/" + prompt + "?" + urllib.parse.urlencode(q)
             else: url = "https://image.pollinations.ai/prompt/" + prompt + "?" + urllib.parse.urlencode(q)
             want = "image/"
+        use_cf = kind == "image" and CF_ACC and CF_TOK and item.get("provider", "auto") != "pollinations"
+        if use_cf:
+            err = None
+            for attempt in range(3):
+                try:
+                    data = cloudflare_image(item); err = None; break
+                except Exception as e:
+                    err = e; time.sleep(4)
+            if err: raise err
+            r["provider"] = "cloudflare"
+            open(os.path.join("out", name), "wb").write(data); r.update(ok=True, bytes=len(data))
+            gen.append(r); print({k: v for k, v in r.items() if k != "prompt"}); continue
         err = None
         for attempt in range(3):
             wait = (3 if KEY else 16) - (time.time() - last)
@@ -68,4 +94,4 @@ for item in req.get("files", [])[:MAX_FILES]:
     except Exception as e:
         r["error"] = str(e)[:200]
     res.append(r); print(r)
-json.dump(dict(id=req.get("id", ""), files=res, generated=gen, has_key=bool(KEY), models=models), open("out/manifest.json", "w"), indent=1)
+json.dump(dict(id=req.get("id", ""), files=res, generated=gen, has_key=bool(KEY), cloudflare=bool(CF_ACC and CF_TOK), models=models), open("out/manifest.json", "w"), indent=1)
