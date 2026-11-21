@@ -1,10 +1,15 @@
 {
-  "id": "study-spacenexus-2",
-  "channels": ["SpaceNexus-x4k"],
-  "channel_detail_limit": 30,
-  "study_download": 12,
-  "suggest": [],
-  "trends_geo": [],
-  "wiki_top": false,
+  "id": "2026-11-21-2241-whatif",
+  "youtube_queries": ["what if a black hole entered the solar system", "black hole in solar system shorts",
+    "what if the sun became a black hole", "sun turned into black hole shorts",
+    "what if earth was hollow", "hollow earth shorts",
+    "what if earth was twice as big", "what if earth was flat",
+    "what if earth was a cube", "what if you fell into jupiter", "what if earth had two moons", "what if earth was closer to the sun"],
+  "shorts_only": true,
+  "suggest": ["what if earth", "what if the moon", "what if we", "what if the sun", "what if a black hole", "what if earth was hollow", "what if earth was flat"],
+  "reddit_queries": ["what if black hole solar system", "hollow earth", "what if earth was flat", "sun replaced black hole"],
+  "trends_geo": ["US", "IN", "GB"],
+  "wiki_top": true,
+  "wiki_articles": ["Hollow Earth", "Black hole", "Flat Earth", "Primordial black hole", "Super-Earth", "Planet Nine"],
   "channel_stats": true
 }
