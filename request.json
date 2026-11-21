@@ -1,10 +1,10 @@
 {
-  "id": "test-2026-11-22-b",
-  "youtube_queries": ["planet nine", "pterodactyl mexico video"],
-  "suggest": ["planet nine", "alien life"],
-  "reddit_queries": ["planet nine"],
-  "trends_geo": ["US", "IN"],
-  "wiki_top": true,
-  "wiki_articles": ["Planet Nine"],
+  "id": "study-spacenexus-1",
+  "channels": ["SpaceNexus-x4k"],
+  "channel_detail_limit": 30,
+  "study_download": 6,
+  "suggest": [],
+  "trends_geo": [],
+  "wiki_top": false,
   "channel_stats": true
 }

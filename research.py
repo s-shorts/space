@@ -265,6 +265,100 @@ def channel_stats(path, channel_target, limit):
     return {"videos": out, "summary": summary}
 
 
+def channel_scan(handle, limit=30, download=0):
+    """Another channel's Shorts: titles and views (newest first as YouTube lists them),
+    details for the top ones, and optionally the top `download` Shorts saved as small
+    videos + frames + auto captions (the spoken script) for study."""
+    import subprocess
+    handle = handle.lstrip("@")
+    r = S.get(f"https://www.youtube.com/@{handle}/shorts", timeout=30)
+    r.raise_for_status()
+    data = yt_initial_data(r.text)
+    items, seen = [], set()
+    for d in walk(data):
+        v = d.get("shortsLockupViewModel") or d.get("reelItemRenderer")
+        if not v:
+            continue
+        if "shortsLockupViewModel" in d:
+            vid = (v.get("onTap", {}).get("innertubeCommand", {}).get("reelWatchEndpoint", {})
+                   .get("videoId")) or str(v.get("entityId", "")).replace("shorts-shelf-item-", "")
+            meta = v.get("overlayMetadata", {})
+            title, views = text_of(meta.get("primaryText")), num(text_of(meta.get("secondaryText")))
+        else:
+            vid, title, views = v.get("videoId"), text_of(v.get("headline")), num(text_of(v.get("viewCountText")))
+        if vid and vid not in seen:
+            seen.add(vid)
+            items.append({"id": vid, "title": title, "views": views, "rank_newest": len(items) + 1})
+    m = re.search(r'"subscriberCountText":\{"simpleText":"([^"]+)"', r.text) or \
+        re.search(r'"content":"([\d.,KM]+ subscribers)"', r.text)
+    subs = m.group(1) if m else None
+    top = sorted(items, key=lambda i: -(i["views"] or 0))
+    for it in top[:limit]:
+        try:
+            h = S.get(f"https://www.youtube.com/watch?v={it['id']}", timeout=30).text
+            m = re.search(r'"shortDescription":"((?:[^"\\]|\\.)*)"', h)
+            it["description"] = json.loads(f'"{m.group(1)}"')[:600] if m else ""
+            m = re.search(r'"lengthSeconds":"(\d+)"', h)
+            it["seconds"] = int(m.group(1)) if m else None
+            d = video_details(it["id"])
+            it.update({k: d[k] for k in ("published", "likes", "comments") if d.get(k) is not None})
+        except Exception as exc:
+            it["detail_error"] = str(exc)
+        time.sleep(0.5)
+    out_dir = OUT / "study"
+    studied = []
+    for it in top[:download]:
+        vid = it["id"]
+        dst = out_dir / vid
+        dst.mkdir(parents=True, exist_ok=True)
+        cmd = ["yt-dlp", "-q", "--no-warnings", "-f", "b[height<=720]/bv*[height<=720]+ba/b",
+               "--write-auto-subs", "--write-subs", "--sub-langs", "en.*", "--sub-format", "vtt",
+               "-o", str(dst / "video.%(ext)s"), f"https://www.youtube.com/shorts/{vid}"]
+        p = subprocess.run(cmd, capture_output=True, text=True, timeout=240)
+        note = {"id": vid, "title": it["title"], "views": it["views"], "ok": p.returncode == 0,
+                "error": p.stderr[-400:] if p.returncode else ""}
+        vids = [f for f in dst.glob("video.*") if f.suffix in (".mp4", ".webm", ".mkv")]
+        if vids:
+            v = vids[0]
+            # one frame per second, small, for studying pacing and visuals
+            subprocess.run(["ffmpeg", "-v", "error", "-i", str(v), "-vf", "fps=1,scale=270:-2",
+                            "-q:v", "5", str(dst / "f%03d.jpg")], timeout=120)
+            # 2x5 contact sheets of the first 10 s and the whole video
+            subprocess.run(["ffmpeg", "-v", "error", "-i", str(v), "-vf",
+                            "fps=1,scale=216:-2,tile=10x6", "-frames:v", "1", "-q:v", "4",
+                            str(dst / "sheet.jpg")], timeout=120)
+            subprocess.run(["ffmpeg", "-v", "error", "-i", str(v), "-t", "4", "-vf",
+                            "fps=4,scale=216:-2,tile=8x2", "-frames:v", "1", "-q:v", "4",
+                            str(dst / "first4s.jpg")], timeout=120)
+            pr = subprocess.run(["ffprobe", "-v", "error", "-show_entries",
+                                 "format=duration:stream=width,height,r_frame_rate,codec_type",
+                                 "-of", "json", str(v)], capture_output=True, text=True)
+            note["probe"] = json.loads(pr.stdout or "{}")
+            # scene cuts (how often the picture changes)
+            sc = subprocess.run(["ffmpeg", "-i", str(v), "-vf", "select='gt(scene,0.3)',showinfo",
+                                 "-f", "null", "-"], capture_output=True, text=True, timeout=180)
+            cuts = [float(x) for x in re.findall(r"pts_time:([\d.]+)", sc.stderr)]
+            note["cuts"] = cuts
+            # keep the audio for loudness/music study, drop the video file (size)
+            subprocess.run(["ffmpeg", "-v", "error", "-i", str(v), "-vn", "-ac", "1", "-b:a", "64k",
+                            str(dst / "audio.mp3")], timeout=120)
+            v.unlink()
+        subs = sorted(dst.glob("*.vtt"))
+        if subs:
+            lines, last = [], ""
+            for line in subs[0].read_text(errors="ignore").splitlines():
+                line = re.sub(r"<[^>]+>", "", line).strip()
+                if not line or "-->" in line or line.startswith(("WEBVTT", "Kind:", "Language:")):
+                    continue
+                if line != last:
+                    lines.append(line)
+                    last = line
+            note["transcript"] = " ".join(lines)
+        studied.append(note)
+    return {"handle": handle, "subscribers": subs, "shorts_listed": len(items),
+            "by_views": top, "studied": studied}
+
+
 def run(name, fn, results, errors):
     try:
         results[name] = fn()
@@ -349,6 +443,15 @@ def main():
     if req.get("channel_stats", True) and Path("published.jsonl").is_file():
         run("channel", lambda: channel_stats("published.jsonl", req.get("channel_target", "yt-main"),
                                              req.get("channel_limit", 40)), results, errors)
+
+    for ch in req.get("channels", [])[:3]:
+        results.setdefault("channels", {})
+        try:
+            results["channels"][ch] = channel_scan(ch, req.get("channel_detail_limit", 25),
+                                                   req.get("study_download", 0))
+        except Exception as exc:
+            results["channels"][ch] = {"error": f"{type(exc).__name__}: {exc}"}
+            traceback.print_exc()
 
     results["errors"] = errors
     OUT.mkdir(exist_ok=True)
