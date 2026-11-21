@@ -1,4 +1,150 @@
-{"id": "cf-test-3", "files": [], "generate": [
- {"name": "t1.jpg", "prompt": "a cube-shaped planet Earth floating in deep navy space, stylized 3D render, soft studio lighting, vivid colours, highly detailed, centered subject, no text", "seed": 7},
- {"name": "t2.jpg", "prompt": "a faceless white mannequin figure standing on a tilted grassy hill under a bright sun, stylized 3D render, clean, vivid colours, no text", "seed": 7}
-]}
+{
+ "id": "2026-11-22-0400-moon-crash",
+ "files": [],
+ "generate": [
+  {
+   "name": "m01.jpg",
+   "prompt": "the grey cratered Moon looming enormous and about to collide with planet Earth, the Moon filling the upper half of the frame, Earth below, dramatic glowing edges, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7100,
+   "steps": 6
+  },
+  {
+   "name": "m02.jpg",
+   "prompt": "a giant grey full Moon filling most of a night sky above a quiet coastal town and calm sea, the Moon looks huge and too close, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7101,
+   "steps": 6
+  },
+  {
+   "name": "m03.jpg",
+   "prompt": "cut-away diagram of planet Earth with its oceans stretched into a tall bulge pointing toward a nearby Moon, glowing arrows, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7102,
+   "steps": 6
+  },
+  {
+   "name": "m04.jpg",
+   "prompt": "enormous tidal waves flooding a coastal city street at night, huge Moon in the sky above, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7103,
+   "steps": 6
+  },
+  {
+   "name": "m05.jpg",
+   "prompt": "the grey Moon in space beginning to crack apart into large glowing fragments, near planet Earth, cracks glowing orange, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7104,
+   "steps": 6
+  },
+  {
+   "name": "m06.jpg",
+   "prompt": "the Moon breaking into many rocky chunks of different sizes spreading out in space, planet Earth nearby, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7105,
+   "steps": 6
+  },
+  {
+   "name": "m07.jpg",
+   "prompt": "planet Earth surrounded by a bright wide ring of grey rock debris like Saturn's rings, seen at an angle from space, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7106,
+   "steps": 6
+  },
+  {
+   "name": "m08.jpg",
+   "prompt": "large glowing rocky fragments falling toward planet Earth, entering the atmosphere with fiery trails, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7107,
+   "steps": 6
+  },
+  {
+   "name": "m09.jpg",
+   "prompt": "a giant mountain-sized rock fragment plunging into an ocean with a massive explosion and shockwave, seen from far away, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7108,
+   "steps": 6
+  },
+  {
+   "name": "m10.jpg",
+   "prompt": "a simple faceless white mannequin figure standing on a hill at night, looking up at a sky full of bright fireballs and meteor streaks, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7109,
+   "steps": 6
+  },
+  {
+   "name": "m11.jpg",
+   "prompt": "the young molten Earth glowing with lava oceans, a Mars-sized orange planet approaching it for a collision, early solar system, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7110,
+   "steps": 6
+  },
+  {
+   "name": "m12.jpg",
+   "prompt": "a giant impact between two planets in space, huge glowing explosion, molten debris flying outward forming a disk, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7111,
+   "steps": 6
+  },
+  {
+   "name": "m13.jpg",
+   "prompt": "the Moon and planet Earth far apart in space, a thin glowing dotted line between them, calm and peaceful, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7112,
+   "steps": 6
+  },
+  {
+   "name": "m14.jpg",
+   "prompt": "a close-up of a human hand with clean fingernails resting on a table under soft light, a small model Moon next to it, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7113,
+   "steps": 6
+  },
+  {
+   "name": "m15.jpg",
+   "prompt": "planet Earth seen from the surface of the Moon, grey lunar landscape in the foreground, calm, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7114,
+   "steps": 6
+  },
+  {
+   "name": "m16.jpg",
+   "prompt": "planet Earth with bright Saturn-like rings next to its full Moon, both glowing softly in space, beautiful, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7115,
+   "steps": 6
+  },
+  {
+   "name": "m17.jpg",
+   "prompt": "a molten lava ocean surface with a giant glowing debris disk in the sky above, primordial Earth, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7116,
+   "steps": 6
+  },
+  {
+   "name": "m18.jpg",
+   "prompt": "glowing ocean tide diagram, sea water pulled up into a bulge by a huge Moon on the horizon, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 7117,
+   "steps": 6
+  }
+ ]
+}
