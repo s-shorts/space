@@ -10,7 +10,7 @@ UA = "OwlFilesAssetFetcher/1.0 (https://github.com/s-shorts/space; educational v
 req = json.load(open("request.json")); os.makedirs("out", exist_ok=True); res = []
 KEY = os.environ.get("POLLINATIONS_API_KEY", "").strip()
 CF_ACC = os.environ.get("CF_ACCOUNT_ID", "").strip(); CF_TOK = os.environ.get("CF_API_TOKEN", "").strip()
-import time, base64
+import time, base64, urllib.error
 def cloudflare_image(item):
     """Free tier: 10,000 neurons a day; flux-1-schnell at 4 steps (1024x1024) costs about 58,
     so roughly 170 images a day. No watermark."""
@@ -19,8 +19,12 @@ def cloudflare_image(item):
     rq = urllib.request.Request(f"https://api.cloudflare.com/client/v4/accounts/{CF_ACC}/ai/run/{model}",
                                 data=json.dumps(body).encode(), method="POST",
                                 headers={"Authorization": "Bearer " + CF_TOK, "Content-Type": "application/json"})
-    with urllib.request.urlopen(rq, timeout=120) as f:
-        out = json.loads(f.read())
+    try:
+        with urllib.request.urlopen(rq, timeout=120) as f:
+            out = json.loads(f.read())
+    except urllib.error.HTTPError as e:
+        body = e.read()[:400].decode("utf-8", "replace")
+        raise ValueError(f"cloudflare HTTP {e.code}: {body} (account id length {len(CF_ACC)})")
     img = (out.get("result") or {}).get("image")
     if not img: raise ValueError("cloudflare: " + json.dumps(out.get("errors") or out)[:180])
     return base64.b64decode(img)
