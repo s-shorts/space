@@ -1,8 +1,8 @@
 {
-  "id": "study-spacenexus-1",
+  "id": "study-spacenexus-2",
   "channels": ["SpaceNexus-x4k"],
   "channel_detail_limit": 30,
-  "study_download": 6,
+  "study_download": 12,
   "suggest": [],
   "trends_geo": [],
   "wiki_top": false,

@@ -311,7 +311,16 @@ def channel_scan(handle, limit=30, download=0):
         vid = it["id"]
         dst = out_dir / vid
         dst.mkdir(parents=True, exist_ok=True)
+        # still frames YouTube publishes for every video (cover + 25/50/75 % points)
+        for name in ("oardefault", "hq1", "hq2", "hq3", "maxresdefault", "hqdefault"):
+            try:
+                tr = S.get(f"https://i.ytimg.com/vi/{vid}/{name}.jpg", timeout=20)
+                if tr.ok and len(tr.content) > 2000:
+                    (dst / f"thumb_{name}.jpg").write_bytes(tr.content)
+            except Exception:
+                pass
         cmd = ["yt-dlp", "-q", "--no-warnings", "-f", "b[height<=720]/bv*[height<=720]+ba/b",
+               "--extractor-args", "youtube:player_client=tv_simply,tv,mweb,web_embedded",
                "--write-auto-subs", "--write-subs", "--sub-langs", "en.*", "--sub-format", "vtt",
                "-o", str(dst / "video.%(ext)s"), f"https://www.youtube.com/shorts/{vid}"]
         p = subprocess.run(cmd, capture_output=True, text=True, timeout=240)
