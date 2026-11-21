@@ -1,148 +1,46 @@
 {
- "id": "20261122-0241-jellyfish-b",
+ "id": "20261122-0241-jellyfish-c",
  "files": [],
  "generate": [
   {
-   "name": "scene01.jpg",
-   "prompt": "a giant translucent glowing jellyfish-shaped object with long dangling tentacles floating in the sky above a pine forest and snowy mountains at golden dusk, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 4100,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene02.jpg",
-   "prompt": "a northern city skyline at bright evening twilight with snowy mountains behind and a vivid rainbow in the sky, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 4101,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene03.jpg",
-   "prompt": "a dark silver jellyfish-shaped object with long wavy streamers hovering above pine trees on a mountainside, evening sky, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 4102,
-   "provider": "pollinations"
-  },
-  {
    "name": "scene04.jpg",
-   "prompt": "a distant military air base with hangars and a long runway at the foot of snowy mountains, evening light, seen from far away, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
+   "prompt": "a distant air base with hangars and a long runway at the foot of snowy mountains near a northern city, evening light, seen from far away across trees, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1080,
    "height": 1920,
-   "seed": 4103,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene05.jpg",
-   "prompt": "a simple faceless white mannequin figure standing in a parking lot looking up at the sky, holding a smartphone, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 4104,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene06.jpg",
-   "prompt": "a low sun just above the horizon over a northern city and mountains, bright summer sky at night, long shadows, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 4105,
+   "seed": 4200,
    "provider": "pollinations"
   },
   {
    "name": "scene07.jpg",
-   "prompt": "a simple faceless white mannequin figure filming a big rainbow with a smartphone, city street, evening light, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
+   "prompt": "a smooth featureless white artist's mannequin figure wearing a simple dark jacket and jeans holding up a smartphone to film a big vivid rainbow over a city street, seen from behind, evening sun, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1080,
    "height": 1920,
-   "seed": 4106,
+   "seed": 4201,
    "provider": "pollinations"
   },
   {
    "name": "scene08.jpg",
-   "prompt": "a small colourful kite flying close above a simple faceless white mannequin figure in an open field, empty sky, lots of empty space, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
+   "prompt": "a small black and silver kite with long ribbon streamers flying low above a tiny smooth featureless white artist's mannequin figure wearing a simple dark jacket and jeans in a wide open field, huge empty evening sky, mountains far away, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1080,
    "height": 1920,
-   "seed": 4107,
+   "seed": 4202,
    "provider": "pollinations"
   },
   {
    "name": "scene09.jpg",
-   "prompt": "a giant octopus-shaped show kite made of shiny fabric with long ribbon tentacles flying in a blue sky, held by a thin string, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
+   "prompt": "a large black and silver fabric show kite shaped like a jellyfish with long wavy ribbon tails, flying on a thin string in an evening sky above pine trees, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1080,
    "height": 1920,
-   "seed": 4108,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene10.jpg",
-   "prompt": "close-up of long silver and black fabric streamers waving in the wind against the evening sky, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 4109,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene11.jpg",
-   "prompt": "infrared thermal camera style grayscale view of a desert air base at night with a small dark jellyfish-shaped blob floating above it, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 4110,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene12.jpg",
-   "prompt": "a cluster of partly deflated balloons with dangling strings drifting in the sky, looking like a jellyfish, desert below, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 4111,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene13.jpg",
-   "prompt": "a cluster of balloons drifting sideways over a desert landscape with wind-blown dust, wide view, sky, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 4112,
+   "seed": 4203,
    "provider": "pollinations"
   },
   {
    "name": "scene14.jpg",
-   "prompt": "two simple faceless white mannequin figures standing far apart, both filming the same floating object in the sky with phones, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
+   "prompt": "two smooth featureless white artist's mannequin figures wearing a simple dark jacket and jeans standing far apart on a hillside, both pointing phones at the same small floating object in the evening sky, wide shot, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1080,
    "height": 1920,
-   "seed": 4113,
+   "seed": 4204,
    "provider": "pollinations"
-  },
-  {
-   "name": "scene15.jpg",
-   "prompt": "a floating jellyfish-shaped object half hidden in fog above snowy mountains, mysterious mood, soft light, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 4114,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene16.jpg",
-   "prompt": "a real glowing ocean jellyfish underwater beside a jellyfish-shaped fabric kite in the sky above the sea surface, split scene, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 4115,
-   "provider": "pollinations"
-  },
-  {
-   "name": "scene17.jpg",
-   "prompt": "a simple faceless white mannequin figure on a hill holding the string of a large jellyfish-shaped kite with long streamers, snowy mountains, sunset, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 4116,
-   "provider": "pollinations"
-  },
-  {
-   "name": "cftest.jpg",
-   "prompt": "a red apple on a table",
-   "seed": 1,
-   "steps": 4
   }
  ]
 }
