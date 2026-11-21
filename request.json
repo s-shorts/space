@@ -1,48 +1,150 @@
 {
- "id": "20261117-styletest-film-2",
+ "id": "2026-11-21-2241-bh-sun",
  "files": [],
  "generate": [
   {
-   "name": "bat_idle.jpg",
-   "prompt": "3D animated feature film character render, cute stylized, big expressive eyes, soft subsurface fur and feathers, cinematic rim light, volumetric fog, detailed, no humans, animal character only, full body, centered, plain dark background. an anthropomorphic fruit bat with leathery wings and big pointed ears, wearing round cracked spectacles and a dark navy hooded cloak, holding a glowing brass lantern, standing calmly, slight smile",
-   "seed": 21,
-   "width": 1088,
-   "height": 2048
+   "name": "scene01.jpg",
+   "prompt": "the Sun in space halfway collapsing into a perfectly black sphere surrounded by a thin glowing orange ring of light, small blue planet Earth in the lower foreground, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5200,
+   "steps": 6
   },
   {
-   "name": "bat_scared.jpg",
-   "prompt": "3D animated feature film character render, cute stylized, big expressive eyes, soft subsurface fur and feathers, cinematic rim light, volumetric fog, detailed, no humans, animal character only, full body, centered, plain dark background. an anthropomorphic fruit bat with leathery wings and big pointed ears, wearing round cracked spectacles and a dark navy hooded cloak, holding a glowing brass lantern, frightened, wings clutched, ears flat, trembling",
-   "seed": 21,
-   "width": 1088,
-   "height": 2048
+   "name": "scene02.jpg",
+   "prompt": "bright yellow Sun on the far left sending golden beams of light across dark space toward a small blue planet Earth, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5201,
+   "steps": 6
   },
   {
-   "name": "owl_idle.jpg",
-   "prompt": "3D animated feature film character render, cute stylized, big expressive eyes, soft subsurface fur and feathers, cinematic rim light, volumetric fog, detailed, no humans, animal character only, full body, centered, plain dark background. an anthropomorphic brown owl bird with feathers and a small orange beak, wearing round glasses, a brown tweed flat cap and a red scarf, holding a magnifying glass, standing confidently",
-   "seed": 31,
-   "width": 1088,
-   "height": 2048
+   "name": "scene03.jpg",
+   "prompt": "a simple faceless white mannequin figure standing in an empty city park at noon looking up at a suddenly pitch black starry sky, long dark shadows, eerie, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5202,
+   "steps": 6
   },
   {
-   "name": "owl_point.jpg",
-   "prompt": "3D animated feature film character render, cute stylized, big expressive eyes, soft subsurface fur and feathers, cinematic rim light, volumetric fog, detailed, no humans, animal character only, full body, centered, plain dark background. an anthropomorphic brown owl bird with feathers and a small orange beak, wearing round glasses, a brown tweed flat cap and a red scarf, holding a magnifying glass, raising one wing to make a point, curious expression",
-   "seed": 31,
-   "width": 1088,
-   "height": 2048
+   "name": "scene04.jpg",
+   "prompt": "planet Earth floating alone in dark space lit only by faint starlight, night side, tiny black dot far away in the background, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5203,
+   "steps": 6
   },
   {
-   "name": "env_room.jpg",
-   "prompt": "stylized 3D animated feature film background, no characters, cinematic composition, volumetric fog and moonlight, soft global illumination, teal and amber color grade, highly detailed. a 1970s children's bedroom at night, a wooden chair alone in the middle of the floor, toys, eerie blue moonlight through curtains",
-   "seed": 13,
-   "width": 1088,
-   "height": 2048
+   "name": "scene05.jpg",
+   "prompt": "top-down view of a tiny black hole in the center of space with planet Earth far away on a circular path, deep navy starfield, wide shot, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5204,
+   "steps": 6
   },
   {
-   "name": "env_corridor.jpg",
-   "prompt": "stylized 3D animated feature film background, no characters, cinematic composition, volumetric fog and moonlight, soft global illumination, teal and amber color grade, highly detailed. a narrow old house hallway at night, stairs, a single flickering lamp, long shadows",
-   "seed": 15,
-   "width": 1088,
-   "height": 2048
+   "name": "scene06.jpg",
+   "prompt": "a small perfectly black sphere hovering just above a tiny model town with houses and roads, the sphere as wide as the whole town, miniature diorama, dusk, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5205,
+   "steps": 6
+  },
+  {
+   "name": "scene07.jpg",
+   "prompt": "a simple faceless white mannequin figure walking along a long straight road toward a huge perfectly black sphere sitting on the horizon, flat plains, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5206,
+   "steps": 6
+  },
+  {
+   "name": "scene08.jpg",
+   "prompt": "the full Moon almost completely dark, a faint dim grey silhouette against a starfield, eerie, space, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5207,
+   "steps": 6
+  },
+  {
+   "name": "scene09.jpg",
+   "prompt": "a simple faceless white mannequin figure on a city street looking up at a sky full of bright stars and the Milky Way, streetlights on, buildings, cold blue tones, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5208,
+   "steps": 6
+  },
+  {
+   "name": "scene10.jpg",
+   "prompt": "a frozen city street covered in thick frost and snow under a black starry sky, icicles on lamp posts, cold blue light, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5209,
+   "steps": 6
+  },
+  {
+   "name": "scene11.jpg",
+   "prompt": "planet Earth covered in white frost and ice, glowing faintly in dark space, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5210,
+   "steps": 6
+  },
+  {
+   "name": "scene12.jpg",
+   "prompt": "a field of dead wilted crops and plants covered in frost under a dark starry sky, farmhouse in the distance, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5211,
+   "steps": 6
+  },
+  {
+   "name": "scene13.jpg",
+   "prompt": "planet Earth completely frozen into a white and pale blue ice ball in dark space, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5212,
+   "steps": 6
+  },
+  {
+   "name": "scene14.jpg",
+   "prompt": "cut-away cross-section diagram of an ocean: thick white ice sheet on the surface, deep dark blue liquid water below, seabed at the bottom, glowing edges, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5213,
+   "steps": 6
+  },
+  {
+   "name": "scene15.jpg",
+   "prompt": "deep-sea hydrothermal vent chimney on the dark ocean floor releasing black smoke, glowing tube worms and tiny bright microbes around it, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5214,
+   "steps": 6
+  },
+  {
+   "name": "scene16.jpg",
+   "prompt": "a small yellow star beside a gigantic bright blue supergiant star, size comparison, deep space starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5215,
+   "steps": 6
+  },
+  {
+   "name": "scene17.jpg",
+   "prompt": "a tiny glowing white dwarf star in the center of a colourful ring-shaped planetary nebula, deep space, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5216,
+   "steps": 6
+  },
+  {
+   "name": "scene18.jpg",
+   "prompt": "golden sunrise over the curved horizon of planet Earth seen from space, warm sunlight spreading across the clouds, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 5217,
+   "steps": 6
   }
  ]
 }
