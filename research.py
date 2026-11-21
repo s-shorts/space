@@ -138,10 +138,18 @@ def video_details(vid):
     out = {}
     m = re.search(r'"viewCount":"(\d+)"', h)
     out["views"] = int(m.group(1)) if m else None
-    m = re.search(r'"(?:uploadDate|publishDate)":"([^"]+)"', h)
+    m = (re.search(r'"(?:uploadDate|publishDate)":"([^"]+)"', h)
+         or re.search(r'itemprop="(?:datePublished|uploadDate)" content="([^"]+)"', h)
+         or re.search(r'"(?:uploadDate|publishDate)":\{"simpleText":"([^"]+)"', h))
     out["published"] = m.group(1) if m else None
-    m = re.search(r'"ownerChannelName":"([^"]*)"', h)
+    m = (re.search(r'"ownerChannelName":"([^"]*)"', h) or re.search(r'"author":"([^"]*)"', h)
+         or re.search(r'<link itemprop="name" content="([^"]*)"', h))
     out["channel"] = m.group(1) if m else ""
+    if out["published"] and not re.match(r"\d{4}-\d{2}-\d{2}", out["published"]):
+        try:   # e.g. "Nov 3, 2026"
+            out["published"] = dt.datetime.strptime(out["published"], "%b %d, %Y").date().isoformat()
+        except ValueError:
+            pass
     m = re.search(r'"likeCount":"?(\d+)', h) or \
         re.search(r'along with ([\d,]+) other (?:people|person)', h)
     out["likes"] = int(m.group(1).replace(",", "")) if m else None
@@ -155,7 +163,8 @@ def video_details(vid):
 
 def published_days(p):
     try:
-        t = dt.datetime.fromisoformat(p.replace("Z", "+00:00"))
+        t = dt.datetime.fromisoformat(p.replace("Z", "+00:00")) if "T" in p else \
+            dt.datetime.fromisoformat(p + "T12:00:00+00:00")
         if t.tzinfo is None:
             t = t.replace(tzinfo=dt.timezone.utc)
         return max((NOW - t).total_seconds() / 86400, 1 / 24)
