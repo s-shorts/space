@@ -1,150 +1,125 @@
 {
- "id": "2026-11-21-2241-bh-sun",
+ "id": "20261122-0241-jellyfish",
  "files": [],
  "generate": [
   {
    "name": "scene01.jpg",
-   "prompt": "the Sun in space halfway collapsing into a perfectly black sphere surrounded by a thin glowing orange ring of light, small blue planet Earth in the lower foreground, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "a giant translucent glowing jellyfish-shaped object with long dangling tentacles floating in the sky above a pine forest and snowy mountains at golden dusk, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5200,
-   "steps": 6
+   "seed": 4100
   },
   {
    "name": "scene02.jpg",
-   "prompt": "bright yellow Sun on the far left sending golden beams of light across dark space toward a small blue planet Earth, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "a northern city skyline at bright evening twilight with snowy mountains behind and a vivid rainbow in the sky, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5201,
-   "steps": 6
+   "seed": 4101
   },
   {
    "name": "scene03.jpg",
-   "prompt": "a simple faceless white mannequin figure standing in an empty city park at noon looking up at a suddenly pitch black starry sky, long dark shadows, eerie, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "a dark silver jellyfish-shaped object with long wavy streamers hovering above pine trees on a mountainside, evening sky, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5202,
-   "steps": 6
+   "seed": 4102
   },
   {
    "name": "scene04.jpg",
-   "prompt": "planet Earth floating alone in dark space lit only by faint starlight, night side, tiny black dot far away in the background, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "a distant military air base with hangars and a long runway at the foot of snowy mountains, evening light, seen from far away, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5203,
-   "steps": 6
+   "seed": 4103
   },
   {
    "name": "scene05.jpg",
-   "prompt": "top-down view of a tiny black hole in the center of space with planet Earth far away on a circular path, deep navy starfield, wide shot, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "a simple faceless white mannequin figure standing in a parking lot looking up at the sky, holding a smartphone, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5204,
-   "steps": 6
+   "seed": 4104
   },
   {
    "name": "scene06.jpg",
-   "prompt": "a small perfectly black sphere hovering just above a tiny model town with houses and roads, the sphere as wide as the whole town, miniature diorama, dusk, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "a low sun just above the horizon over a northern city and mountains, bright summer sky at night, long shadows, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5205,
-   "steps": 6
+   "seed": 4105
   },
   {
    "name": "scene07.jpg",
-   "prompt": "a simple faceless white mannequin figure walking along a long straight road toward a huge perfectly black sphere sitting on the horizon, flat plains, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "a simple faceless white mannequin figure filming a big rainbow with a smartphone, city street, evening light, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5206,
-   "steps": 6
+   "seed": 4106
   },
   {
    "name": "scene08.jpg",
-   "prompt": "the full Moon almost completely dark, a faint dim grey silhouette against a starfield, eerie, space, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "a small colourful kite flying close above a simple faceless white mannequin figure in an open field, empty sky, lots of empty space, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5207,
-   "steps": 6
+   "seed": 4107
   },
   {
    "name": "scene09.jpg",
-   "prompt": "a simple faceless white mannequin figure on a city street looking up at a sky full of bright stars and the Milky Way, streetlights on, buildings, cold blue tones, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "a giant octopus-shaped show kite made of shiny fabric with long ribbon tentacles flying in a blue sky, held by a thin string, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5208,
-   "steps": 6
+   "seed": 4108
   },
   {
    "name": "scene10.jpg",
-   "prompt": "a frozen city street covered in thick frost and snow under a black starry sky, icicles on lamp posts, cold blue light, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "close-up of long silver and black fabric streamers waving in the wind against the evening sky, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5209,
-   "steps": 6
+   "seed": 4109
   },
   {
    "name": "scene11.jpg",
-   "prompt": "planet Earth covered in white frost and ice, glowing faintly in dark space, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "infrared thermal camera style grayscale view of a desert air base at night with a small dark jellyfish-shaped blob floating above it, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5210,
-   "steps": 6
+   "seed": 4110
   },
   {
    "name": "scene12.jpg",
-   "prompt": "a field of dead wilted crops and plants covered in frost under a dark starry sky, farmhouse in the distance, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "a cluster of partly deflated balloons with dangling strings drifting in the sky, looking like a jellyfish, desert below, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5211,
-   "steps": 6
+   "seed": 4111
   },
   {
    "name": "scene13.jpg",
-   "prompt": "planet Earth completely frozen into a white and pale blue ice ball in dark space, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "a cluster of balloons drifting sideways over a desert landscape with wind-blown dust, wide view, sky, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5212,
-   "steps": 6
+   "seed": 4112
   },
   {
    "name": "scene14.jpg",
-   "prompt": "cut-away cross-section diagram of an ocean: thick white ice sheet on the surface, deep dark blue liquid water below, seabed at the bottom, glowing edges, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "two simple faceless white mannequin figures standing far apart, both filming the same floating object in the sky with phones, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5213,
-   "steps": 6
+   "seed": 4113
   },
   {
    "name": "scene15.jpg",
-   "prompt": "deep-sea hydrothermal vent chimney on the dark ocean floor releasing black smoke, glowing tube worms and tiny bright microbes around it, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "a floating jellyfish-shaped object half hidden in fog above snowy mountains, mysterious mood, soft light, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5214,
-   "steps": 6
+   "seed": 4114
   },
   {
    "name": "scene16.jpg",
-   "prompt": "a small yellow star beside a gigantic bright blue supergiant star, size comparison, deep space starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "a real glowing ocean jellyfish underwater beside a jellyfish-shaped fabric kite in the sky above the sea surface, split scene, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5215,
-   "steps": 6
+   "seed": 4115
   },
   {
    "name": "scene17.jpg",
-   "prompt": "a tiny glowing white dwarf star in the center of a colourful ring-shaped planetary nebula, deep space, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
+   "prompt": "a simple faceless white mannequin figure on a hill holding the string of a large jellyfish-shaped kite with long streamers, snowy mountains, sunset, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 5216,
-   "steps": 6
-  },
-  {
-   "name": "scene18.jpg",
-   "prompt": "golden sunrise over the curved horizon of planet Earth seen from space, warm sunlight spreading across the clouds, starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy background, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 5217,
-   "steps": 6
+   "seed": 4116
   }
  ]
 }
