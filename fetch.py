@@ -15,7 +15,7 @@ def cloudflare_image(item):
     """Free tier: 10,000 neurons a day; flux-1-schnell at 4 steps (1024x1024) costs about 58,
     so roughly 170 images a day. No watermark."""
     model = item.get("cf_model", "@cf/black-forest-labs/flux-1-schnell")
-    body = dict(prompt=item["prompt"][:2048], steps=int(item.get("steps", 6)), seed=int(item.get("seed", 1)))
+    body = dict(prompt=item["prompt"][:2048], steps=min(8, int(item.get("steps", 6))))  # this model takes no seed
     rq = urllib.request.Request(f"https://api.cloudflare.com/client/v4/accounts/{CF_ACC}/ai/run/{model}",
                                 data=json.dumps(body).encode(), method="POST",
                                 headers={"Authorization": "Bearer " + CF_TOK, "Content-Type": "application/json"})
