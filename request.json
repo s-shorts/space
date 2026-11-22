@@ -1,27 +1,12 @@
 {
- "id": "2026-11-22-B-mumler-3",
+ "id": "2026-11-22-B-mumler-4",
  "files": [
   {
-   "name": "loc_fallis_v.jpg",
-   "url": "https://tile.loc.gov/storage-services/service/pnp/cph/3g00000/3g01000/3g01800/3g01845v.jpg",
-   "credit": "S. W. Fallis, Spirit photograph (1901), Library of Congress",
-   "licence": "Public domain"
-  },
-  {
-   "name": "loc_fallis_r.jpg",
-   "url": "https://tile.loc.gov/storage-services/service/pnp/cph/3g00000/3g01000/3g01800/3g01845r.jpg",
-   "credit": "S. W. Fallis, Spirit photograph (1901), Library of Congress",
+   "name": "loc_poster.jpg",
+   "url": "https://tile.loc.gov/storage-services/service/pnp/var/1600/1627v.jpg",
+   "credit": "Do Spirits Return? poster (c.1909), Library of Congress",
    "licence": "Public domain"
   }
  ],
- "generate": [
-  {
-   "name": "ai_court.jpg",
-   "prompt": "empty 19th century courtroom interior at dusk, wooden benches, gas lamps glowing, dust in the air, dark moody, candlelight and deep indigo shadows, film grain, cinematic, no text",
-   "width": 1024,
-   "height": 1024,
-   "seed": 2300,
-   "provider": "pollinations"
-  }
- ]
+ "generate": []
 }
