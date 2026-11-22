@@ -1,14 +1,14 @@
 {
-  "id": "2026-11-22-2241-whatif",
+  "id": "2026-11-23-0241-trending",
   "region": "IN",
   "compare_region": "US",
-  "youtube_queries": ["what if the himalayas disappeared", "what if himalaya disappeared shorts", "agar himalaya na hota", "what if a black hole entered the solar system", "black hole solar system shorts", "what if earth had two suns", "two suns shorts", "what if gravity doubled", "what if earth was twice as big shorts", "what if you fell into jupiter", "falling into jupiter shorts", "what if no monsoon india"],
   "shorts_only": true,
-  "suggest": ["what if the himalayas", "what if himalaya", "agar himalaya", "what if a black hole", "what if earth had", "what if gravity", "what if you fell into", "what if earth"],
-  "reddit_queries": ["what if Himalayas didn't exist", "black hole solar system what would happen", "Earth two suns", "falling into Jupiter"],
+  "youtube_queries": ["supermoon", "supermoon november 2026 shorts", "supermoon kab hai", "beaver moon 2026", "voyager 1 stopped sending data", "voyager 1 shorts", "gaganyaan", "gaganyaan launch shorts", "star swallowing star", "andromeda star eats companion", "neptune trojan asteroids", "why does the moon look bigger"],
+  "suggest": ["supermoon", "supermoon 2026", "voyager 1", "gaganyaan", "star swallowed", "why is the moon"],
+  "reddit_queries": ["supermoon", "voyager 1", "gaganyaan", "star swallowing companion"],
   "trends_geo": ["IN", "US", "GB"],
   "wiki_top": true,
   "wiki_top_langs": ["hi"],
-  "wiki_articles": ["Himalayas", "Tibetan Plateau", "Monsoon of South Asia", "Black hole", "Binary star", "Jupiter", "Gravity of Earth", "Primordial black hole"],
+  "wiki_articles": ["Supermoon", "Full moon", "Voyager 1", "Gaganyaan", "Moon illusion", "Kartik Purnima"],
   "channel_stats": true
 }
