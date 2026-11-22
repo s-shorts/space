@@ -1,14 +1,14 @@
 {
-  "id": "2026-11-22-1311-earth-mystery",
+  "id": "2026-11-22-2241-whatif",
   "region": "IN",
   "compare_region": "US",
-  "youtube_queries": ["roopkund skeleton lake", "skeleton lake shorts", "roopkund lake mystery", "lonar lake", "lonar crater lake shorts", "magnetic hill ladakh", "magnetic hill ladakh shorts", "morbi well mystery", "gujarat well waves", "red sky chhattisgarh", "mysterious places in india shorts", "earth mystery shorts"],
+  "youtube_queries": ["what if the himalayas disappeared", "what if himalaya disappeared shorts", "agar himalaya na hota", "what if a black hole entered the solar system", "black hole solar system shorts", "what if earth had two suns", "two suns shorts", "what if gravity doubled", "what if earth was twice as big shorts", "what if you fell into jupiter", "falling into jupiter shorts", "what if no monsoon india"],
   "shorts_only": true,
-  "suggest": ["roopkund", "skeleton lake", "lonar lake", "magnetic hill", "morbi well", "mysterious places in india", "red sky"],
-  "reddit_queries": ["Roopkund", "Lonar lake", "magnetic hill ladakh", "Morbi well"],
+  "suggest": ["what if the himalayas", "what if himalaya", "agar himalaya", "what if a black hole", "what if earth had", "what if gravity", "what if you fell into", "what if earth"],
+  "reddit_queries": ["what if Himalayas didn't exist", "black hole solar system what would happen", "Earth two suns", "falling into Jupiter"],
   "trends_geo": ["IN", "US", "GB"],
   "wiki_top": true,
   "wiki_top_langs": ["hi"],
-  "wiki_articles": ["Roopkund", "Lonar Lake", "Magnetic Hill (India)", "Gravity hill", "Seiche"],
+  "wiki_articles": ["Himalayas", "Tibetan Plateau", "Monsoon of South Asia", "Black hole", "Binary star", "Jupiter", "Gravity of Earth", "Primordial black hole"],
   "channel_stats": true
 }
