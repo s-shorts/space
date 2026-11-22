@@ -1,9 +1,11 @@
 {
-  "id": "2026-11-22-1441-alien-b",
-  "youtube_queries": ["did viking find life on mars", "viking life on mars shorts", "did we kill life on mars", "did nasa kill life on mars shorts", "viking labeled release experiment", "life on mars 1976", "alpha centauri a planet webb", "life on mars shorts"],
+  "id": "2026-11-22-0912-earth-mystery",
+  "youtube_queries": ["door to hell crater", "gates of hell turkmenistan shorts", "eye of the sahara", "richat structure shorts", "blood falls antarctica", "blood falls antarctica shorts", "brinicle finger of death", "finger of death antarctica shorts", "sailing stones death valley", "moving rocks death valley shorts", "earth mysteries shorts", "darvaza gas crater"],
   "shorts_only": true,
-  "suggest": ["did viking find life on mars", "did we kill life on mars", "did nasa kill life on mars", "viking lander life"],
-  "reddit_queries": ["viking life on mars"],
-  "wiki_articles": ["Viking lander biological experiments", "Viking program", "Life on Mars", "Gilbert Levin"],
-  "channel_stats": false
+  "suggest": ["door to hell", "gates of hell turkmenistan", "eye of the sahara", "blood falls", "finger of death", "sailing stones", "why is the door to hell"],
+  "reddit_queries": ["door to hell crater", "eye of the sahara", "blood falls antarctica", "brinicle", "sailing stones"],
+  "trends_geo": ["US", "IN", "GB"],
+  "wiki_top": true,
+  "wiki_articles": ["Darvaza gas crater", "Richat Structure", "Blood Falls", "Brinicle", "Sailing stones"],
+  "channel_stats": true
 }
