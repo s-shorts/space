@@ -1,133 +1,21 @@
 {
- "id": "2026-11-22-1041-polar-vortex",
+ "id": "2026-11-22-1041-polar-vortex-b",
  "files": [],
  "generate": [
   {
-   "name": "scene01.jpg",
-   "prompt": "planet Earth seen from above the North Pole, a giant glowing icy-blue ring of swirling wind circling the Arctic high above the white ice cap, deep navy starfield background, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
+   "name": "scene17.jpg",
+   "prompt": "planet Earth seen from above the North Pole with two separate glowing blue whirlpool swirls of wind side by side over the Arctic, one over Canada and one over Siberia, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 9100,
+   "seed": 9117,
    "steps": 6
   },
   {
-   "name": "scene02.jpg",
-   "prompt": "a glowing blue ring of wind above the Arctic of planet Earth cracking and breaking apart into fragments, bright energy at the break, deep navy starfield background, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
+   "name": "scene18.jpg",
+   "prompt": "top view of planet Earth over the North Pole, a blue vortex of swirling wind pinched in the middle and splitting into two spinning lobes like a figure eight, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 9101,
-   "steps": 6
-  },
-  {
-   "name": "scene03.jpg",
-   "prompt": "planet Earth viewed over the North Pole, a smooth tight circular band of fast blue wind streaks spinning around the white Arctic, deep navy starfield background, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 9102,
-   "steps": 6
-  },
-  {
-   "name": "scene04.jpg",
-   "prompt": "a towering transparent dome of freezing blue air held over the snowy Arctic ice like a glass wall, icy mist inside, ocean around, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 9103,
-   "steps": 6
-  },
-  {
-   "name": "scene05.jpg",
-   "prompt": "planet Earth over the North Pole, the ring of wind slowing and unravelling into loose chaotic swirls, wisps flowing backwards, deep navy starfield background, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 9104,
-   "steps": 6
-  },
-  {
-   "name": "scene06.jpg",
-   "prompt": "a white weather balloon rising into a pale winter sky above a small snowy research station with radio antennas, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 9105,
-   "steps": 6
-  },
-  {
-   "name": "scene07.jpg",
-   "prompt": "a giant glass hourglass standing on Arctic snow with snow falling inside it instead of sand, twilight sky, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 9106,
-   "steps": 6
-  },
-  {
-   "name": "scene08.jpg",
-   "prompt": "a column of warm glowing orange air sinking down from high above onto a cold blue swirling vortex over the Arctic of planet Earth, deep navy starfield background, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 9107,
-   "steps": 6
-  },
-  {
-   "name": "scene09.jpg",
-   "prompt": "planet Earth over the North Pole, the blue vortex of wind stretched and split into two separate smaller spinning swirls, deep navy starfield background, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 9108,
-   "steps": 6
-  },
-  {
-   "name": "scene10.jpg",
-   "prompt": "a long glowing white-blue ribbon of wind, the jet stream, wrapping around planet Earth and bending into deep wavy loops toward the south, deep navy starfield background, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 9109,
-   "steps": 6
-  },
-  {
-   "name": "scene11.jpg",
-   "prompt": "a river of icy blue arctic air pouring south from the North Pole across the snowy forests and plains of North America on a globe, deep navy starfield background, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 9110,
-   "steps": 6
-  },
-  {
-   "name": "scene12.jpg",
-   "prompt": "a simple faceless grey mannequin figure in a thick winter coat standing on a frozen city street at dawn, icicles, frost, breath vapour, snowbanks, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 9111,
-   "steps": 6
-  },
-  {
-   "name": "scene13.jpg",
-   "prompt": "a simple faceless grey mannequin figure looking up at a sky split in half, one side warm golden sunshine, the other side dark snow clouds, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 9112,
-   "steps": 6
-  },
-  {
-   "name": "scene14.jpg",
-   "prompt": "planet Earth showing a wide band of glowing warm red-orange ocean water stretching across the tropical Pacific, El Nino, deep navy starfield background, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 9113,
-   "steps": 6
-  },
-  {
-   "name": "scene15.jpg",
-   "prompt": "a weather satellite orbiting above planet Earth scanning swirling white clouds over the Arctic with a soft beam, deep navy starfield background, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 9114,
-   "steps": 6
-  },
-  {
-   "name": "scene16.jpg",
-   "prompt": "a cozy small wooden house on a quiet street under the first heavy snowfall of winter, warm glowing windows, blue evening light, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 9115,
+   "seed": 9118,
    "steps": 6
   }
  ]
