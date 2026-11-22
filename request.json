@@ -1,14 +1,13 @@
 {
-  "id": "2026-11-23-0241-trending",
+  "id": "2026-11-23-0241-trending-b",
   "region": "IN",
   "compare_region": "US",
   "shorts_only": true,
-  "youtube_queries": ["supermoon", "supermoon november 2026 shorts", "supermoon kab hai", "beaver moon 2026", "voyager 1 stopped sending data", "voyager 1 shorts", "gaganyaan", "gaganyaan launch shorts", "star swallowing star", "andromeda star eats companion", "neptune trojan asteroids", "why does the moon look bigger"],
-  "suggest": ["supermoon", "supermoon 2026", "voyager 1", "gaganyaan", "star swallowed", "why is the moon"],
-  "reddit_queries": ["supermoon", "voyager 1", "gaganyaan", "star swallowing companion"],
+  "youtube_queries": ["riemann hypothesis", "riemann hypothesis solved", "riemann hypothesis shorts", "riemann hypothesis ai", "riemann hypothesis proof claude", "riemann hypothesis in hindi", "millennium prize problems", "1 million dollar math problem", "beaver supermoon shorts", "voyager 1 no data"],
+  "suggest": ["riemann hypothesis", "riemann hypothesis solved", "riemann hypothesis ai", "riemann hypothesis kya hai", "millennium prize"],
+  "reddit_queries": ["riemann hypothesis", "riemann hypothesis proof lean", "riemann hypothesis claude"],
   "trends_geo": ["IN", "US", "GB"],
-  "wiki_top": true,
-  "wiki_top_langs": ["hi"],
-  "wiki_articles": ["Supermoon", "Full moon", "Voyager 1", "Gaganyaan", "Moon illusion", "Kartik Purnima"],
-  "channel_stats": true
+  "wiki_top": false,
+  "wiki_articles": ["Riemann hypothesis", "Levent Alpöge", "Millennium Prize Problems", "Riemann zeta function", "Bernhard Riemann", "Lean (proof assistant)", "Srinivasa Ramanujan"],
+  "channel_stats": false
 }
