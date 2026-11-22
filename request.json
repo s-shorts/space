@@ -1,3 +1,14 @@
-{"id": "india-test-1", "region": "IN", "compare_region": "US",
- "youtube_queries": ["isro", "black hole", "what if earth"], "suggest": ["what if", "isro"],
- "trends_geo": ["IN"], "wiki_top": false, "wiki_top_langs": ["hi"], "channel_stats": false}
+{
+  "id": "2026-11-22-1311-earth-mystery",
+  "region": "IN",
+  "compare_region": "US",
+  "youtube_queries": ["roopkund skeleton lake", "skeleton lake shorts", "roopkund lake mystery", "lonar lake", "lonar crater lake shorts", "magnetic hill ladakh", "magnetic hill ladakh shorts", "morbi well mystery", "gujarat well waves", "red sky chhattisgarh", "mysterious places in india shorts", "earth mystery shorts"],
+  "shorts_only": true,
+  "suggest": ["roopkund", "skeleton lake", "lonar lake", "magnetic hill", "morbi well", "mysterious places in india", "red sky"],
+  "reddit_queries": ["Roopkund", "Lonar lake", "magnetic hill ladakh", "Morbi well"],
+  "trends_geo": ["IN", "US", "GB"],
+  "wiki_top": true,
+  "wiki_top_langs": ["hi"],
+  "wiki_articles": ["Roopkund", "Lonar Lake", "Magnetic Hill (India)", "Gravity hill", "Seiche"],
+  "channel_stats": true
+}
