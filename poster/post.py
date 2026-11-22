@@ -392,6 +392,11 @@ def main():
             retire(item)
             sync(f"clear {item['id']}")
             continue
+        if item["id"] in CONFIG.get("skip_ids", []):   # withdrawn: drop without posting
+            log(f"{item['id']}: on skip_ids, removed without posting")
+            retire(item)
+            sync(f"clear {item['id']} (skip_ids)")
+            continue
         todo = pending(item, enabled)
         if not todo and wanted(item, enabled):   # every channel either done or out of attempts
             log(f"{item['id']}: giving up on the failed channel(s) after {CONFIG.get('max_attempts', 5)} attempts")
