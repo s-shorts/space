@@ -1,11 +1,11 @@
 {
-  "id": "2026-11-22-1441-whatif",
-  "youtube_queries": ["what if earth had two suns", "two suns shorts", "what if you fell into jupiter", "falling into jupiter shorts", "what if earth was a cube", "earth cube shorts", "what if earth was the size of jupiter", "what if gravity doubled", "what if you fell into a black hole", "falling into black hole shorts", "what if earth was a donut", "what if earth had no gravity"],
+  "id": "2026-11-22-0850-spacemystery",
+  "youtube_queries": ["what is inside a black hole", "what is inside a black hole shorts", "bootes void", "bootes void shorts", "what happened before the big bang", "before the big bang shorts", "is the universe infinite", "what is outside the universe shorts", "tabby's star", "platypus galaxies webb", "white hole", "what is a white hole shorts"],
   "shorts_only": true,
-  "suggest": ["what if earth", "what if the sun", "what if we", "what if earth had two", "what if you fell into", "what if earth was a", "what if gravity"],
-  "reddit_queries": ["what if earth had two suns", "fell into jupiter", "earth was a cube", "gravity doubled"],
+  "suggest": ["what is inside a black hole", "bootes void", "what happened before the big bang", "what is outside the universe", "white hole", "is the universe infinite"],
+  "reddit_queries": ["inside a black hole", "bootes void", "before the big bang", "white hole"],
   "trends_geo": ["US", "IN", "GB"],
   "wiki_top": true,
-  "wiki_articles": ["Binary star", "Jupiter", "Black hole", "Spaghettification", "Gravity of Earth", "Toroidal planet"],
+  "wiki_articles": ["Black hole", "Boötes Void", "Big Bang", "White hole", "Tabby's Star", "Observable universe"],
   "channel_stats": true
 }
