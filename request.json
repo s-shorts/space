@@ -1,11 +1,11 @@
 {
-  "id": "2026-11-22-0850-spacemystery",
-  "youtube_queries": ["what is inside a black hole", "what is inside a black hole shorts", "bootes void", "bootes void shorts", "what happened before the big bang", "before the big bang shorts", "is the universe infinite", "what is outside the universe shorts", "tabby's star", "platypus galaxies webb", "white hole", "what is a white hole shorts"],
+  "id": "2026-11-22-0850-earth-mystery",
+  "youtube_queries": ["ocean beneath earth's crust", "hidden ocean under earth shorts", "earth's inner core moving backwards", "earth's core shorts", "bermuda triangle explained", "bermuda triangle shorts", "kola superdeep borehole", "deepest hole on earth shorts", "door to hell crater", "door to hell turkmenistan shorts", "earth's inner core slowing down", "ringwoodite ocean"],
   "shorts_only": true,
-  "suggest": ["what is inside a black hole", "bootes void", "what happened before the big bang", "what is outside the universe", "white hole", "is the universe infinite"],
-  "reddit_queries": ["inside a black hole", "bootes void", "before the big bang", "white hole"],
+  "suggest": ["ocean under earth", "earth's core", "bermuda triangle", "kola superdeep", "door to hell", "deepest hole"],
+  "reddit_queries": ["ocean beneath earth", "earth inner core", "bermuda triangle", "kola borehole"],
   "trends_geo": ["US", "IN", "GB"],
   "wiki_top": true,
-  "wiki_articles": ["Black hole", "Boötes Void", "Big Bang", "White hole", "Tabby's Star", "Observable universe"],
+  "wiki_articles": ["Ringwoodite", "Earth's inner core", "Bermuda Triangle", "Kola Superdeep Borehole", "Darvaza gas crater", "Transition zone (Earth)"],
   "channel_stats": true
 }
