@@ -1,16 +1,11 @@
 {
-  "id": "2026-11-22-1041-trending",
-  "youtube_queries": ["polar vortex", "polar vortex collapse shorts",
-    "simpsons blackout november 17", "simpsons prediction blackout shorts",
-    "sea pig", "sea pig shorts",
-    "super el nino 2026", "el nino shorts",
-    "beaver supermoon 2026", "supermoon shorts",
-    "fireball sky meteor video", "what is the polar vortex"],
+  "id": "2026-11-22-1441-whatif",
+  "youtube_queries": ["what if earth had two suns", "two suns shorts", "what if you fell into jupiter", "falling into jupiter shorts", "what if earth was a cube", "earth cube shorts", "what if earth was the size of jupiter", "what if gravity doubled", "what if you fell into a black hole", "falling into black hole shorts", "what if earth was a donut", "what if earth had no gravity"],
   "shorts_only": true,
-  "suggest": ["polar vortex", "what is the polar vortex", "simpsons blackout", "sea pig", "supermoon november", "super el nino"],
-  "reddit_queries": ["polar vortex", "simpsons blackout", "sea pig", "supermoon"],
-  "trends_geo": ["US","IN","GB"],
+  "suggest": ["what if earth", "what if the sun", "what if we", "what if earth had two", "what if you fell into", "what if earth was a", "what if gravity"],
+  "reddit_queries": ["what if earth had two suns", "fell into jupiter", "earth was a cube", "gravity doubled"],
+  "trends_geo": ["US", "IN", "GB"],
   "wiki_top": true,
-  "wiki_articles": ["Polar vortex", "Sudden stratospheric warming", "Sea pig", "Supermoon", "El Niño–Southern Oscillation", "The Simpsons"],
+  "wiki_articles": ["Binary star", "Jupiter", "Black hole", "Spaghettification", "Gravity of Earth", "Toroidal planet"],
   "channel_stats": true
 }
