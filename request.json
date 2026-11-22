@@ -1,11 +1,11 @@
 {
-  "id": "2026-11-22-0850-earth-mystery",
-  "youtube_queries": ["ocean beneath earth's crust", "hidden ocean under earth shorts", "earth's inner core moving backwards", "earth's core shorts", "bermuda triangle explained", "bermuda triangle shorts", "kola superdeep borehole", "deepest hole on earth shorts", "door to hell crater", "door to hell turkmenistan shorts", "earth's inner core slowing down", "ringwoodite ocean"],
+  "id": "2026-11-22-1441-alien",
+  "youtube_queries": ["did life on earth come from mars", "life from mars shorts", "panspermia shorts", "alpha centauri planet", "alpha centauri planet shorts", "habitable planet 25 light years", "new habitable planet shorts", "life on titan", "life on titan shorts", "proxima b life", "bacteria survive in space shorts", "are we martians"],
   "shorts_only": true,
-  "suggest": ["ocean under earth", "earth's core", "bermuda triangle", "kola superdeep", "door to hell", "deepest hole"],
-  "reddit_queries": ["ocean beneath earth", "earth inner core", "bermuda triangle", "kola borehole"],
+  "suggest": ["did life come from mars", "are we martians", "alpha centauri planet", "life on titan", "panspermia", "habitable planet"],
+  "reddit_queries": ["life from mars panspermia", "alpha centauri planet webb", "GJ 3378", "life on titan"],
   "trends_geo": ["US", "IN", "GB"],
   "wiki_top": true,
-  "wiki_articles": ["Ringwoodite", "Earth's inner core", "Bermuda Triangle", "Kola Superdeep Borehole", "Darvaza gas crater", "Transition zone (Earth)"],
+  "wiki_articles": ["Panspermia", "Alpha Centauri", "Deinococcus radiodurans", "Titan (moon)", "Proxima Centauri b", "Gliese 3378"],
   "channel_stats": true
 }
