@@ -1,21 +1,136 @@
 {
- "id": "2026-11-22-1041-polar-vortex-b",
- "files": [],
+ "id": "2026-11-22-A-richat-B-mumler",
+ "files": [
+  {
+   "name": "r2001.jpg",
+   "url": "https://www.nasa.gov/wp-content/uploads/2023/12/iss002e5457-9498039144-o.jpg",
+   "credit": "NASA, ISS002-E-5457 (2001)",
+   "licence": "Public domain (NASA)"
+  },
+  {
+   "name": "r2019h.jpg",
+   "url": "https://www.nasa.gov/wp-content/uploads/2023/03/eemcad6wkaamlmj-1.jpg",
+   "credit": "NASA / Nick Hague, ISS (2019)",
+   "licence": "Public domain (NASA)"
+  },
+  {
+   "name": "r2019e59.jpg",
+   "url": "https://www.nasa.gov/wp-content/uploads/2024/01/the-eye-of-the-sahara-40614492163-o.jpg",
+   "credit": "NASA, iss059e013137 (2019)",
+   "licence": "Public domain (NASA)"
+  },
+  {
+   "name": "r2019oct.jpg",
+   "url": "https://www.nasa.gov/wp-content/uploads/2023/03/iss061e012458.jpg",
+   "credit": "NASA, iss061e012458 (2019)",
+   "licence": "Public domain (NASA)"
+  },
+  {
+   "name": "r2022.jpg",
+   "url": "https://www.nasa.gov/wp-content/uploads/2024/01/the-richat-structure-also-known-as-the-eye-of-the-sahara-52307787747-o.jpg",
+   "credit": "NASA, iss067e286458 (2022)",
+   "licence": "Public domain (NASA)"
+  },
+  {
+   "name": "r2023.jpg",
+   "url": "https://www.nasa.gov/wp-content/uploads/2023/12/the-eye-of-the-sahara-in-the-african-nation-of-mauritania-52860947227-o.jpg",
+   "credit": "NASA, iss069e005526 (2023)",
+   "licence": "Public domain (NASA)"
+  },
+  {
+   "name": "r2011.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Richat_Structure_ISS030-E-12516.jpg?width=2000",
+   "credit": "NASA, ISS030-E-12516 (2011)",
+   "licence": "Public domain (NASA)"
+  },
+  {
+   "name": "m_lincoln.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mumler_(Lincoln).jpg?width=1600",
+   "credit": "William H. Mumler, Mary Todd Lincoln (1870s)",
+   "licence": "Public domain (age)"
+  },
+  {
+   "name": "loc_hauntedlane.jpg",
+   "url": "https://tile.loc.gov/storage-services/service/pnp/cph/3a40000/3a49000/3a49400/3a49425r.jpg",
+   "credit": "Melander & Bro., The Haunted Lane (1889), Library of Congress",
+   "licence": "Public domain / no known restrictions"
+  },
+  {
+   "name": "loc_houdini.jpg",
+   "url": "https://tile.loc.gov/storage-services/service/pnp/cph/3a20000/3a27000/3a27300/3a27314r.jpg",
+   "credit": "Houdini and the ghost of Lincoln (1920s), Library of Congress",
+   "licence": "Public domain / no known restrictions"
+  },
+  {
+   "name": "loc_fallis_v.jpg",
+   "url": "https://tile.loc.gov/storage-services/service/pnp/cph/3g00000/3g01000/3g01800/3g01845v.jpg",
+   "credit": "S. W. Fallis, Spirit photograph (1901), Library of Congress",
+   "licence": "Public domain"
+  },
+  {
+   "name": "loc_fallis_r.jpg",
+   "url": "https://tile.loc.gov/storage-services/service/pnp/cph/3g00000/3g01000/3g01800/3g01845r.jpg",
+   "credit": "S. W. Fallis, Spirit photograph (1901), Library of Congress",
+   "licence": "Public domain"
+  },
+  {
+   "name": "loc_poster_a.jpg",
+   "url": "https://tile.loc.gov/storage-services/service/pnp/var/1600/1627v.jpg",
+   "credit": "Do Spirits Return? poster (c.1909), Library of Congress",
+   "licence": "Public domain"
+  },
+  {
+   "name": "loc_poster_b.jpg",
+   "url": "https://tile.loc.gov/storage-services/service/pnp/var/1620/1627v.jpg",
+   "credit": "Do Spirits Return? poster (c.1909), Library of Congress",
+   "licence": "Public domain"
+  },
+  {
+   "name": "loc_poster_c.jpg",
+   "url": "https://tile.loc.gov/storage-services/service/pnp/var/1600/1620/1627v.jpg",
+   "credit": "Do Spirits Return? poster (c.1909), Library of Congress",
+   "licence": "Public domain"
+  }
+ ],
  "generate": [
   {
-   "name": "scene17.jpg",
-   "prompt": "planet Earth seen from above the North Pole with two separate glowing blue whirlpool swirls of wind side by side over the Arctic, one over Canada and one over Siberia, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "name": "ai_studio.jpg",
+   "prompt": "interior of an 1860s photography studio at night, a large wooden bellows camera on a tripod facing an empty velvet chair, dark moody 19th-century atmosphere, candlelight and deep indigo shadows, film grain, cinematic, muted colors, no people faces, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 9117,
+   "seed": 2211,
    "steps": 6
   },
   {
-   "name": "scene18.jpg",
-   "prompt": "top view of planet Earth over the North Pole, a blue vortex of swirling wind pinched in the middle and splitting into two spinning lobes like a figure eight, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, deep navy starfield background, no text, no letters, no logos",
+   "name": "ai_darkroom.jpg",
+   "prompt": "old Victorian darkroom lit by a single red lantern, glass plate negatives drying on a wooden rack, chemical bottles, dark moody 19th-century atmosphere, candlelight and deep indigo shadows, film grain, cinematic, muted colors, no people faces, no text, no letters, no logos",
    "width": 1024,
    "height": 1024,
-   "seed": 9118,
+   "seed": 2212,
+   "steps": 6
+  },
+  {
+   "name": "ai_court.jpg",
+   "prompt": "empty 1869 New York courtroom interior at dusk, wooden benches, judge's bench, gas lamps glowing, dust in the air, dark moody 19th-century atmosphere, candlelight and deep indigo shadows, film grain, cinematic, muted colors, no people faces, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 2213,
+   "steps": 6
+  },
+  {
+   "name": "ai_street.jpg",
+   "prompt": "foggy 1860s Boston street at night with gas street lamps and brick buildings, cobblestones wet with rain, dark moody 19th-century atmosphere, candlelight and deep indigo shadows, film grain, cinematic, muted colors, no people faces, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 2214,
+   "steps": 6
+  },
+  {
+   "name": "ai_plates.jpg",
+   "prompt": "close-up of two glass photographic plates on a dark wooden table under candlelight, faint reflections, dark moody 19th-century atmosphere, candlelight and deep indigo shadows, film grain, cinematic, muted colors, no people faces, no text, no letters, no logos",
+   "width": 1024,
+   "height": 1024,
+   "seed": 2215,
    "steps": 6
   }
  ]
