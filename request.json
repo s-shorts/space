@@ -1,70 +1,26 @@
 {
- "id": "2026-11-22-B-mumler-2",
+ "id": "2026-11-22-B-mumler-3",
  "files": [
   {
-   "name": "loc_houdini.jpg",
-   "url": "https://tile.loc.gov/storage-services/service/pnp/cph/3a20000/3a27000/3a27300/3a27314r.jpg",
-   "credit": "Houdini and the ghost of Lincoln (1920s), Library of Congress",
-   "licence": "No known restrictions"
+   "name": "loc_fallis_v.jpg",
+   "url": "https://tile.loc.gov/storage-services/service/pnp/cph/3g00000/3g01000/3g01800/3g01845v.jpg",
+   "credit": "S. W. Fallis, Spirit photograph (1901), Library of Congress",
+   "licence": "Public domain"
   },
   {
-   "name": "g_tinkham1.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/William_H._Mumler_(American,_1832_-_1884)_-_Mrs._Tinkham_-_Google_Art_Project.jpg?width=1400",
-   "credit": "William H. Mumler, Mrs. Tinkham, J. Paul Getty Museum",
-   "licence": "Public domain (age)"
-  },
-  {
-   "name": "g_tinkham2.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/William_H._Mumler_-_Mrs._Tinkham_-_Google_Art_Project.jpg?width=1400",
-   "credit": "William H. Mumler, Mrs. Tinkham",
-   "licence": "Public domain (age)"
-  },
-  {
-   "name": "g_ghost_lincoln.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mumler_Lincoln_ghost.jpg?width=1400",
-   "credit": "Mumler",
-   "licence": "Public domain (age)"
+   "name": "loc_fallis_r.jpg",
+   "url": "https://tile.loc.gov/storage-services/service/pnp/cph/3g00000/3g01000/3g01800/3g01845r.jpg",
+   "credit": "S. W. Fallis, Spirit photograph (1901), Library of Congress",
+   "licence": "Public domain"
   }
  ],
  "generate": [
   {
-   "name": "ai_studio.jpg",
-   "prompt": "interior of an 1860s photography studio at night, a large wooden bellows camera on a tripod facing an empty velvet chair, dark moody 19th-century atmosphere, candlelight and deep indigo shadows, film grain, cinematic, muted colors, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 2211,
-   "provider": "pollinations"
-  },
-  {
-   "name": "ai_darkroom.jpg",
-   "prompt": "old Victorian darkroom lit by a single red lantern, glass plate negatives drying on a wooden rack, dark moody 19th-century atmosphere, candlelight and deep indigo shadows, film grain, cinematic, muted colors, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 2212,
-   "provider": "pollinations"
-  },
-  {
    "name": "ai_court.jpg",
-   "prompt": "empty 19th century courtroom interior at dusk, wooden benches, gas lamps glowing, dust in the air, dark moody 19th-century atmosphere, candlelight and deep indigo shadows, film grain, cinematic, muted colors, no text, no letters, no logos",
+   "prompt": "empty 19th century courtroom interior at dusk, wooden benches, gas lamps glowing, dust in the air, dark moody, candlelight and deep indigo shadows, film grain, cinematic, no text",
    "width": 1024,
    "height": 1024,
-   "seed": 2213,
-   "provider": "pollinations"
-  },
-  {
-   "name": "ai_street.jpg",
-   "prompt": "foggy 1860s city street at night with gas street lamps and brick buildings, wet cobblestones, dark moody 19th-century atmosphere, candlelight and deep indigo shadows, film grain, cinematic, muted colors, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 2214,
-   "provider": "pollinations"
-  },
-  {
-   "name": "ai_plates.jpg",
-   "prompt": "two glass photographic plates on a dark wooden table under candlelight, dark moody 19th-century atmosphere, candlelight and deep indigo shadows, film grain, cinematic, muted colors, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
-   "seed": 2215,
+   "seed": 2300,
    "provider": "pollinations"
   }
  ]
