@@ -1,150 +1,150 @@
 {
- "id": "2026-11-22-1441-twosuns",
+ "id": "2026-11-22-1441-twosuns-poll",
  "files": [],
  "generate": [
   {
    "name": "scene01.jpg",
    "prompt": "planet Earth in space with two bright suns side by side behind it, one golden yellow sun and one orange sun, deep navy starfield, glowing rim light, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7100,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene02.jpg",
    "prompt": "double sunset over a calm ocean, two glowing suns side by side touching the horizon, warm orange and pink sky, reflections on water, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7101,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene03.jpg",
    "prompt": "simple faceless white mannequin figure standing on flat sandy ground casting two long shadows in different directions, two suns low in the sky, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7102,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene04.jpg",
    "prompt": "two identical blazing suns close together in space shining intensely on a small Earth in the foreground, overexposed bright light, deep navy starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7103,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene05.jpg",
    "prompt": "planet Venus with thick pale yellow clouds glowing in harsh bright sunlight, deep navy starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7104,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene06.jpg",
    "prompt": "overheating Earth landscape, cracked dry seabed, steam rising from boiling ocean, hazy orange glowing sky, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7105,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene07.jpg",
    "prompt": "two small stars, one orange and one red, orbiting very close to each other, glowing curved orbit lines, deep navy starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7106,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene08.jpg",
    "prompt": "small blue planet on a large glowing circular orbit around a pair of close orange stars at the center, orbit line glowing, deep navy starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7107,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene09.jpg",
    "prompt": "generic space telescope with a long tube and solar panels floating in deep space, starfield, earth far away, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7108,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene10.jpg",
    "prompt": "tan banded gas giant planet without rings in space, two small suns orange and red glowing behind it, deep navy starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7109,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene11.jpg",
    "prompt": "two glowing stars circling each other in a tight dance, bright spiral light trails around them, deep navy starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7110,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene12.jpg",
    "prompt": "frozen icy gas giant planet covered in frost haze, two small dim distant suns, cold blue lighting, deep navy starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7111,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene13.jpg",
    "prompt": "milky way galaxy full of glowing star pairs, binary stars sparkling, deep navy space, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7112,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene14.jpg",
    "prompt": "close pair of a yellow star and an orange star glowing side by side, gentle lens glow, deep navy starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7113,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene15.jpg",
    "prompt": "two young baby stars forming side by side inside a glowing dusty pink and blue nebula cloud, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7114,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene16.jpg",
    "prompt": "a single glowing star drifting away into deep space leaving a faint light trail, lonely, deep navy starfield, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7115,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene17.jpg",
    "prompt": "simple faceless white mannequin figure sitting on a grassy hill watching a single golden sunset, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7116,
-   "steps": 8
+   "provider": "pollinations"
   },
   {
    "name": "scene18.jpg",
    "prompt": "two suns setting over golden desert sand dunes, warm sky, long shadows, stylized 3D render, soft studio lighting, clean, vivid colours, highly detailed, centered subject, vertical composition, no text, no letters, no logos",
-   "width": 1024,
-   "height": 1024,
+   "width": 1080,
+   "height": 1920,
    "seed": 7117,
-   "steps": 8
+   "provider": "pollinations"
   }
  ]
 }
