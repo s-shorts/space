@@ -1,11 +1,9 @@
 {
-  "id": "2026-11-22-1441-alien",
-  "youtube_queries": ["did life on earth come from mars", "life from mars shorts", "panspermia shorts", "alpha centauri planet", "alpha centauri planet shorts", "habitable planet 25 light years", "new habitable planet shorts", "life on titan", "life on titan shorts", "proxima b life", "bacteria survive in space shorts", "are we martians"],
+  "id": "2026-11-22-1441-alien-b",
+  "youtube_queries": ["did viking find life on mars", "viking life on mars shorts", "did we kill life on mars", "did nasa kill life on mars shorts", "viking labeled release experiment", "life on mars 1976", "alpha centauri a planet webb", "life on mars shorts"],
   "shorts_only": true,
-  "suggest": ["did life come from mars", "are we martians", "alpha centauri planet", "life on titan", "panspermia", "habitable planet"],
-  "reddit_queries": ["life from mars panspermia", "alpha centauri planet webb", "GJ 3378", "life on titan"],
-  "trends_geo": ["US", "IN", "GB"],
-  "wiki_top": true,
-  "wiki_articles": ["Panspermia", "Alpha Centauri", "Deinococcus radiodurans", "Titan (moon)", "Proxima Centauri b", "Gliese 3378"],
-  "channel_stats": true
+  "suggest": ["did viking find life on mars", "did we kill life on mars", "did nasa kill life on mars", "viking lander life"],
+  "reddit_queries": ["viking life on mars"],
+  "wiki_articles": ["Viking lander biological experiments", "Viking program", "Life on Mars", "Gilbert Levin"],
+  "channel_stats": false
 }
