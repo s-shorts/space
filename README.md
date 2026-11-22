@@ -28,3 +28,9 @@ What comes back:
 - `wiki_top`: the most-read English Wikipedia articles yesterday; `wiki_views[a]`: 30 days of daily views with `rising_ratio` (last 3 days vs. before).
 - `channel`: our own recent Shorts (target `yt-main`) with views, likes, comments, views per hour since posting, and a `summary` with median, top 5 and bottom 5.
 - `errors`: any source that failed (each source is best effort).
+
+## Country focus (added 22 Nov 2026)
+- `"region": "IN"` makes YouTube search and autocomplete behave as seen from India (results, view leaders and suggestions Indians get).
+- `"compare_region": "US"` repeats the first 8 YouTube queries and the suggest seeds for a second country (`youtube_us`, `youtube_suggest_us`), to compare what Indian vs global viewers watch.
+- `"wiki_top_langs": ["hi"]` adds the most-read Hindi Wikipedia articles (`wiki_top_hi`).
+- `"trends_geo": ["IN", "US"]`: Google Trends "trending now" for each country (India first).

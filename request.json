@@ -1,9 +1,3 @@
-{
-  "id": "2026-11-22-0912-earth-mystery-b",
-  "youtube_queries": ["kola superdeep borehole", "kola superdeep borehole shorts", "deepest hole in the world shorts", "what did they find at the bottom of the deepest hole", "is the door to hell still burning", "door to hell closing shorts"],
-  "shorts_only": true,
-  "suggest": ["kola superdeep borehole", "deepest hole", "what did they find in the deepest hole", "is the door to hell"],
-  "reddit_queries": ["kola superdeep borehole"],
-  "wiki_articles": ["Kola Superdeep Borehole"],
-  "channel_stats": false
-}
+{"id": "india-test-1", "region": "IN", "compare_region": "US",
+ "youtube_queries": ["isro", "black hole", "what if earth"], "suggest": ["what if", "isro"],
+ "trends_geo": ["IN"], "wiki_top": false, "wiki_top_langs": ["hi"], "channel_stats": false}

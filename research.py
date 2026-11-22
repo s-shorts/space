@@ -88,9 +88,14 @@ def text_of(x):
     return ""
 
 
-def youtube_search(q, shorts=True, limit=20):
+REGION = ""   # e.g. "IN": YouTube search and autocomplete as seen from that country
+
+
+def youtube_search(q, shorts=True, limit=20, region=None):
+    region = REGION if region is None else region
     sp = "&sp=EgIYAQ%253D%253D" if shorts else ""   # "under 4 minutes"
-    r = S.get(f"https://www.youtube.com/results?search_query={urllib.parse.quote(q)}{sp}", timeout=30)
+    loc = f"&gl={region}&hl=en-{region}" if region else ""
+    r = S.get(f"https://www.youtube.com/results?search_query={urllib.parse.quote(q)}{sp}{loc}", timeout=30)
     r.raise_for_status()
     data = yt_initial_data(r.text)
     seen, items = set(), []
@@ -172,8 +177,10 @@ def published_days(p):
         return None
 
 
-def suggest(q, yt=True):
+def suggest(q, yt=True, region=None):
+    region = REGION if region is None else region
     url = "https://suggestqueries.google.com/complete/search?client=firefox&hl=en"
+    url += f"&gl={region.lower()}" if region else ""
     url += ("&ds=yt" if yt else "") + "&q=" + urllib.parse.quote(q)
     r = S.get(url, timeout=20)
     r.raise_for_status()
@@ -205,9 +212,9 @@ def trends(geo):
     return out
 
 
-def wiki_top(limit=60):
+def wiki_top(limit=60, lang="en"):
     day = NOW - dt.timedelta(days=1)
-    url = ("https://wikimedia.org/api/rest_v1/metrics/pageviews/top/en.wikipedia/all-access/"
+    url = (f"https://wikimedia.org/api/rest_v1/metrics/pageviews/top/{lang}.wikipedia/all-access/"
            f"{day:%Y/%m/%d}")
     r = S.get(url, headers={"User-Agent": "shorts-research/1.0 (github.com/s-shorts/space)"}, timeout=20)
     r.raise_for_status()
@@ -378,6 +385,8 @@ def run(name, fn, results, errors):
 
 def main():
     req = json.loads(Path("request.json").read_text())
+    global REGION
+    REGION = (req.get("region") or "").upper()
     results, errors = {"id": req.get("id"), "made": NOW.isoformat()}, {}
 
     yq = req.get("youtube_queries", [])[:12]
@@ -418,6 +427,28 @@ def main():
                     res[s] = {"error": str(exc)}
             results[key] = res
 
+    # the same queries as seen from a second country (e.g. global vs India)
+    cq = req.get("compare_region")
+    if cq and yq:
+        cmp = {}
+        for q in yq[:8]:
+            try:
+                items = youtube_search(q, shorts=req.get("shorts_only", True), region=cq.upper())
+                vs = sorted([i["views"] for i in items if i.get("views")], reverse=True)
+                cmp[q] = {"top_titles": [(i["title"], i["views"]) for i in items[:6]], "top_views": vs[:3],
+                          "median_views": vs[len(vs) // 2] if vs else None}
+            except Exception as exc:
+                cmp[q] = {"error": str(exc)}
+            time.sleep(1)
+        results[f"youtube_{cq.lower()}"] = cmp
+        if req.get("suggest"):
+            results[f"youtube_suggest_{cq.lower()}"] = {}
+            for sd in req["suggest"][:8]:
+                try:
+                    results[f"youtube_suggest_{cq.lower()}"][sd] = suggest(sd, True, cq.upper())
+                except Exception as exc:
+                    results[f"youtube_suggest_{cq.lower()}"][sd] = {"error": str(exc)}
+
     rq = req.get("reddit_queries", [])[:8]
     if rq:
         rd = {}
@@ -440,6 +471,8 @@ def main():
 
     if req.get("wiki_top", True):
         run("wiki_top", wiki_top, results, errors)
+    for lang in req.get("wiki_top_langs", []):   # e.g. ["hi"]: most-read Hindi Wikipedia articles
+        run(f"wiki_top_{lang}", lambda lang=lang: wiki_top(40, lang), results, errors)
     wa = req.get("wiki_articles", [])[:10]
     if wa:
         results["wiki_views"] = {}
