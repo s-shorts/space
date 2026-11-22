@@ -18,7 +18,7 @@
     "share_to_feed": true
   },
   "max_attempts": 5,
-  "max_posts_per_run": 1,
+  "max_posts_per_run": 3,
   "skip_ids": [
     "20261122-1400-what-if-the-sun-became-a-black-hole"
   ]
