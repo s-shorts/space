@@ -1,7 +1,14 @@
-{"id":"2026-11-23-1441-alien","region":"IN","compare_region":"US","shorts_only":true,
-"youtube_queries":["can life survive on mars","can humans live on mars shorts","microbes on mars","life on mars shorts","mars par jeevan","ladakh mars","toi 270 d","life on titan","proxima b life","are aliens real shorts","alien life evidence","yeast on mars"],
-"suggest":["can life survive on mars","life on mars","mars par jeevan","aliens real","ladakh mars","proxima b","life on titan","microbes on mars"],
-"reddit_queries":["life on mars microbes","haloferax mars","toi-270 d","titan life"],
-"trends_geo":["IN","US","GB"],"wiki_top":true,"wiki_top_langs":["hi"],
-"wiki_articles":["Life on Mars","Haloferax volcanii","Extremophile","TOI-270 d","Titan (moon)","Proxima Centauri b","Extraterrestrial life","Perchlorate","Ladakh"],
-"channel_stats":true}
+{
+  "id": "2026-11-23-1841-earth-mystery",
+  "region": "IN",
+  "compare_region": "US",
+  "shorts_only": true,
+  "youtube_queries": ["lonar lake", "lonar crater lake shorts", "lonar lake mystery", "lonar lake pink water", "door to hell", "door to hell shorts", "blood falls antarctica", "bioluminescent beach india", "glowing waves shorts", "kodinhi twins village", "chhattisgarh red sky", "meteor crater lake india"],
+  "suggest": ["lonar lake", "lonar crater", "door to hell", "blood falls", "glowing beach", "kodinhi"],
+  "reddit_queries": ["lonar lake", "door to hell", "blood falls", "bioluminescence india"],
+  "trends_geo": ["IN","US","GB"],
+  "wiki_top": true,
+  "wiki_top_langs": ["hi"],
+  "wiki_articles": ["Lonar Lake", "Darvaza gas crater", "Blood Falls", "Kodinhi", "Noctiluca scintillans", "Impact crater"],
+  "channel_stats": true
+}
