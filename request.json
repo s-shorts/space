@@ -1,14 +1,14 @@
 {
-  "id": "2026-11-23-2241-whatif",
+  "id": "2026-11-24-0241-trending",
   "region": "IN",
   "compare_region": "US",
-  "youtube_queries": ["doomsday equation 2026", "november 13 2026 end of world shorts", "what if population never stopped growing", "what if you dug a hole through the earth", "hole through earth shorts", "what if a black hole entered the solar system", "what if earth had two suns", "what if earth was twice as big", "agar dharti me ched karke dusri taraf", "duniya ka ant 2026", "what if gravity doubled shorts", "doomsday 2026 shorts"],
+  "youtube_queries": ["supermoon", "supermoon shorts", "beaver moon 2026", "kartik purnima supermoon", "supermoon kya hai", "why is the moon bigger tonight", "ozone hole 2026", "ozone hole shorts", "giant virus discovery", "dimorphos hera", "dev deepawali moon", "supermoon explained"],
   "shorts_only": true,
-  "suggest": ["doomsday equation", "november 13 2026", "what if you dug a hole through", "what if earth had two", "what if a black hole", "duniya ka ant", "what if gravity"],
-  "reddit_queries": ["doomsday equation 2026", "von foerster doomsday", "hole through the earth"],
+  "suggest": ["supermoon", "supermoon kya", "beaver moon", "kartik purnima moon", "ozone hole", "why is the moon"],
+  "reddit_queries": ["supermoon", "beaver moon", "ozone hole", "giant virus"],
   "trends_geo": ["IN", "US", "GB"],
   "wiki_top": true,
   "wiki_top_langs": ["hi"],
-  "wiki_articles": ["Heinz von Foerster", "Doomsday argument", "World population", "Gravity tunnel", "Antipodes", "Binary star", "Rogue black hole"],
+  "wiki_articles": ["Supermoon", "Full moon", "Kartik Purnima", "Ozone depletion", "Giant virus", "Dimorphos", "Dev Deepawali"],
   "channel_stats": true
 }
