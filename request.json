@@ -1,13 +1,14 @@
 {
-  "id": "2026-11-23-0241-trending-b",
+  "id": "2026-11-23-0115-spacemystery",
   "region": "IN",
   "compare_region": "US",
+  "youtube_queries": ["why does the moon have two faces", "far side of the moon mystery shorts", "why we only see one side of the moon", "dark side of the moon shorts", "chandrayaan moon discovery shorts", "supermoon november 2026", "black hole mysterious disruptor", "james webb signal from empty space", "why is uranus tilted shorts", "chand ka dusra hissa", "what is inside a black hole shorts", "moon far side secret"],
   "shorts_only": true,
-  "youtube_queries": ["riemann hypothesis", "riemann hypothesis solved", "riemann hypothesis shorts", "riemann hypothesis ai", "riemann hypothesis proof claude", "riemann hypothesis in hindi", "millennium prize problems", "1 million dollar math problem", "beaver supermoon shorts", "voyager 1 no data"],
-  "suggest": ["riemann hypothesis", "riemann hypothesis solved", "riemann hypothesis ai", "riemann hypothesis kya hai", "millennium prize"],
-  "reddit_queries": ["riemann hypothesis", "riemann hypothesis proof lean", "riemann hypothesis claude"],
-  "trends_geo": ["IN", "US", "GB"],
-  "wiki_top": false,
-  "wiki_articles": ["Riemann hypothesis", "Levent Alpöge", "Millennium Prize Problems", "Riemann zeta function", "Bernhard Riemann", "Lean (proof assistant)", "Srinivasa Ramanujan"],
-  "channel_stats": false
+  "suggest": ["why does the moon", "far side of the moon", "dark side of the moon", "chand ka", "supermoon", "why is uranus", "james webb found"],
+  "reddit_queries": ["far side of the moon", "moon two faces", "uranus tilt", "james webb empty space signal"],
+  "trends_geo": ["IN","US","GB"],
+  "wiki_top": true,
+  "wiki_top_langs": ["hi"],
+  "wiki_articles": ["Far side of the Moon", "Near side of the Moon", "Supermoon", "Uranus", "Chandrayaan-3", "Tidal locking", "Lunar mare"],
+  "channel_stats": true
 }
