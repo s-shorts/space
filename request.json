@@ -1,14 +1,14 @@
 {
-  "id": "2026-11-23-1841-earth-mystery",
+  "id": "2026-11-23-2241-whatif",
   "region": "IN",
   "compare_region": "US",
+  "youtube_queries": ["doomsday equation 2026", "november 13 2026 end of world shorts", "what if population never stopped growing", "what if you dug a hole through the earth", "hole through earth shorts", "what if a black hole entered the solar system", "what if earth had two suns", "what if earth was twice as big", "agar dharti me ched karke dusri taraf", "duniya ka ant 2026", "what if gravity doubled shorts", "doomsday 2026 shorts"],
   "shorts_only": true,
-  "youtube_queries": ["lonar lake", "lonar crater lake shorts", "lonar lake mystery", "lonar lake pink water", "door to hell", "door to hell shorts", "blood falls antarctica", "bioluminescent beach india", "glowing waves shorts", "kodinhi twins village", "chhattisgarh red sky", "meteor crater lake india"],
-  "suggest": ["lonar lake", "lonar crater", "door to hell", "blood falls", "glowing beach", "kodinhi"],
-  "reddit_queries": ["lonar lake", "door to hell", "blood falls", "bioluminescence india"],
-  "trends_geo": ["IN","US","GB"],
+  "suggest": ["doomsday equation", "november 13 2026", "what if you dug a hole through", "what if earth had two", "what if a black hole", "duniya ka ant", "what if gravity"],
+  "reddit_queries": ["doomsday equation 2026", "von foerster doomsday", "hole through the earth"],
+  "trends_geo": ["IN", "US", "GB"],
   "wiki_top": true,
   "wiki_top_langs": ["hi"],
-  "wiki_articles": ["Lonar Lake", "Darvaza gas crater", "Blood Falls", "Kodinhi", "Noctiluca scintillans", "Impact crater"],
+  "wiki_articles": ["Heinz von Foerster", "Doomsday argument", "World population", "Gravity tunnel", "Antipodes", "Binary star", "Rogue black hole"],
   "channel_stats": true
 }
