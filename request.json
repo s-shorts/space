@@ -1,14 +1,14 @@
 {
-  "id": "2026-11-24-0641-spacemystery",
+  "id": "2026-11-24-1041-trending",
   "region": "IN",
   "compare_region": "US",
-  "youtube_queries": ["star system that should not exist", "impossible star system shorts", "triple star system", "white dwarf shorts", "mysterious x ray objects", "aditya l1 discovery", "aditya l1 shorts", "why is space dark", "is the universe infinite shorts", "beta pictoris", "black hole that wasn't a black hole", "brahmand ka rahasya"],
   "shorts_only": true,
-  "suggest": ["star system that", "impossible star", "aditya l1", "white dwarf", "why is space", "is the universe infinite", "brahmand"],
-  "reddit_queries": ["triple star system white dwarf", "hypersoft x-ray", "aditya l1", "should not exist astronomy"],
+  "youtube_queries": ["mariana trench volcano", "mariana trench shorts", "deepest volcanic eruption ocean", "challenger deep discovery", "mariana trench mystery hindi", "delhi smog from space", "why delhi smog in winter", "black hole in a lab", "black hole on a chip", "supernova explosion caught", "oldest black holes discovered", "new virus discovery evolution"],
+  "suggest": ["mariana trench", "mariana trench me kya", "challenger deep", "delhi smog", "black hole lab", "supernova 2026"],
+  "reddit_queries": ["challenger deep eruption", "mariana trench volcano", "delhi smog", "black hole chip"],
   "trends_geo": ["IN", "US", "GB"],
   "wiki_top": true,
   "wiki_top_langs": ["hi"],
-  "wiki_articles": ["White dwarf", "Aditya-L1", "Beta Pictoris", "Olbers's paradox", "Star system", "Red dwarf", "Chandra X-ray Observatory", "Shape of the universe"],
+  "wiki_articles": ["Challenger Deep", "Mariana Trench", "Pyroclastic flow", "Air pollution in Delhi", "Sonic black hole", "Supernova", "Hawking radiation"],
   "channel_stats": true
 }
