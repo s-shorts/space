@@ -1,59 +1,77 @@
 {
- "id": "2026-11-24-A-dancingplague",
+ "id": "2026-11-24-B-tutcurse",
  "files": [
   {
-   "name": "a_hondius_brugje.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hondius_brugje.jpg?width=1600",
-   "credit": "Hendrik Hondius after Pieter Bruegel, 1642 engraving (Wikimedia Commons)",
-   "licence": "public domain (pre-1700 artwork)"
+   "name": "b00.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Howard_Carter_und_Lord_Carnarvon_1922.jpg?width=1600",
+   "credit": "Howard_Carter_und_Lord_Carnarvon_1922.jpg (Wikimedia Commons)",
+   "licence": "public domain (1922-23 photograph)"
   },
   {
-   "name": "a_hondius_processie.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hondius_processie.jpg?width=1600",
-   "credit": "Hendrik Hondius after Pieter Bruegel, 1642 engraving (Wikimedia Commons)",
-   "licence": "public domain (pre-1700 artwork)"
+   "name": "b01.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Howard_Carter_in_the_King_Tutankhamen%27s_tomb.jpg?width=1600",
+   "credit": "Howard_Carter_in_the_King_Tutankhamen's_tomb.jpg (Wikimedia Commons)",
+   "licence": "public domain (1922-23 photograph)"
   },
   {
-   "name": "a_meulebeeck_blue.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Dance_epidemic_in_Meulebeeck.jpg?width=1600",
-   "credit": "After Pieter Bruegel the Elder, 1564 drawing (copy) (Wikimedia Commons)",
-   "licence": "public domain (pre-1700 artwork)"
+   "name": "b02.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Moment_Carter_Opens_the_Shrine.jpg?width=1600",
+   "credit": "The_Moment_Carter_Opens_the_Shrine.jpg (Wikimedia Commons)",
+   "licence": "public domain (1922-23 photograph)"
   },
   {
-   "name": "a_dance_molenbeek.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dance_at_Molenbeek.jpg?width=1600",
-   "credit": "After Pieter Bruegel the Elder (Wikimedia Commons)",
-   "licence": "public domain (pre-1700 artwork)"
+   "name": "b03.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/George_Herbert%2C_5th_Earl_of_Carnarvon%2C_reading.jpg?width=1600",
+   "credit": "George_Herbert,_5th_Earl_of_Carnarvon,_reading.jpg (Wikimedia Commons)",
+   "licence": "public domain (1922-23 photograph)"
   },
   {
-   "name": "a_wallfahrt.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg?width=1600",
-   "credit": "After Pieter Bruegel the Elder (Wikimedia Commons)",
-   "licence": "public domain (pre-1700 artwork)"
+   "name": "b04.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tutankhamun%27s_mask%2C_Burton_photograph_P0744%2C_1922.jpg?width=1600",
+   "credit": "Tutankhamun's_mask,_Burton_photograph_P0744,_1922.jpg (Wikimedia Commons)",
+   "licence": "public domain (1922-23 photograph)"
   },
   {
-   "name": "a_navolger.png",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Navolger_Bruegel.PNG?width=1600",
-   "credit": "Follower of Pieter Bruegel, painting (Wikimedia Commons)",
-   "licence": "public domain (pre-1700 artwork)"
+   "name": "b05.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tutankhamun_tomb_photographs_2_031.jpg?width=1600",
+   "credit": "Tutankhamun_tomb_photographs_2_031.jpg (Wikimedia Commons)",
+   "licence": "public domain (1922-23 photograph)"
   },
   {
-   "name": "a_churchyard.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dancingplague2.jpg?width=1600",
-   "credit": "German engraving, c. 17th century (Wikimedia Commons)",
-   "licence": "public domain (pre-1700 artwork)"
+   "name": "b06.png",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Beauchamp_family_visting_Tutankhamen%27s_tomb%2C_1923.png?width=1600",
+   "credit": "Beauchamp_family_visting_Tutankhamen's_tomb,_1923.png (Wikimedia Commons)",
+   "licence": "public domain (1922-23 photograph)"
   },
   {
-   "name": "a_paracelsus.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paracelsus.jpg?width=1600",
-   "credit": "Portrait of Paracelsus after Quentin Matsys (Wikimedia Commons)",
-   "licence": "public domain (pre-1700 artwork)"
+   "name": "b07.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Arkofthecovenantatkingtutstomb.jpg?width=1600",
+   "credit": "Arkofthecovenantatkingtutstomb.jpg (Wikimedia Commons)",
+   "licence": "public domain (1922-23 photograph)"
   },
   {
-   "name": "a_brant.jpg",
-   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sebastian_Brant.jpg?width=1600",
-   "credit": "Portrait of Sebastian Brant (Wikimedia Commons)",
-   "licence": "public domain (pre-1700 artwork)"
+   "name": "b08.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tutankhamun%27s_mask%2C_Burton_photograph_P0750a%2C_1922.jpg?width=1600",
+   "credit": "Tutankhamun's_mask,_Burton_photograph_P0750a,_1922.jpg (Wikimedia Commons)",
+   "licence": "public domain (1922-23 photograph)"
+  },
+  {
+   "name": "b09.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Silver_trumpet_from_Tutankhamun%27s_tomb.jpg?width=1600",
+   "credit": "Silver_trumpet_from_Tutankhamun's_tomb.jpg (Wikimedia Commons)",
+   "licence": "public domain (1922-23 photograph)"
+  },
+  {
+   "name": "b10.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tutankhamun_tomb_photographs_2_010.jpg?width=1600",
+   "credit": "Tutankhamun_tomb_photographs_2_010.jpg (Wikimedia Commons)",
+   "licence": "public domain (1922-23 photograph)"
+  },
+  {
+   "name": "b11.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Tutankhamun_tomb_photographs_2_020.jpg?width=1600",
+   "credit": "Tutankhamun_tomb_photographs_2_020.jpg (Wikimedia Commons)",
+   "licence": "public domain (1922-23 photograph)"
   }
  ],
  "generate": []
