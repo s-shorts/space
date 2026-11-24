@@ -1,14 +1,14 @@
 {
-  "id": "2026-11-24-1841-earth-mystery",
+  "id": "2026-11-24-2241-whatif",
   "region": "IN",
   "compare_region": "US",
+  "youtube_queries": ["what if a solar storm hit earth", "carrington event shorts", "what if earth had two suns", "earth with two suns shorts", "what if earth was twice as big", "what if gravity doubled", "what if asteroid hit india", "agar suraj do hote", "solar storm hindi shorts", "what if earth was bigger shorts", "what if a black hole entered the solar system", "what if gravity disappeared shorts"],
   "shorts_only": true,
-  "youtube_queries": ["kerala red rain", "red rain kerala mystery shorts", "earth pulse every 26 seconds", "earth heartbeat 26 seconds shorts", "fish rain from sky", "machli ki barish", "waterspout india", "door to hell", "blood falls antarctica", "earth mystery shorts", "laal barish kerala", "earth hottest day record"],
-  "suggest": ["kerala red rain", "earth pulse", "fish rain", "red rain", "door to hell", "earth mystery"],
-  "reddit_queries": ["kerala red rain", "earth 26 second pulse", "raining fish", "earth mystery"],
-  "trends_geo": ["IN", "US", "GB"],
+  "suggest": ["what if a solar storm", "what if earth had two", "what if earth was twice", "what if gravity", "agar suraj", "solar storm", "what if asteroid hit"],
+  "reddit_queries": ["carrington event", "solar storm india", "what if earth had two suns", "what if gravity doubled"],
+  "trends_geo": ["IN","US","GB"],
   "wiki_top": true,
   "wiki_top_langs": ["hi"],
-  "wiki_articles": ["Red rain in Kerala", "Microseism", "Rain of animals", "Darvaza gas crater", "Blood Falls", "Waterspout"],
+  "wiki_articles": ["Carrington Event", "Geomagnetic storm", "Binary star", "Super-Earth", "Gravity of Earth", "Aurora", "2024 YR4"],
   "channel_stats": true
 }
