@@ -1,62 +1,60 @@
 {
- "id": "2026-11-23-A-magnetichill",
- "files": [],
- "generate": [
+ "id": "2026-11-24-A-dancingplague",
+ "files": [
   {
-   "name": "ma_road.jpg",
-   "prompt": "empty asphalt highway winding through barren brown Himalayan desert mountains, wide shot, cinematic realistic photograph, high-altitude cold desert of Ladakh, warm golden-hour light, muted earthy browns and deep blue sky, film look, no people, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 8200
+   "name": "a_hondius_brugje.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hondius_brugje.jpg?width=1600",
+   "credit": "Hendrik Hondius after Pieter Bruegel, 1642 engraving (Wikimedia Commons)",
+   "licence": "public domain (pre-1700 artwork)"
   },
   {
-   "name": "ma_car.jpg",
-   "prompt": "a small white hatchback car stopped alone on an empty mountain highway, barren slopes on both sides, cinematic realistic photograph, high-altitude cold desert of Ladakh, warm golden-hour light, muted earthy browns and deep blue sky, film look, no people, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 8201
+   "name": "a_hondius_processie.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Hondius_processie.jpg?width=1600",
+   "credit": "Hendrik Hondius after Pieter Bruegel, 1642 engraving (Wikimedia Commons)",
+   "licence": "public domain (pre-1700 artwork)"
   },
   {
-   "name": "ma_valley.jpg",
-   "prompt": "wide valley enclosed by steep barren mountain slopes on every side, distant snow peaks, a thin river below, cinematic realistic photograph, high-altitude cold desert of Ladakh, warm golden-hour light, muted earthy browns and deep blue sky, film look, no people, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 8202
+   "name": "a_meulebeeck_blue.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/The_Dance_epidemic_in_Meulebeeck.jpg?width=1600",
+   "credit": "After Pieter Bruegel the Elder, 1564 drawing (copy) (Wikimedia Commons)",
+   "licence": "public domain (pre-1700 artwork)"
   },
   {
-   "name": "ma_plane.jpg",
-   "prompt": "small passenger jet airplane flying high in clear blue sky above barren brown mountains, cinematic realistic photograph, high-altitude cold desert of Ladakh, warm golden-hour light, muted earthy browns and deep blue sky, film look, no people, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 8203
+   "name": "a_dance_molenbeek.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dance_at_Molenbeek.jpg?width=1600",
+   "credit": "After Pieter Bruegel the Elder (Wikimedia Commons)",
+   "licence": "public domain (pre-1700 artwork)"
   },
   {
-   "name": "ma_night.jpg",
-   "prompt": "starry night sky with the milky way over barren mountains and an empty road, cinematic realistic photograph, high-altitude cold desert of Ladakh, warm golden-hour light, muted earthy browns and deep blue sky, film look, no people, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 8204
+   "name": "a_wallfahrt.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg?width=1600",
+   "credit": "After Pieter Bruegel the Elder (Wikimedia Commons)",
+   "licence": "public domain (pre-1700 artwork)"
   },
   {
-   "name": "ma_chai.jpg",
-   "prompt": "steaming glass of milky tea standing on a rough stone wall, blurred brown mountains behind, close-up, cinematic realistic photograph, high-altitude cold desert of Ladakh, warm golden-hour light, muted earthy browns and deep blue sky, film look, no people, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 8205
+   "name": "a_navolger.png",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Navolger_Bruegel.PNG?width=1600",
+   "credit": "Follower of Pieter Bruegel, painting (Wikimedia Commons)",
+   "licence": "public domain (pre-1700 artwork)"
   },
   {
-   "name": "ma_slope.jpg",
-   "prompt": "long straight road seen from low angle stretching into the distance between tilted rocky hillsides, cinematic realistic photograph, high-altitude cold desert of Ladakh, warm golden-hour light, muted earthy browns and deep blue sky, film look, no people, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 8206
+   "name": "a_churchyard.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Dancingplague2.jpg?width=1600",
+   "credit": "German engraving, c. 17th century (Wikimedia Commons)",
+   "licence": "public domain (pre-1700 artwork)"
   },
   {
-   "name": "ma_dust.jpg",
-   "prompt": "dusty mountain road at sunset with long shadows and golden haze over the slopes, cinematic realistic photograph, high-altitude cold desert of Ladakh, warm golden-hour light, muted earthy browns and deep blue sky, film look, no people, no text, no letters, no logos",
-   "width": 1080,
-   "height": 1920,
-   "seed": 8207
+   "name": "a_paracelsus.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paracelsus.jpg?width=1600",
+   "credit": "Portrait of Paracelsus after Quentin Matsys (Wikimedia Commons)",
+   "licence": "public domain (pre-1700 artwork)"
+  },
+  {
+   "name": "a_brant.jpg",
+   "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sebastian_Brant.jpg?width=1600",
+   "credit": "Portrait of Sebastian Brant (Wikimedia Commons)",
+   "licence": "public domain (pre-1700 artwork)"
   }
- ]
+ ],
+ "generate": []
 }
