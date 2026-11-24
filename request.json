@@ -1,14 +1,14 @@
 {
-  "id": "2026-11-24-1041-trending",
+  "id": "2026-11-24-1441-alien",
   "region": "IN",
   "compare_region": "US",
+  "youtube_queries": ["life on enceladus", "enceladus life shorts", "are aliens real", "kya aliens sach me hote hai", "did life come from space", "life on titan", "alpha centauri planet", "proxima b life", "aliens exist shorts", "dusre grah par jeevan", "panspermia shorts", "closest habitable planet to earth"],
   "shorts_only": true,
-  "youtube_queries": ["mariana trench volcano", "mariana trench shorts", "deepest volcanic eruption ocean", "challenger deep discovery", "mariana trench mystery hindi", "delhi smog from space", "why delhi smog in winter", "black hole in a lab", "black hole on a chip", "supernova explosion caught", "oldest black holes discovered", "new virus discovery evolution"],
-  "suggest": ["mariana trench", "mariana trench me kya", "challenger deep", "delhi smog", "black hole lab", "supernova 2026"],
-  "reddit_queries": ["challenger deep eruption", "mariana trench volcano", "delhi smog", "black hole chip"],
+  "suggest": ["life on enceladus", "are aliens", "kya aliens", "did life come from", "life on titan", "alpha centauri", "closest habitable planet", "aliens exist"],
+  "reddit_queries": ["enceladus life", "aliens real", "panspermia", "alpha centauri planet"],
   "trends_geo": ["IN", "US", "GB"],
   "wiki_top": true,
   "wiki_top_langs": ["hi"],
-  "wiki_articles": ["Challenger Deep", "Mariana Trench", "Pyroclastic flow", "Air pollution in Delhi", "Sonic black hole", "Supernova", "Hawking radiation"],
+  "wiki_articles": ["Enceladus", "Extraterrestrial life", "Panspermia", "Titan (moon)", "Alpha Centauri", "Proxima Centauri b", "101955 Bennu"],
   "channel_stats": true
 }
