@@ -1,14 +1,14 @@
 {
-  "id": "2026-11-24-1441-alien",
+  "id": "2026-11-24-1841-earth-mystery",
   "region": "IN",
   "compare_region": "US",
-  "youtube_queries": ["life on enceladus", "enceladus life shorts", "are aliens real", "kya aliens sach me hote hai", "did life come from space", "life on titan", "alpha centauri planet", "proxima b life", "aliens exist shorts", "dusre grah par jeevan", "panspermia shorts", "closest habitable planet to earth"],
   "shorts_only": true,
-  "suggest": ["life on enceladus", "are aliens", "kya aliens", "did life come from", "life on titan", "alpha centauri", "closest habitable planet", "aliens exist"],
-  "reddit_queries": ["enceladus life", "aliens real", "panspermia", "alpha centauri planet"],
+  "youtube_queries": ["kerala red rain", "red rain kerala mystery shorts", "earth pulse every 26 seconds", "earth heartbeat 26 seconds shorts", "fish rain from sky", "machli ki barish", "waterspout india", "door to hell", "blood falls antarctica", "earth mystery shorts", "laal barish kerala", "earth hottest day record"],
+  "suggest": ["kerala red rain", "earth pulse", "fish rain", "red rain", "door to hell", "earth mystery"],
+  "reddit_queries": ["kerala red rain", "earth 26 second pulse", "raining fish", "earth mystery"],
   "trends_geo": ["IN", "US", "GB"],
   "wiki_top": true,
   "wiki_top_langs": ["hi"],
-  "wiki_articles": ["Enceladus", "Extraterrestrial life", "Panspermia", "Titan (moon)", "Alpha Centauri", "Proxima Centauri b", "101955 Bennu"],
+  "wiki_articles": ["Red rain in Kerala", "Microseism", "Rain of animals", "Darvaza gas crater", "Blood Falls", "Waterspout"],
   "channel_stats": true
 }
