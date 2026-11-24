@@ -1,14 +1,14 @@
 {
-  "id": "2026-11-24-0241-trending",
+  "id": "2026-11-24-0641-spacemystery",
   "region": "IN",
   "compare_region": "US",
-  "youtube_queries": ["supermoon", "supermoon shorts", "beaver moon 2026", "kartik purnima supermoon", "supermoon kya hai", "why is the moon bigger tonight", "ozone hole 2026", "ozone hole shorts", "giant virus discovery", "dimorphos hera", "dev deepawali moon", "supermoon explained"],
+  "youtube_queries": ["star system that should not exist", "impossible star system shorts", "triple star system", "white dwarf shorts", "mysterious x ray objects", "aditya l1 discovery", "aditya l1 shorts", "why is space dark", "is the universe infinite shorts", "beta pictoris", "black hole that wasn't a black hole", "brahmand ka rahasya"],
   "shorts_only": true,
-  "suggest": ["supermoon", "supermoon kya", "beaver moon", "kartik purnima moon", "ozone hole", "why is the moon"],
-  "reddit_queries": ["supermoon", "beaver moon", "ozone hole", "giant virus"],
+  "suggest": ["star system that", "impossible star", "aditya l1", "white dwarf", "why is space", "is the universe infinite", "brahmand"],
+  "reddit_queries": ["triple star system white dwarf", "hypersoft x-ray", "aditya l1", "should not exist astronomy"],
   "trends_geo": ["IN", "US", "GB"],
   "wiki_top": true,
   "wiki_top_langs": ["hi"],
-  "wiki_articles": ["Supermoon", "Full moon", "Kartik Purnima", "Ozone depletion", "Giant virus", "Dimorphos", "Dev Deepawali"],
+  "wiki_articles": ["White dwarf", "Aditya-L1", "Beta Pictoris", "Olbers's paradox", "Star system", "Red dwarf", "Chandra X-ray Observatory", "Shape of the universe"],
   "channel_stats": true
 }
