@@ -1,54 +1,14 @@
 {
- "id": "2026-11-25-0241-trending",
- "region": "IN",
- "compare_region": "US",
- "youtube_queries": [
-  "hidden planet solar system",
-  "planet x shorts",
-  "how will the sun die",
-  "sun death shorts",
-  "dying star alma",
-  "hera asteroid dimorphos",
-  "two black holes early universe",
-  "star swallowed another star",
-  "delhi smog from space",
-  "solar sail light speed",
-  "suraj kaise khatam hoga",
-  "naya grah mila"
- ],
- "shorts_only": true,
- "suggest": [
-  "hidden planet",
-  "planet x",
-  "how will the sun die",
-  "suraj kab khatam hoga",
-  "hera mission",
-  "dying star",
-  "delhi pollution from space"
- ],
- "reddit_queries": [
-  "planet x2",
-  "dying star alma",
-  "hera dimorphos",
-  "hidden planet"
- ],
- "trends_geo": [
-  "IN",
-  "US",
-  "GB"
- ],
- "wiki_top": true,
- "wiki_top_langs": [
-  "hi"
- ],
- "wiki_articles": [
-  "Planet Nine",
-  "Hypothetical planets of the Solar System",
-  "Planetary nebula",
-  "Sun",
-  "Hera (space mission)",
-  "Dimorphos",
-  "Asymptotic giant branch"
- ],
- "channel_stats": true
+  "id": "2026-11-25-0641-space-mystery",
+  "region": "IN",
+  "compare_region": "US",
+  "youtube_queries": ["saturn hexagon", "saturn hexagon shorts", "saturn decagon", "shani grah rahasya", "is the universe infinite", "is the universe infinite shorts", "what is inside a black hole shorts", "why is uranus tilted", "why does venus spin backwards", "saturn mystery shorts", "brahmand ka ant kahan hai", "saturn in hindi shorts"],
+  "shorts_only": true,
+  "suggest": ["saturn hexagon", "saturn decagon", "shani grah", "is the universe infinite", "what is inside a black hole", "why is uranus", "why does venus spin"],
+  "reddit_queries": ["saturn hexagon", "saturn decagon", "is the universe infinite", "uranus tilt"],
+  "trends_geo": ["IN", "US", "GB"],
+  "wiki_top": true,
+  "wiki_top_langs": ["hi"],
+  "wiki_articles": ["Saturn's hexagon", "Saturn", "Universe", "Black hole", "Uranus", "Venus"],
+  "channel_stats": true
 }
