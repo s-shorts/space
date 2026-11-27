@@ -1,14 +1,11 @@
 {
-  "id": "2026-11-25-0641-space-mystery",
-  "region": "IN",
-  "compare_region": "US",
-  "youtube_queries": ["saturn hexagon", "saturn hexagon shorts", "saturn decagon", "shani grah rahasya", "is the universe infinite", "is the universe infinite shorts", "what is inside a black hole shorts", "why is uranus tilted", "why does venus spin backwards", "saturn mystery shorts", "brahmand ka ant kahan hai", "saturn in hindi shorts"],
-  "shorts_only": true,
-  "suggest": ["saturn hexagon", "saturn decagon", "shani grah", "is the universe infinite", "what is inside a black hole", "why is uranus", "why does venus spin"],
-  "reddit_queries": ["saturn hexagon", "saturn decagon", "is the universe infinite", "uranus tilt"],
-  "trends_geo": ["IN", "US", "GB"],
-  "wiki_top": true,
-  "wiki_top_langs": ["hi"],
-  "wiki_articles": ["Saturn's hexagon", "Saturn", "Universe", "Black hole", "Uranus", "Venus"],
-  "channel_stats": true
+ "id": "2026-11-27-1841-trending-catchup",
+ "region": "IN", "compare_region": "US", "shorts_only": true,
+ "youtube_queries": ["michigan fireball", "green fireball meteor shorts", "why are meteors green", "meteor india sky", "starship catch", "starship caught by tower shorts", "starship chopsticks catch upper stage", "spacex starship india hindi", "fireball meteor shorts", "asteroid hindi shorts", "ancient ocean oxygen", "dark matter telescope discovery"],
+ "suggest": ["green fireball", "meteor kya hota hai", "fireball meteor", "starship catch", "starship", "why is meteor green"],
+ "reddit_queries": ["michigan fireball", "starship catch", "meteor india", "green fireball"],
+ "trends_geo": ["IN","US","GB"],
+ "wiki_top": true, "wiki_top_langs": ["hi"],
+ "wiki_articles": ["Bolide", "Meteoroid", "SpaceX Starship", "Starship flight test 14", "Meteor", "Fireball (meteor)"],
+ "channel_stats": true
 }
