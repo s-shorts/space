@@ -1,11 +1,11 @@
 {
- "id": "2026-11-28-0241-trending-r1",
+ "id": "2026-11-28-0241-trending-r2",
  "region": "IN", "compare_region": "US", "shorts_only": true,
- "youtube_queries": ["science news today", "space news today shorts", "isro news", "nasa news hindi", "viral science video", "mystery video viral", "hera dimorphos", "comet 2026", "earthquake india today", "delhi smog satellite"],
- "suggest": ["isro", "nasa", "comet", "asteroid", "mystery", "space news"],
- "reddit_queries": ["ISRO", "space discovery", "strange phenomenon"],
+ "youtube_queries": ["dart crater dimorphos", "hera asteroid images shorts", "nasa hit an asteroid what happened", "asteroid crater stadium", "maryborough meteorite", "man found meteorite thought gold shorts", "red sea brine pool", "lake under the sea shorts", "narwhal tusk", "primordial black hole", "asteroid kya hota hai", "meteorite sona samjha"],
+ "suggest": ["dart mission", "dimorphos", "hera mission", "maryborough meteorite", "brine pool", "meteorite"],
+ "reddit_queries": ["Dimorphos crater", "Hera Dimorphos", "Maryborough meteorite", "brine pool"],
  "trends_geo": ["IN","US","GB"],
- "wiki_top": true, "wiki_top_langs": ["hi"],
- "wiki_articles": ["Hera (space mission)", "Dimorphos", "Voyager 1", "Comet", "Geminids"],
- "channel_stats": true
+ "wiki_top": false,
+ "wiki_articles": ["Dimorphos", "Double Asteroid Redirection Test", "Maryborough meteorite", "Brine pool", "Narwhal", "Primordial black hole", "65803 Didymos"],
+ "channel_stats": false
 }
