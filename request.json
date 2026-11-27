@@ -1,11 +1,11 @@
 {
- "id": "2026-11-27-2241-scifi",
+ "id": "2026-11-28-0241-trending-r1",
  "region": "IN", "compare_region": "US", "shorts_only": true,
- "youtube_queries": ["what if earth had two suns", "two suns shorts", "what if gravity disappeared for 5 seconds", "gravity disappeared shorts", "what if jupiter was our moon", "jupiter moon shorts", "what if earth and mars switched places", "what if asteroid hit india", "agar do suraj hote", "agar gravity khatam ho jaye", "what if earth was closer to the sun", "agar jupiter chand ki jagah hota"],
- "suggest": ["what if earth had two suns", "what if gravity", "what if jupiter", "agar gravity", "agar do suraj", "what if earth"],
- "reddit_queries": ["two suns earth", "gravity disappeared", "jupiter instead of moon", "what if earth"],
+ "youtube_queries": ["science news today", "space news today shorts", "isro news", "nasa news hindi", "viral science video", "mystery video viral", "hera dimorphos", "comet 2026", "earthquake india today", "delhi smog satellite"],
+ "suggest": ["isro", "nasa", "comet", "asteroid", "mystery", "space news"],
+ "reddit_queries": ["ISRO", "space discovery", "strange phenomenon"],
  "trends_geo": ["IN","US","GB"],
  "wiki_top": true, "wiki_top_langs": ["hi"],
- "wiki_articles": ["Binary star", "Gravity", "Jupiter", "Circumbinary planet", "Kepler-16b", "Earth"],
+ "wiki_articles": ["Hera (space mission)", "Dimorphos", "Voyager 1", "Comet", "Geminids"],
  "channel_stats": true
 }
