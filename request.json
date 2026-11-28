@@ -1,11 +1,11 @@
 {
- "id": "2026-11-28-1441-alienworlds",
+ "id": "2026-11-28-1841-catchup",
  "region": "IN", "compare_region": "US", "shorts_only": true,
- "youtube_queries": ["diamond rain neptune","does it rain diamonds on neptune shorts","titan methane lakes","life on titan shorts","rogue planet","rogue planet shorts","lava planet","55 cancri e diamond planet","eyeball planet","tidally locked planet shorts","uranus neptune facts shorts","planet where it rains glass"],
- "suggest": ["does it rain diamonds","diamond rain","titan lakes","rogue planet","lava planet","eyeball planet","planet where it rains","neptune par"],
- "reddit_queries": ["diamond rain neptune","titan methane","rogue planet","lava planet"],
+ "youtube_queries": ["hit by a meteorite","only person hit by a meteorite shorts","has anyone been hit by a meteorite","brine pool red sea","underwater lake of death shorts","el nino 2026","super el nino shorts","crows roost mystery","curiosity rover mount sharp","meteorite kills man india","meteorite","el nino california sharks"],
+ "suggest": ["hit by a meteorite","has anyone been hit by","brine pool","lake of death","super el nino","el nino 2026","meteorite","crows"],
+ "reddit_queries": ["hit by meteorite","brine pool","super el nino","crows roost"],
  "trends_geo": ["US","IN","GB"],
  "wiki_top": true, "wiki_top_langs": ["hi"],
- "wiki_articles": ["Neptune","Uranus","Titan (moon)","Rogue planet","55 Cancri e","Lava planet","Tidal locking","Diamond rain","HD 189733 b"],
+ "wiki_articles": ["Ann Hodges","Sylacauga (meteorite)","Meteorite","Brine pool","El Niño","2026–27 El Niño event","American crow","Curiosity (rover)","Swift Observatory"],
  "channel_stats": true
 }
