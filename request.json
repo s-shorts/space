@@ -1,14 +1,14 @@
 {
-  "id": "2026-11-28-0641-spacemystery",
+  "id": "2026-11-28-1041-trending",
   "region": "IN",
   "compare_region": "US",
-  "youtube_queries": ["is our universe inside a black hole", "universe inside a black hole shorts", "black hole older than galaxy", "which came first black hole or galaxy shorts", "primordial black hole", "primordial black hole dark matter shorts", "is the universe infinite", "is the universe infinite shorts", "what is outside the universe shorts", "bootes void shorts", "brahmand ka rahasya shorts", "kya hum black hole ke andar hai"],
+  "youtube_queries": ["bepicolombo mercury", "why is it hard to go to mercury", "mercury mission shorts", "venus morning star", "venus brightest shorts", "subah ka tara shukra", "spacex 1 million satellites", "starlink night sky astronomers", "ozone hole 2026", "euclid quasar", "mercury planet facts shorts", "budh grah mission"],
   "shorts_only": true,
-  "suggest": ["is our universe inside a black hole", "black hole before", "primordial black hole", "is the universe infinite", "what is outside the universe", "brahmand", "bootes void"],
-  "reddit_queries": ["universe inside black hole", "primordial black hole", "black hole before galaxy", "universe infinite"],
+  "suggest": ["bepicolombo", "mercury mission", "why is it hard to get to mercury", "venus brightest", "subah ka tara", "spacex million satellites", "budh grah"],
+  "reddit_queries": ["bepicolombo", "venus brightest", "spacex million satellites", "mercury orbit"],
   "trends_geo": ["IN", "US", "GB"],
   "wiki_top": true,
   "wiki_top_langs": ["hi"],
-  "wiki_articles": ["Black hole cosmology", "Primordial black hole", "Little red dot (astronomy)", "Boötes Void", "Shape of the universe", "Observable universe", "Supermassive black hole"],
+  "wiki_articles": ["BepiColombo", "Mercury (planet)", "Venus", "Starlink", "Ozone depletion", "Quasar"],
   "channel_stats": true
 }
