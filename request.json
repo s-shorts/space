@@ -1,11 +1,14 @@
 {
- "id": "2026-11-28-0241-trending-r2",
- "region": "IN", "compare_region": "US", "shorts_only": true,
- "youtube_queries": ["dart crater dimorphos", "hera asteroid images shorts", "nasa hit an asteroid what happened", "asteroid crater stadium", "maryborough meteorite", "man found meteorite thought gold shorts", "red sea brine pool", "lake under the sea shorts", "narwhal tusk", "primordial black hole", "asteroid kya hota hai", "meteorite sona samjha"],
- "suggest": ["dart mission", "dimorphos", "hera mission", "maryborough meteorite", "brine pool", "meteorite"],
- "reddit_queries": ["Dimorphos crater", "Hera Dimorphos", "Maryborough meteorite", "brine pool"],
- "trends_geo": ["IN","US","GB"],
- "wiki_top": false,
- "wiki_articles": ["Dimorphos", "Double Asteroid Redirection Test", "Maryborough meteorite", "Brine pool", "Narwhal", "Primordial black hole", "65803 Didymos"],
- "channel_stats": false
+  "id": "2026-11-28-0641-spacemystery",
+  "region": "IN",
+  "compare_region": "US",
+  "youtube_queries": ["is our universe inside a black hole", "universe inside a black hole shorts", "black hole older than galaxy", "which came first black hole or galaxy shorts", "primordial black hole", "primordial black hole dark matter shorts", "is the universe infinite", "is the universe infinite shorts", "what is outside the universe shorts", "bootes void shorts", "brahmand ka rahasya shorts", "kya hum black hole ke andar hai"],
+  "shorts_only": true,
+  "suggest": ["is our universe inside a black hole", "black hole before", "primordial black hole", "is the universe infinite", "what is outside the universe", "brahmand", "bootes void"],
+  "reddit_queries": ["universe inside black hole", "primordial black hole", "black hole before galaxy", "universe infinite"],
+  "trends_geo": ["IN", "US", "GB"],
+  "wiki_top": true,
+  "wiki_top_langs": ["hi"],
+  "wiki_articles": ["Black hole cosmology", "Primordial black hole", "Little red dot (astronomy)", "Boötes Void", "Shape of the universe", "Observable universe", "Supermassive black hole"],
+  "channel_stats": true
 }
